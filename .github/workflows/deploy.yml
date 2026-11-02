@@ -1,0 +1,176 @@
+name: Deploy PaceMatcher
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pacematcher-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://pacematcher.com
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Validate deployment inputs
+        env:
+          CLOUDWAYS_HOST: ${{ secrets.CLOUDWAYS_HOST }}
+          CLOUDWAYS_USER: ${{ secrets.CLOUDWAYS_USER }}
+          CLOUDWAYS_SSH_KEY: ${{ secrets.CLOUDWAYS_SSH_KEY }}
+          CLOUDWAYS_DEPLOY_PATH: ${{ secrets.CLOUDWAYS_DEPLOY_PATH }}
+          CLOUDWAYS_KNOWN_HOSTS: ${{ secrets.CLOUDWAYS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+
+          required_secrets=(
+            CLOUDWAYS_HOST
+            CLOUDWAYS_USER
+            CLOUDWAYS_SSH_KEY
+            CLOUDWAYS_DEPLOY_PATH
+            CLOUDWAYS_KNOWN_HOSTS
+          )
+
+          for secret_name in "${required_secrets[@]}"; do
+            if [[ -z "${!secret_name:-}" ]]; then
+              echo "Required deployment secret is missing: $secret_name"
+              exit 1
+            fi
+          done
+
+          if [[ ! "$CLOUDWAYS_HOST" =~ ^[A-Za-z0-9]([A-Za-z0-9.-]*[A-Za-z0-9])?$ ]]; then
+            echo "CLOUDWAYS_HOST must be a hostname or IPv4 address."
+            exit 1
+          fi
+
+          if [[ ! "$CLOUDWAYS_USER" =~ ^[A-Za-z0-9._-]+$ ]]; then
+            echo "CLOUDWAYS_USER contains unsupported characters."
+            exit 1
+          fi
+
+          if [[ ! "$CLOUDWAYS_DEPLOY_PATH" =~ ^/[A-Za-z0-9._/-]+/public_html$ ]]; then
+            echo "CLOUDWAYS_DEPLOY_PATH must be an absolute application public_html path."
+            exit 1
+          fi
+
+          if [[ "/$CLOUDWAYS_DEPLOY_PATH/" == *"/../"* || "/$CLOUDWAYS_DEPLOY_PATH/" == *"/./"* ]]; then
+            echo "CLOUDWAYS_DEPLOY_PATH must not contain relative path segments."
+            exit 1
+          fi
+
+          if [[ ! -f dist/index.html || ! -f dist/.pacematcher-deploy ]]; then
+            echo "The production build or PaceMatcher ownership marker is missing."
+            exit 1
+          fi
+
+          if [[ ! -s dist/.pacematcher-managed-paths ]]; then
+            echo "The managed-path manifest is missing or empty."
+            exit 1
+          fi
+
+          if [[ "$(cat dist/.pacematcher-deploy)" != "PaceMatcher Cloudways deployment marker. Keep this file in the deployed document root." ]]; then
+            echo "The build contains an unexpected PaceMatcher ownership marker."
+            exit 1
+          fi
+
+          while IFS= read -r managed_path; do
+            if [[ -z "$managed_path" || "$managed_path" == /* || "/$managed_path/" == *"/../"* || "/$managed_path/" == *"/./"* ]]; then
+              echo "Managed-path manifest contains an invalid destination: $managed_path"
+              exit 1
+            fi
+          done < dist/.pacematcher-managed-paths
+
+          if [[ -n "$(find dist -type l -print -quit)" ]]; then
+            echo "Symbolic links are not allowed in the deployment artifact."
+            exit 1
+          fi
+
+      - name: Preflight and upload static files over verified SSH
+        env:
+          CLOUDWAYS_HOST: ${{ secrets.CLOUDWAYS_HOST }}
+          CLOUDWAYS_USER: ${{ secrets.CLOUDWAYS_USER }}
+          CLOUDWAYS_SSH_KEY: ${{ secrets.CLOUDWAYS_SSH_KEY }}
+          CLOUDWAYS_DEPLOY_PATH: ${{ secrets.CLOUDWAYS_DEPLOY_PATH }}
+          CLOUDWAYS_KNOWN_HOSTS: ${{ secrets.CLOUDWAYS_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          umask 077
+
+          ssh_key="$RUNNER_TEMP/cloudways_deploy_key"
+          known_hosts_file="$RUNNER_TEMP/cloudways_known_hosts"
+
+          printf '%s\n' "$CLOUDWAYS_SSH_KEY" > "$ssh_key"
+          printf '%s\n' "$CLOUDWAYS_KNOWN_HOSTS" > "$known_hosts_file"
+          chmod 600 "$ssh_key" "$known_hosts_file"
+
+          if ! ssh-keygen -F "$CLOUDWAYS_HOST" -f "$known_hosts_file" >/dev/null; then
+            echo "CLOUDWAYS_KNOWN_HOSTS does not contain a trusted entry for CLOUDWAYS_HOST."
+            exit 1
+          fi
+
+          ssh_options=(
+            -i "$ssh_key"
+            -o BatchMode=yes
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o "UserKnownHostsFile=$known_hosts_file"
+            -o ConnectTimeout=20
+          )
+          remote="${CLOUDWAYS_USER}@${CLOUDWAYS_HOST}"
+          printf -v quoted_deploy_path '%q' "$CLOUDWAYS_DEPLOY_PATH"
+          manifest_base64="$(base64 < dist/.pacematcher-managed-paths | tr -d '\n')"
+          printf -v quoted_manifest_base64 '%q' "$manifest_base64"
+
+          ssh "${ssh_options[@]}" "$remote" \
+            "bash -s -- $quoted_deploy_path $quoted_manifest_base64" \
+            < scripts/cloudways-preflight.sh
+
+          # New content-hashed assets become available while the old index is
+          # still live. The index changes only after its dependencies exist.
+          rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
+            --exclude=.DS_Store \
+            --exclude='*.map' \
+            --include='/assets/***' \
+            --include='/images/***' \
+            --include='/fonts/***' \
+            --include='/favicon.svg' \
+            --exclude='*' \
+            -e "ssh ${ssh_options[*]}" \
+            dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
+
+          rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
+            --include='/index.html' \
+            --exclude='*' \
+            -e "ssh ${ssh_options[*]}" \
+            dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
+
+          ssh "${ssh_options[@]}" "$remote" "
+            set -eu
+            deploy_path=$quoted_deploy_path
+            mv \"\$deploy_path/.pacematcher-managed-paths.stage\" \"\$deploy_path/.pacematcher-managed-paths\"
+          "

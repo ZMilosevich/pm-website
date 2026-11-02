@@ -1,0 +1,1660 @@
+{
+  "checkedAt": "2026-11-02T12:15:47.865Z",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "viewports": [
+    {
+      "viewport": "1440",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "pageHeight": 4033,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 91,
+      "sectionHeights": {
+        "how-it-works": 473,
+        "app": 890,
+        "safety": 578,
+        "our-story": 545,
+        "faq": 422,
+        "contact": 265
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "microLabel": 12.48,
+        "howHeading": 64,
+        "appHeading": 57.6,
+        "safetyHeading": 64,
+        "storyHeading": 64
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "clippedText": [],
+      "contrastAudit": {
+        "bodyText": 10.06,
+        "panelBodyText": 9.16,
+        "accentText": 5.04,
+        "microLabel": 15.69,
+        "heroDescription": 12.24,
+        "heroLink": 15.69,
+        "heroAccentHeading": 4.02,
+        "safetyPolicy": 4.59,
+        "pageMicroLabel": 19.66,
+        "primaryButtonText": 5.9
+      },
+      "scrimAudit": {
+        "minimumAppliedAlpha": 0.9,
+        "backgroundImage": "linear-gradient(90deg, rgba(11, 11, 13, 0.96) 0%, rgba(11, 11, 13, 0.94) 46%, rgba(11, 11, 13, 0.9) calc(100% - 201.6px), rgba(0, 0, 0, 0) 100%)",
+        "copyRight": 746,
+        "textRight": 746,
+        "textWithinGuaranteedBand": true
+      },
+      "storeBadgeLinks": [
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        },
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        }
+      ],
+      "safetyCardCount": 3,
+      "safetyText": "Photo verification Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety. Location access Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location. Report and block Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "safetyPolicyHref": "https://pacematcher.com/privacy-policy",
+      "storyContributionCount": 3,
+      "hasBetterMiles": false,
+      "headerCta": {
+        "text": "Get the app",
+        "href": "#download"
+      },
+      "locationFaq": "Is my exact location visible?",
+      "locationFaqAnswer": "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "appImageCurrentSrc": "/images/app-screens-three.webp",
+      "productWidthRatio": 1,
+      "productImageWidth": 767,
+      "productControlsPresent": false,
+      "productImageLoading": "lazy",
+      "productImageAlt": "Three PaceMatcher app screens for runner discovery, match chat, and activity tracking",
+      "productImageObjectFit": "contain",
+      "productShotStyles": {
+        "position": "relative",
+        "display": "flex",
+        "minWidth": "0px",
+        "minHeight": "544px",
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "overflow": "hidden",
+        "margin": "0px",
+        "backgroundColor": "rgb(15, 15, 17)"
+      },
+      "productImageDetails": {
+        "currentSrc": "http://127.0.0.1:4173/images/app-screens-three-1200.webp",
+        "width": 767,
+        "height": 698,
+        "opacity": "1",
+        "visibility": "visible",
+        "display": "block",
+        "transform": "none",
+        "filter": "none"
+      },
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1.35
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "flex",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 1440
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-screens-three.webp",
+          "complete": true,
+          "naturalWidth": 864
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "Read the privacy policy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "1024",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "pageHeight": 4045,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 91,
+      "sectionHeights": {
+        "how-it-works": 445,
+        "app": 833,
+        "safety": 630,
+        "our-story": 561,
+        "faq": 422,
+        "contact": 294
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "microLabel": 12.48,
+        "howHeading": 45.568,
+        "appHeading": 40.96,
+        "safetyHeading": 45.568,
+        "storyHeading": 45.568
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "clippedText": [],
+      "contrastAudit": {
+        "bodyText": 10.06,
+        "panelBodyText": 9.16,
+        "accentText": 5.04,
+        "microLabel": 15.69,
+        "heroDescription": 12.24,
+        "heroLink": 15.69,
+        "heroAccentHeading": 4.02,
+        "safetyPolicy": 4.59,
+        "pageMicroLabel": 19.66,
+        "primaryButtonText": 5.9
+      },
+      "scrimAudit": {
+        "minimumAppliedAlpha": 0.9,
+        "backgroundImage": "linear-gradient(90deg, rgba(11, 11, 13, 0.96) 0%, rgba(11, 11, 13, 0.94) 46%, rgba(11, 11, 13, 0.9) calc(100% - 143.36px), rgba(0, 0, 0, 0) 100%)",
+        "copyRight": 531,
+        "textRight": 531,
+        "textWithinGuaranteedBand": true
+      },
+      "storeBadgeLinks": [
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        },
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        }
+      ],
+      "safetyCardCount": 3,
+      "safetyText": "Photo verification Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety. Location access Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location. Report and block Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "safetyPolicyHref": "https://pacematcher.com/privacy-policy",
+      "storyContributionCount": 3,
+      "hasBetterMiles": false,
+      "headerCta": {
+        "text": "Get the app",
+        "href": "#download"
+      },
+      "locationFaq": "Is my exact location visible?",
+      "locationFaqAnswer": "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "appImageCurrentSrc": "/images/app-screens-three.webp",
+      "productWidthRatio": 1,
+      "productImageWidth": 524,
+      "productControlsPresent": false,
+      "productImageLoading": "lazy",
+      "productImageAlt": "Three PaceMatcher app screens for runner discovery, match chat, and activity tracking",
+      "productImageObjectFit": "contain",
+      "productShotStyles": {
+        "position": "relative",
+        "display": "flex",
+        "minWidth": "0px",
+        "minHeight": "544px",
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "overflow": "hidden",
+        "margin": "0px",
+        "backgroundColor": "rgb(15, 15, 17)"
+      },
+      "productImageDetails": {
+        "currentSrc": "http://127.0.0.1:4173/images/app-screens-three-1200.webp",
+        "width": 524,
+        "height": 477,
+        "opacity": "1",
+        "visibility": "visible",
+        "display": "block",
+        "transform": "none",
+        "filter": "none"
+      },
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1.349990234375
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "flex",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 1024
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-screens-three.webp",
+          "complete": true,
+          "naturalWidth": 614
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "Read the privacy policy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "768",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "pageHeight": 5708,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 180,
+      "sectionHeights": {
+        "how-it-works": 492,
+        "app": 1277,
+        "safety": 1154,
+        "our-story": 883,
+        "faq": 589,
+        "contact": 363
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "microLabel": 12.48,
+        "howHeading": 41.6,
+        "appHeading": 34,
+        "safetyHeading": 44,
+        "storyHeading": 44
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "clippedText": [],
+      "contrastAudit": {
+        "bodyText": 10.06,
+        "panelBodyText": 9.16,
+        "accentText": 5.04,
+        "microLabel": 15.69,
+        "heroDescription": 12.24,
+        "heroLink": 15.69,
+        "heroAccentHeading": 4.02,
+        "safetyPolicy": 4.59,
+        "pageMicroLabel": 19.66,
+        "primaryButtonText": 5.9
+      },
+      "scrimAudit": {
+        "minimumAppliedAlpha": 0.9,
+        "backgroundImage": "linear-gradient(90deg, rgba(11, 11, 13, 0.96) 0%, rgba(11, 11, 13, 0.94) 46%, rgba(11, 11, 13, 0.9) calc(100% - 128px), rgba(0, 0, 0, 0) 100%)",
+        "copyRight": 537,
+        "textRight": 537,
+        "textWithinGuaranteedBand": true
+      },
+      "storeBadgeLinks": [
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        },
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        }
+      ],
+      "safetyCardCount": 3,
+      "safetyText": "Photo verification Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety. Location access Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location. Report and block Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "safetyPolicyHref": "https://pacematcher.com/privacy-policy",
+      "storyContributionCount": 3,
+      "hasBetterMiles": false,
+      "headerCta": {
+        "text": "Get the app",
+        "href": "#download"
+      },
+      "locationFaq": "Is my exact location visible?",
+      "locationFaqAnswer": "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "appImageCurrentSrc": "/images/app-screens-three.webp",
+      "productWidthRatio": 1,
+      "productImageWidth": 692,
+      "productControlsPresent": false,
+      "productImageLoading": "lazy",
+      "productImageAlt": "Three PaceMatcher app screens for runner discovery, match chat, and activity tracking",
+      "productImageObjectFit": "contain",
+      "productShotStyles": {
+        "position": "relative",
+        "display": "flex",
+        "minWidth": "0px",
+        "minHeight": "400px",
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "overflow": "hidden",
+        "margin": "0px",
+        "backgroundColor": "rgb(15, 15, 17)"
+      },
+      "productImageDetails": {
+        "currentSrc": "http://127.0.0.1:4173/images/app-screens-three-1200.webp",
+        "width": 692,
+        "height": 630,
+        "opacity": "1",
+        "visibility": "visible",
+        "display": "block",
+        "transform": "none",
+        "filter": "none"
+      },
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1.3499999999999999
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 768
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-screens-three.webp",
+          "complete": true,
+          "naturalWidth": 720
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "Read the privacy policy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "375",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "pageHeight": 6153,
+      "headerHeight": 64,
+      "heroHeight": 672,
+      "footerHeight": 174,
+      "sectionHeights": {
+        "how-it-works": 829,
+        "app": 1247,
+        "safety": 1162,
+        "our-story": 980,
+        "faq": 622,
+        "contact": 403
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "microLabel": 12.48,
+        "howHeading": 45.75,
+        "appHeading": 35.625,
+        "safetyHeading": 44,
+        "storyHeading": 44
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "clippedText": [],
+      "contrastAudit": {
+        "bodyText": 10.06,
+        "panelBodyText": 9.16,
+        "accentText": 5.04,
+        "microLabel": 15.69,
+        "heroDescription": 12.24,
+        "heroLink": 15.69,
+        "heroAccentHeading": 4.02,
+        "safetyPolicy": 4.59,
+        "pageMicroLabel": 19.66,
+        "primaryButtonText": 5.9
+      },
+      "scrimAudit": {
+        "minimumAppliedAlpha": 0.9,
+        "backgroundImage": "linear-gradient(90deg, rgba(11, 11, 13, 0.96) 0%, rgba(11, 11, 13, 0.94) 46%, rgba(11, 11, 13, 0.9) calc(100% - 128px), rgba(0, 0, 0, 0) 100%)",
+        "copyRight": 359,
+        "textRight": 359,
+        "textWithinGuaranteedBand": true
+      },
+      "storeBadgeLinks": [
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        },
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        }
+      ],
+      "safetyCardCount": 3,
+      "safetyText": "Photo verification Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety. Location access Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location. Report and block Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "safetyPolicyHref": "https://pacematcher.com/privacy-policy",
+      "storyContributionCount": 3,
+      "hasBetterMiles": false,
+      "headerCta": {
+        "text": "Get the app",
+        "href": "#download"
+      },
+      "locationFaq": "Is my exact location visible?",
+      "locationFaqAnswer": "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "appImageCurrentSrc": "/images/app-screens-three.webp",
+      "productWidthRatio": 0.916,
+      "productImageWidth": 312,
+      "productControlsPresent": false,
+      "productImageLoading": "lazy",
+      "productImageAlt": "Three PaceMatcher app screens for runner discovery, match chat, and activity tracking",
+      "productImageObjectFit": "contain",
+      "productShotStyles": {
+        "position": "relative",
+        "display": "flex",
+        "minWidth": "0px",
+        "minHeight": "0px",
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "overflow": "hidden",
+        "margin": "0px",
+        "backgroundColor": "rgb(15, 15, 17)"
+      },
+      "productImageDetails": {
+        "currentSrc": "http://127.0.0.1:4173/images/app-screens-three-1200.webp",
+        "width": 312,
+        "height": 284,
+        "opacity": "1",
+        "visibility": "visible",
+        "display": "block",
+        "transform": "none",
+        "filter": "none"
+      },
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 375
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-screens-three.webp",
+          "complete": true,
+          "naturalWidth": 335
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "Read the privacy policy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "320",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "pageHeight": 6335,
+      "headerHeight": 64,
+      "heroHeight": 672,
+      "footerHeight": 192,
+      "sectionHeights": {
+        "how-it-works": 810,
+        "app": 1218,
+        "safety": 1285,
+        "our-story": 1081,
+        "faq": 625,
+        "contact": 389
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "microLabel": 12.48,
+        "howHeading": 39.04,
+        "appHeading": 32,
+        "safetyHeading": 44,
+        "storyHeading": 44
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "clippedText": [],
+      "contrastAudit": {
+        "bodyText": 10.06,
+        "panelBodyText": 9.16,
+        "accentText": 5.04,
+        "microLabel": 15.69,
+        "heroDescription": 12.24,
+        "heroLink": 15.69,
+        "heroAccentHeading": 4.02,
+        "safetyPolicy": 4.59,
+        "pageMicroLabel": 19.66,
+        "primaryButtonText": 5.9
+      },
+      "scrimAudit": {
+        "minimumAppliedAlpha": 0.9,
+        "backgroundImage": "linear-gradient(90deg, rgba(11, 11, 13, 0.96) 0%, rgba(11, 11, 13, 0.94) 46%, rgba(11, 11, 13, 0.9) calc(100% - 128px), rgba(0, 0, 0, 0) 100%)",
+        "copyRight": 304,
+        "textRight": 304,
+        "textWithinGuaranteedBand": true
+      },
+      "storeBadgeLinks": [
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        },
+        {
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Download PaceMatcher on the App Store",
+          "minHeight": 57
+        },
+        {
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "Get PaceMatcher on Google Play",
+          "minHeight": 57
+        }
+      ],
+      "safetyCardCount": 3,
+      "safetyText": "Photo verification Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety. Location access Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location. Report and block Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "safetyPolicyHref": "https://pacematcher.com/privacy-policy",
+      "storyContributionCount": 3,
+      "hasBetterMiles": false,
+      "headerCta": {
+        "text": "Get the app",
+        "href": "#download"
+      },
+      "locationFaq": "Is my exact location visible?",
+      "locationFaqAnswer": "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "appImageCurrentSrc": "/images/app-screens-three.webp",
+      "productWidthRatio": 0.899,
+      "productImageWidth": 257,
+      "productControlsPresent": false,
+      "productImageLoading": "lazy",
+      "productImageAlt": "Three PaceMatcher app screens for runner discovery, match chat, and activity tracking",
+      "productImageObjectFit": "contain",
+      "productShotStyles": {
+        "position": "relative",
+        "display": "flex",
+        "minWidth": "0px",
+        "minHeight": "0px",
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "overflow": "hidden",
+        "margin": "0px",
+        "backgroundColor": "rgb(15, 15, 17)"
+      },
+      "productImageDetails": {
+        "currentSrc": "http://127.0.0.1:4173/images/app-screens-three-1200.webp",
+        "width": 257,
+        "height": 234,
+        "opacity": "1",
+        "visibility": "visible",
+        "display": "block",
+        "transform": "none",
+        "filter": "none"
+      },
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 320
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-store-badge.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/images/google-play-badge.png",
+          "complete": true,
+          "naturalWidth": 646
+        },
+        {
+          "src": "/images/app-screens-three.webp",
+          "complete": true,
+          "naturalWidth": 280
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Safety",
+          "href": "#safety",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get the app",
+          "href": "#download",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "",
+          "href": "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+          "target": "_blank",
+          "internalTargetExists": true
+        },
+        {
+          "text": "Read the privacy policy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    }
+  ],
+  "interactions": {
+    "menuOpened": "true",
+    "mobileNavVisible": "visible",
+    "menuClosed": "false",
+    "escapeFocus": "Open navigation menu",
+    "resizeState": {
+      "menuExpanded": "false",
+      "mobileNavHidden": "true",
+      "desktopNavDisplay": "flex"
+    },
+    "mobileNavigation": {
+      "hash": "#app",
+      "menuExpanded": "false"
+    },
+    "mobileDownloadNavigation": {
+      "hash": "#download",
+      "menuExpanded": "false"
+    },
+    "desktopNavigation": {
+      "hash": "#how-it-works",
+      "sectionTop": 106,
+      "headerHeight": 90
+    },
+    "desktopDownloadNavigation": {
+      "hash": "#download",
+      "targetTop": 106
+    },
+    "headerHoverStyles": {
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(201, 0, 66)"
+    },
+    "headerHoverContrast": 5.9,
+    "headerFocusStyles": {
+      "isFocused": true,
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(201, 0, 66)"
+    },
+    "headerFocusContrast": 5.9,
+    "secondExpanded": "true",
+    "secondAnswerVisible": "visible",
+    "faqIconColors": {
+      "expanded": "rgb(255, 0, 85)",
+      "collapsed": "rgb(255, 255, 255)"
+    },
+    "arrowFocus": "faq-button-2",
+    "footerUrls": [
+      "https://www.instagram.com/pacematcher/",
+      "https://www.linkedin.com/company/pacematcher",
+      "https://pacematcher.com/privacy-policy",
+      "https://pacematcher.com/terms-of-service"
+    ],
+    "contactHref": "mailto:contact@pacematcher.com",
+    "reducedMotion": {
+      "scrollBehavior": "auto",
+      "firstRevealOpacity": "1",
+      "firstRevealTransform": "none"
+    }
+  },
+  "errors": []
+}

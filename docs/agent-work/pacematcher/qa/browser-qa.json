@@ -1,0 +1,951 @@
+{
+  "checkedAt": "2026-11-02T10:17:50.368Z",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "viewports": [
+    {
+      "viewport": "1440",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "pageHeight": 3353,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 91,
+      "sectionHeights": {
+        "how-it-works": 473,
+        "app": 742,
+        "better-miles": 450,
+        "our-story": 140,
+        "faq": 422,
+        "contact": 265
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "howHeading": 64,
+        "appHeading": 57.6,
+        "betterHeading": 64
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "betterLineCounts": [
+        1,
+        1
+      ],
+      "heroImageLayout": {
+        "leftPercent": 0.07999166666666667,
+        "widthPercent": 1.1799930555555556
+      },
+      "productCompositeContained": false,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "flex",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 1440
+        },
+        {
+          "src": "/images/app-screens.webp",
+          "complete": true,
+          "naturalWidth": 835
+        },
+        {
+          "src": "/images/better-miles.webp",
+          "complete": true,
+          "naturalWidth": 1440
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Explore the app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "1024",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "pageHeight": 3279,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 91,
+      "sectionHeights": {
+        "how-it-works": 445,
+        "app": 686,
+        "better-miles": 432,
+        "our-story": 140,
+        "faq": 422,
+        "contact": 294
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "howHeading": 45.568,
+        "appHeading": 40.96,
+        "betterHeading": 45.568
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "betterLineCounts": [
+        1,
+        1
+      ],
+      "heroImageLayout": {
+        "leftPercent": 0.0799865234375,
+        "widthPercent": 1.179990234375
+      },
+      "productCompositeContained": false,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "flex",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 1024
+        },
+        {
+          "src": "/images/app-screens.webp",
+          "complete": true,
+          "naturalWidth": 593
+        },
+        {
+          "src": "/images/better-miles.webp",
+          "complete": true,
+          "naturalWidth": 1024
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Explore the app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "768",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "pageHeight": 3912,
+      "headerHeight": 90,
+      "heroHeight": 680,
+      "footerHeight": 180,
+      "sectionHeights": {
+        "how-it-works": 492,
+        "app": 932,
+        "better-miles": 432,
+        "our-story": 154,
+        "faq": 589,
+        "contact": 363
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "howHeading": 41.6,
+        "appHeading": 34,
+        "betterHeading": 44
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "betterLineCounts": [
+        1,
+        1
+      ],
+      "heroImageLayout": {
+        "leftPercent": 0.07999674479166667,
+        "widthPercent": 1.1799921875000001
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 768
+        },
+        {
+          "src": "/images/app-screens.webp",
+          "complete": true,
+          "naturalWidth": 720
+        },
+        {
+          "src": "/images/better-miles.webp",
+          "complete": true,
+          "naturalWidth": 768
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Explore the app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "375",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "pageHeight": 4652,
+      "headerHeight": 64,
+      "heroHeight": 672,
+      "footerHeight": 174,
+      "sectionHeights": {
+        "how-it-works": 827,
+        "app": 1011,
+        "better-miles": 480,
+        "our-story": 399,
+        "faq": 622,
+        "contact": 403
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "howHeading": 45.75,
+        "appHeading": 35.625,
+        "betterHeading": 37.5
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "betterLineCounts": [
+        1,
+        1
+      ],
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 375
+        },
+        {
+          "src": "/images/app-screens.webp",
+          "complete": true,
+          "naturalWidth": 335
+        },
+        {
+          "src": "/images/better-miles.webp",
+          "complete": true,
+          "naturalWidth": 375
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Explore the app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    },
+    {
+      "viewport": "320",
+      "httpStatus": 200,
+      "title": "PaceMatcher — Walk. Jog. Run. Together.",
+      "heading": "Your pace.\nYour people.",
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "pageHeight": 4625,
+      "headerHeight": 64,
+      "heroHeight": 672,
+      "footerHeight": 192,
+      "sectionHeights": {
+        "how-it-works": 808,
+        "app": 997,
+        "better-miles": 480,
+        "our-story": 399,
+        "faq": 625,
+        "contact": 389
+      },
+      "fontSizes": {
+        "nav": 16,
+        "heroBody": 18,
+        "stepTitle": 22,
+        "stepBody": 18,
+        "appBody": 18,
+        "footer": 14,
+        "howHeading": 39.04,
+        "appHeading": 32,
+        "betterHeading": 36
+      },
+      "appLineCounts": [
+        1,
+        1
+      ],
+      "betterLineCounts": [
+        1,
+        1
+      ],
+      "heroImageLayout": {
+        "leftPercent": 0,
+        "widthPercent": 1
+      },
+      "productCompositeContained": true,
+      "faqInitiallyExpanded": "true",
+      "mobileNavInitiallyOpen": false,
+      "desktopNavDisplay": "none",
+      "images": [
+        {
+          "src": "/images/hero-runners.webp",
+          "complete": true,
+          "naturalWidth": 320
+        },
+        {
+          "src": "/images/app-screens.webp",
+          "complete": true,
+          "naturalWidth": 280
+        },
+        {
+          "src": "/images/better-miles.webp",
+          "complete": true,
+          "naturalWidth": 320
+        }
+      ],
+      "anchors": [
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "The app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Our story",
+          "href": "#our-story",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "FAQ",
+          "href": "#faq",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Get in touch",
+          "href": "#contact",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Explore the app",
+          "href": "#app",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "How it works",
+          "href": "#how-it-works",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "contact@pacematcher.com",
+          "href": "mailto:contact@pacematcher.com",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "PaceMatcher",
+          "href": "#top",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Instagram",
+          "href": "https://www.instagram.com/pacematcher/",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/company/pacematcher",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Privacy",
+          "href": "https://pacematcher.com/privacy-policy",
+          "target": null,
+          "internalTargetExists": true
+        },
+        {
+          "text": "Terms",
+          "href": "https://pacematcher.com/terms-of-service",
+          "target": null,
+          "internalTargetExists": true
+        }
+      ]
+    }
+  ],
+  "interactions": {
+    "menuOpened": "true",
+    "mobileNavVisible": "visible",
+    "menuClosed": "false",
+    "escapeFocus": "Open navigation menu",
+    "resizeState": {
+      "menuExpanded": "false",
+      "mobileNavHidden": "true",
+      "desktopNavDisplay": "flex"
+    },
+    "mobileNavigation": {
+      "hash": "#app",
+      "menuExpanded": "false"
+    },
+    "desktopNavigation": {
+      "hash": "#how-it-works",
+      "sectionTop": 106,
+      "headerHeight": 90
+    },
+    "secondExpanded": "true",
+    "secondAnswerVisible": "visible",
+    "faqIconColors": {
+      "expanded": "rgb(255, 0, 85)",
+      "collapsed": "rgb(255, 255, 255)"
+    },
+    "arrowFocus": "faq-button-2",
+    "footerUrls": [
+      "https://www.instagram.com/pacematcher/",
+      "https://www.linkedin.com/company/pacematcher",
+      "https://pacematcher.com/privacy-policy",
+      "https://pacematcher.com/terms-of-service"
+    ],
+    "contactHref": "mailto:contact@pacematcher.com",
+    "reducedMotion": {
+      "scrollBehavior": "auto",
+      "firstRevealOpacity": "1",
+      "firstRevealTransform": "none"
+    }
+  },
+  "errors": []
+}
