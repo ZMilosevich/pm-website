@@ -65,10 +65,10 @@ export function RunClubs() {
               <div className="runclubs-preview__bottom">
                 <div className="runclubs-preview__metrics">
                   <p>
-                    <span>Pace</span>6:00 /km
+                    <span>Pace</span>9:39 /mi
                   </p>
                   <p>
-                    <span>Distance</span>5 km
+                    <span>Distance</span>3.1 mi
                   </p>
                 </div>
                 <div className="runclubs-preview__attendees">
