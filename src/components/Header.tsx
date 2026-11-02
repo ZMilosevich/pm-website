@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 const navigation = [
   { label: "How it works", href: "#how-it-works" },
   { label: "The app", href: "#app" },
-  { label: "RunClubs", href: "#runclubs" },
+  { label: "RunClubs & Events", href: "#runclubs" },
   { label: "Safety", href: "#safety" },
   { label: "Our story", href: "#our-story" },
   { label: "FAQ", href: "#faq" },
