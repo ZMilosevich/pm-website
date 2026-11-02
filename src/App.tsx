@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
+import { RunClubs } from "./components/RunClubs";
 import { Safety } from "./components/Safety";
 import { Team } from "./components/Team";
 
@@ -16,6 +17,7 @@ export default function App() {
         <Hero />
         <HowItWorks />
         <AppShowcase />
+        <RunClubs />
         <Safety />
         <Team />
         <FAQ />

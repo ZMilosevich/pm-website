@@ -22,6 +22,10 @@ const faqs = [
     question: "Which platforms are available?",
     answer: "PaceMatcher is available for iOS and Android.",
   },
+  {
+    question: "How do I join a local run event?",
+    answer: "Open a club or event in the app, check the pace and time, and tap to RSVP.",
+  },
 ] as const;
 
 export function FAQ() {
