@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="page-shell">
         <div className="site-footer__top">
-          <Logo />
+          <Logo href="/" />
           <p>{siteConfig.location}</p>
           <nav className="footer-links" aria-label="Footer navigation">
             {footerDestinations.map((destination) => {

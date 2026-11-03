@@ -7,7 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "typecheck": "tsc --noEmit --pretty false",
     "build": "vite build && node scripts/generate-managed-paths.mjs",
-    "start": "serve --single --listen $PORT dist",
+    "start": "serve --listen $PORT dist",
     "preview": "vite preview --host 127.0.0.1",
     "test:deployment": "bash scripts/tests/cloudways-preflight.test.sh",
     "qa:browser": "node scripts/browser-qa.cjs"

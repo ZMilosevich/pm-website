@@ -1,0 +1,551 @@
+{
+  "checkedAt": "2026-11-03T13:07:59.923Z",
+  "baseUrl": "http://127.0.0.1:4173/",
+  "suite": "dist-serve",
+  "results": [
+    {
+      "page": "/privacy-policy/",
+      "refreshHeading": "Privacy Policy",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "320",
+        "status": 200,
+        "title": "Privacy Policy - PaceMatcher",
+        "heading": "Privacy Policy",
+        "date": "Last Updated: August 11, 2026",
+        "sectionHeadings": [
+          "1. Information We Collect",
+          "2. How We Use Information",
+          "3. How We Share Information",
+          "4. Profile, Activity, and Location Visibility",
+          "5. Data Retention",
+          "6. Your Rights and Choices",
+          "7. Security",
+          "8. Safety and Verification",
+          "9. Consumer Health and Fitness Information",
+          "10. Children’s Privacy",
+          "11. Third-Party Services",
+          "12. Changes to This Privacy Policy",
+          "13. Contact Us"
+        ],
+        "subsectionHeadings": [
+          "Account and Profile Information",
+          "Activity Information",
+          "Location Information",
+          "Messages and Communications",
+          "Safety, Reports, and Verification Information",
+          "Information From Other Users",
+          "Usage and Technical Information",
+          "Information From Connected Services",
+          "Payment Information",
+          "Other PaceMatcher Users",
+          "Service Providers",
+          "Connected Services",
+          "Partners, Clubs, and Organizations",
+          "Legal, Safety, and Security Reasons",
+          "Business Transactions"
+        ],
+        "listCount": 13,
+        "listItemCount": 112,
+        "text": "PaceMatcher LLC (“PaceMatcher,” “we,” “our,” or “us”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, retain, and protect information when you use the PaceMatcher mobile application, website, and related services (collectively, the “Services”).By using PaceMatcher, you acknowledge the data practices described in this Privacy Policy.1. Information We CollectAccount and Profile InformationWhen you create or maintain a PaceMatcher account, we may collect information such as:NameEmail addressPhone numberAge or date-of-birth informationGenderProfile photosBioRunning or walking paceActivity goalsLocation preferencesMatching preferencesAvailability or schedule preferencesOther information you choose to provide through your profileCertain profile information may be visible to other PaceMatcher users as part of the matching and social experience.Activity InformationWhen you use features related to running, walking, or activities organized or recorded through PaceMatcher, we may collect information associated with those activities, such as:Activity typeDate and timeDurationDistancePaceActivity status or completionWhether an activity was completed individually or with another userParticipants associated with an activityLocation information associated with an activityOther information you choose to provide about an activityWe may use this information to provide activity-related features, improve matching, understand engagement, and operate and improve the Services.Location InformationPaceMatcher may collect and use location information to provide features such as identifying compatible people nearby, supporting matching, identifying nearby events or activities, and facilitating activities between users.Depending on the feature and permissions you provide, this may include approximate or precise device location information.PaceMatcher may use measures such as location rounding or other safeguards designed to limit unnecessary exposure of precise location information to other users. We do not intend for your precise device location to be publicly displayed to all PaceMatcher users.You can manage location permissions through your device settings. Disabling location access may affect features that rely on location.Messages and CommunicationsWhen you communicate through PaceMatcher, we may process information associated with those communications, including:Messages sent and receivedParticipants in a conversationDate and time of communicationsReports or support communicationsWe may access or review communications when reasonably necessary to investigate safety concerns, reports, suspected abuse, fraud, violations of our policies, or legal obligations.Safety, Reports, and Verification InformationPaceMatcher may collect and process information associated with trust and safety features, including:Selfie verificationReports involving users or activitiesBlockingSafety-related communicationsAccount restrictions or enforcement actionsPaceMatcher offers selfie verification to help determine whether the person completing verification corresponds to the person shown in the user’s current profile photo.During selfie verification, the submitted selfie and the user’s current profile photo are temporarily processed using automated facial analysis to determine whether the images match. A match score is calculated and evaluated against a verification threshold.The verification selfie, facial-analysis data, and match score are not retained by PaceMatcher after the verification process is completed. PaceMatcher retains only the resulting verification status.Verification indicates that a user successfully completed PaceMatcher’s verification process. It does not guarantee a user’s identity, background, character, conduct, intentions, reliability, or safety.Information From Other UsersWe may receive information about you from other PaceMatcher users, including when another user:Matches or interacts with youParticipates in an activity with youReports an account or interaction involving youBlocks youContacts PaceMatcher regarding an interaction involving youWe may use this information for safety, support, moderation, fraud prevention, dispute resolution, and enforcement purposes.Usage and Technical InformationWhen you use PaceMatcher, we may automatically collect certain information about your use of the Services and the device used to access them, including:Features usedMatches and interactionsApp navigationSession informationDevice typeOperating systemApp versionIP addressDevice or application identifiersCrash informationDiagnostic and performance informationWe may use this information to operate, secure, troubleshoot, analyze, and improve PaceMatcher.Information From Connected ServicesIf you choose to connect PaceMatcher with a third-party service, device, platform, or account, we may receive information from that service according to the permissions you provide.Depending on the integration, this may include:Account identifiersProfile informationRunning or walking activity informationPaceDistanceActivity date and timeOther fitness or activity informationOther information you authorize the service to provideWe will use information received through connected services in accordance with this Privacy Policy and the permissions associated with the connection.Payment InformationIf PaceMatcher offers paid features or services and you make a purchase, payments may be processed through third-party payment processors or application stores.PaceMatcher does not directly store complete payment card information when payment information is handled by those third parties.2. How We Use InformationWe may use information to:Create, authenticate, and maintain your account.Provide and personalize the Services.Match you with compatible runners and walkers based on factors such as pace, location, goals, preferences, and availability.Enable communication between users.Help users organize and participate in activities.Provide activity and event-related functionality.Operate verification and safety features.Respond to reports and support requests.Detect, investigate, and prevent fraud, misuse, abuse, security incidents, or violations of our policies.Enforce our Terms of Service and Community Guidelines.Maintain the safety, security, and integrity of the Services.Analyze how the Services are used.Troubleshoot technical problems.Improve existing features and develop new features.Communicate with you regarding your account, activities, safety, product updates, or policy changes.Comply with applicable laws, regulations, legal processes, and lawful requests.3. How We Share InformationWe do not sell your personal information for money.We may disclose information in the circumstances described below.Other PaceMatcher UsersInformation you make part of your profile may be visible to other users as necessary to provide matching and social features.Depending on the feature, users you interact or participate in activities with may also receive information necessary to coordinate that interaction or activity.Your private contact information, such as your email address or phone number, is not intended to be publicly displayed to other users unless you choose to share it.Service ProvidersWe may use third-party service providers that help us operate PaceMatcher, including providers of:Cloud hosting and infrastructureAuthenticationAnalyticsMapping and location servicesCommunications and notificationsError and performance monitoringPayment processingCustomer supportSecurity and fraud preventionThese providers may process information on our behalf to perform services for PaceMatcher.Connected ServicesWhen you choose to connect PaceMatcher with another platform or service, information may be exchanged with that service as necessary to provide the connection you requested and according to your permissions.Third-party services have their own privacy practices, and their handling of information is governed by their respective policies.Partners, Clubs, and OrganizationsPaceMatcher may work with running clubs, walking groups, event organizers, brands, community organizations, and other partners.Unless otherwise disclosed to you or authorized by you, PaceMatcher does not provide a partner with your private messages or precise device location merely because you view or participate in a partner-associated activity or event.We may provide partners with aggregated or de-identified information, such as participation, engagement, or feature-use statistics, that is not reasonably intended to identify individual users.If a particular activity, promotion, or integration requires information to be shared with a partner, we may provide additional notice at the time of participation.Legal, Safety, and Security ReasonsWe may preserve, access, or disclose information when we reasonably believe doing so is necessary to:Comply with applicable law, regulation, legal process, or lawful governmental request.Respond to emergencies involving potential harm.Investigate fraud, abuse, threats, harassment, or other safety concerns.Enforce our agreements and policies.Protect the rights, property, safety, or security of PaceMatcher, our users, or others.Establish, exercise, or defend legal claims.Business TransactionsIf PaceMatcher is involved in a merger, acquisition, financing, reorganization, bankruptcy, sale of assets, or similar corporate transaction, information may be disclosed or transferred as part of that transaction, subject to applicable law.4. Profile, Activity, and Location VisibilityPaceMatcher is designed to help people connect with compatible runners and walkers. Certain information therefore needs to be visible to other users for the Services to function.Depending on the feature and your settings, other users may see information such as:NameProfile photoBioPaceGoalsMatching preferencesVerification statusInformation associated with activities you choose to participate in or sharePaceMatcher may provide privacy controls that allow you to manage the visibility of certain information.Precise device location is not intended to be publicly displayed to all users.You should consider the information you choose to make available when interacting with other people through PaceMatcher.5. Data RetentionWe retain personal information for as long as reasonably necessary to provide the Services and fulfill the purposes described in this Privacy Policy.Retention periods may vary depending on the type of information and why we process it.After an account is deleted, we may retain certain information for a limited period where reasonably necessary for:Safety and securityFraud preventionInvestigation of reports or incidentsEnforcement of our policiesCompliance with legal or regulatory obligationsResolving disputesEstablishing, exercising, or defending legal claimsWe may retain aggregated or de-identified information where it no longer reasonably identifies an individual.As described above, selfies submitted for PaceMatcher’s selfie-verification process, facial-analysis data, and match scores are not retained after the verification process is completed.6. Your Rights and ChoicesDepending on where you live and applicable law, you may have rights regarding your personal information, including the ability to:Access certain personal information.Correct inaccurate information.Request deletion of certain information.Delete your PaceMatcher account.Request a copy of certain information.Manage profile and privacy settings.Manage device permissions, including location permissions.Disconnect connected third-party services.Withdraw consent where processing relies on consent.Appeal certain decisions regarding a privacy request where required by law.To submit a privacy request, contact:privacy@pacematcher.comWe may need to verify your identity before completing certain requests.Additional rights may apply depending on your state, country, or region.7. SecurityPaceMatcher uses reasonable administrative, technical, and organizational safeguards designed to protect personal information.However, no application, internet transmission, storage system, or security measure can be guaranteed to be completely secure.Users should exercise care when deciding what information to share through PaceMatcher or directly with other users.8. Safety and VerificationPaceMatcher provides features designed to support safer and more informed interactions between users. These may include verification, reporting, blocking, privacy controls, and other safety tools.These features are intended to provide users with additional information and controls when deciding whether and how to interact with others.No verification, matching, reporting, or other safety feature can guarantee another person’s identity, behavior, intentions, reliability, or safety.Users remain responsible for deciding whether, when, where, and with whom they interact or participate in activities.Additional requirements governing user conduct and interactions may be contained in PaceMatcher’s Terms of Service and Community Guidelines.9. Consumer Health and Fitness InformationCertain fitness, activity, and related information processed by PaceMatcher may be considered consumer health data under applicable law.PaceMatcher maintains additional disclosures regarding covered consumer health data, including a Consumer Health Data Privacy Policy where applicable. These disclosures explain the categories of covered information we process, how that information is used and shared, and rights available to consumers.10. Children’s PrivacyPaceMatcher is intended only for individuals who are 18 years of age or older.We do not knowingly permit individuals under 18 to create PaceMatcher accounts or knowingly collect personal information from children through the Services.If we learn that an individual under 18 has created an account, we may take steps to remove the account and associated information as appropriate.11. Third-Party ServicesPaceMatcher may contain links to, integrations with, or functionality provided by third-party services.When you interact directly with a third-party service, that third party may independently collect and process information under its own privacy policy and terms.This Privacy Policy does not govern information a third party independently processes under its own policies.12. Changes to This Privacy PolicyWe may update this Privacy Policy as PaceMatcher, our Services, and applicable laws evolve.If we make material changes, we may provide notice through the Services, by email, or through another appropriate method.The “Last Updated” date at the beginning of this Privacy Policy indicates when it was most recently revised.13. Contact UsIf you have questions, concerns, or requests regarding this Privacy Policy or PaceMatcher’s privacy practices, contact:PaceMatcher LLCEmail: privacy@pacematcher.comWebsite: pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [],
+        "externalLinks": [
+          {
+            "text": "pacematcher.com",
+            "href": "https://pacematcher.com/",
+            "target": null,
+            "rel": null
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "clipped": [],
+        "footerTop": 19161,
+        "documentHeight": 19353
+      },
+      "topScreenshot": "privacy-policy-320-top.png",
+      "screenshot": "privacy-policy-320-full.png"
+    },
+    {
+      "page": "/privacy-policy/",
+      "refreshHeading": "Privacy Policy",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "768",
+        "status": 200,
+        "title": "Privacy Policy - PaceMatcher",
+        "heading": "Privacy Policy",
+        "date": "Last Updated: August 11, 2026",
+        "sectionHeadings": [
+          "1. Information We Collect",
+          "2. How We Use Information",
+          "3. How We Share Information",
+          "4. Profile, Activity, and Location Visibility",
+          "5. Data Retention",
+          "6. Your Rights and Choices",
+          "7. Security",
+          "8. Safety and Verification",
+          "9. Consumer Health and Fitness Information",
+          "10. Children’s Privacy",
+          "11. Third-Party Services",
+          "12. Changes to This Privacy Policy",
+          "13. Contact Us"
+        ],
+        "subsectionHeadings": [
+          "Account and Profile Information",
+          "Activity Information",
+          "Location Information",
+          "Messages and Communications",
+          "Safety, Reports, and Verification Information",
+          "Information From Other Users",
+          "Usage and Technical Information",
+          "Information From Connected Services",
+          "Payment Information",
+          "Other PaceMatcher Users",
+          "Service Providers",
+          "Connected Services",
+          "Partners, Clubs, and Organizations",
+          "Legal, Safety, and Security Reasons",
+          "Business Transactions"
+        ],
+        "listCount": 13,
+        "listItemCount": 112,
+        "text": "PaceMatcher LLC (“PaceMatcher,” “we,” “our,” or “us”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, retain, and protect information when you use the PaceMatcher mobile application, website, and related services (collectively, the “Services”).By using PaceMatcher, you acknowledge the data practices described in this Privacy Policy.1. Information We CollectAccount and Profile InformationWhen you create or maintain a PaceMatcher account, we may collect information such as:NameEmail addressPhone numberAge or date-of-birth informationGenderProfile photosBioRunning or walking paceActivity goalsLocation preferencesMatching preferencesAvailability or schedule preferencesOther information you choose to provide through your profileCertain profile information may be visible to other PaceMatcher users as part of the matching and social experience.Activity InformationWhen you use features related to running, walking, or activities organized or recorded through PaceMatcher, we may collect information associated with those activities, such as:Activity typeDate and timeDurationDistancePaceActivity status or completionWhether an activity was completed individually or with another userParticipants associated with an activityLocation information associated with an activityOther information you choose to provide about an activityWe may use this information to provide activity-related features, improve matching, understand engagement, and operate and improve the Services.Location InformationPaceMatcher may collect and use location information to provide features such as identifying compatible people nearby, supporting matching, identifying nearby events or activities, and facilitating activities between users.Depending on the feature and permissions you provide, this may include approximate or precise device location information.PaceMatcher may use measures such as location rounding or other safeguards designed to limit unnecessary exposure of precise location information to other users. We do not intend for your precise device location to be publicly displayed to all PaceMatcher users.You can manage location permissions through your device settings. Disabling location access may affect features that rely on location.Messages and CommunicationsWhen you communicate through PaceMatcher, we may process information associated with those communications, including:Messages sent and receivedParticipants in a conversationDate and time of communicationsReports or support communicationsWe may access or review communications when reasonably necessary to investigate safety concerns, reports, suspected abuse, fraud, violations of our policies, or legal obligations.Safety, Reports, and Verification InformationPaceMatcher may collect and process information associated with trust and safety features, including:Selfie verificationReports involving users or activitiesBlockingSafety-related communicationsAccount restrictions or enforcement actionsPaceMatcher offers selfie verification to help determine whether the person completing verification corresponds to the person shown in the user’s current profile photo.During selfie verification, the submitted selfie and the user’s current profile photo are temporarily processed using automated facial analysis to determine whether the images match. A match score is calculated and evaluated against a verification threshold.The verification selfie, facial-analysis data, and match score are not retained by PaceMatcher after the verification process is completed. PaceMatcher retains only the resulting verification status.Verification indicates that a user successfully completed PaceMatcher’s verification process. It does not guarantee a user’s identity, background, character, conduct, intentions, reliability, or safety.Information From Other UsersWe may receive information about you from other PaceMatcher users, including when another user:Matches or interacts with youParticipates in an activity with youReports an account or interaction involving youBlocks youContacts PaceMatcher regarding an interaction involving youWe may use this information for safety, support, moderation, fraud prevention, dispute resolution, and enforcement purposes.Usage and Technical InformationWhen you use PaceMatcher, we may automatically collect certain information about your use of the Services and the device used to access them, including:Features usedMatches and interactionsApp navigationSession informationDevice typeOperating systemApp versionIP addressDevice or application identifiersCrash informationDiagnostic and performance informationWe may use this information to operate, secure, troubleshoot, analyze, and improve PaceMatcher.Information From Connected ServicesIf you choose to connect PaceMatcher with a third-party service, device, platform, or account, we may receive information from that service according to the permissions you provide.Depending on the integration, this may include:Account identifiersProfile informationRunning or walking activity informationPaceDistanceActivity date and timeOther fitness or activity informationOther information you authorize the service to provideWe will use information received through connected services in accordance with this Privacy Policy and the permissions associated with the connection.Payment InformationIf PaceMatcher offers paid features or services and you make a purchase, payments may be processed through third-party payment processors or application stores.PaceMatcher does not directly store complete payment card information when payment information is handled by those third parties.2. How We Use InformationWe may use information to:Create, authenticate, and maintain your account.Provide and personalize the Services.Match you with compatible runners and walkers based on factors such as pace, location, goals, preferences, and availability.Enable communication between users.Help users organize and participate in activities.Provide activity and event-related functionality.Operate verification and safety features.Respond to reports and support requests.Detect, investigate, and prevent fraud, misuse, abuse, security incidents, or violations of our policies.Enforce our Terms of Service and Community Guidelines.Maintain the safety, security, and integrity of the Services.Analyze how the Services are used.Troubleshoot technical problems.Improve existing features and develop new features.Communicate with you regarding your account, activities, safety, product updates, or policy changes.Comply with applicable laws, regulations, legal processes, and lawful requests.3. How We Share InformationWe do not sell your personal information for money.We may disclose information in the circumstances described below.Other PaceMatcher UsersInformation you make part of your profile may be visible to other users as necessary to provide matching and social features.Depending on the feature, users you interact or participate in activities with may also receive information necessary to coordinate that interaction or activity.Your private contact information, such as your email address or phone number, is not intended to be publicly displayed to other users unless you choose to share it.Service ProvidersWe may use third-party service providers that help us operate PaceMatcher, including providers of:Cloud hosting and infrastructureAuthenticationAnalyticsMapping and location servicesCommunications and notificationsError and performance monitoringPayment processingCustomer supportSecurity and fraud preventionThese providers may process information on our behalf to perform services for PaceMatcher.Connected ServicesWhen you choose to connect PaceMatcher with another platform or service, information may be exchanged with that service as necessary to provide the connection you requested and according to your permissions.Third-party services have their own privacy practices, and their handling of information is governed by their respective policies.Partners, Clubs, and OrganizationsPaceMatcher may work with running clubs, walking groups, event organizers, brands, community organizations, and other partners.Unless otherwise disclosed to you or authorized by you, PaceMatcher does not provide a partner with your private messages or precise device location merely because you view or participate in a partner-associated activity or event.We may provide partners with aggregated or de-identified information, such as participation, engagement, or feature-use statistics, that is not reasonably intended to identify individual users.If a particular activity, promotion, or integration requires information to be shared with a partner, we may provide additional notice at the time of participation.Legal, Safety, and Security ReasonsWe may preserve, access, or disclose information when we reasonably believe doing so is necessary to:Comply with applicable law, regulation, legal process, or lawful governmental request.Respond to emergencies involving potential harm.Investigate fraud, abuse, threats, harassment, or other safety concerns.Enforce our agreements and policies.Protect the rights, property, safety, or security of PaceMatcher, our users, or others.Establish, exercise, or defend legal claims.Business TransactionsIf PaceMatcher is involved in a merger, acquisition, financing, reorganization, bankruptcy, sale of assets, or similar corporate transaction, information may be disclosed or transferred as part of that transaction, subject to applicable law.4. Profile, Activity, and Location VisibilityPaceMatcher is designed to help people connect with compatible runners and walkers. Certain information therefore needs to be visible to other users for the Services to function.Depending on the feature and your settings, other users may see information such as:NameProfile photoBioPaceGoalsMatching preferencesVerification statusInformation associated with activities you choose to participate in or sharePaceMatcher may provide privacy controls that allow you to manage the visibility of certain information.Precise device location is not intended to be publicly displayed to all users.You should consider the information you choose to make available when interacting with other people through PaceMatcher.5. Data RetentionWe retain personal information for as long as reasonably necessary to provide the Services and fulfill the purposes described in this Privacy Policy.Retention periods may vary depending on the type of information and why we process it.After an account is deleted, we may retain certain information for a limited period where reasonably necessary for:Safety and securityFraud preventionInvestigation of reports or incidentsEnforcement of our policiesCompliance with legal or regulatory obligationsResolving disputesEstablishing, exercising, or defending legal claimsWe may retain aggregated or de-identified information where it no longer reasonably identifies an individual.As described above, selfies submitted for PaceMatcher’s selfie-verification process, facial-analysis data, and match scores are not retained after the verification process is completed.6. Your Rights and ChoicesDepending on where you live and applicable law, you may have rights regarding your personal information, including the ability to:Access certain personal information.Correct inaccurate information.Request deletion of certain information.Delete your PaceMatcher account.Request a copy of certain information.Manage profile and privacy settings.Manage device permissions, including location permissions.Disconnect connected third-party services.Withdraw consent where processing relies on consent.Appeal certain decisions regarding a privacy request where required by law.To submit a privacy request, contact:privacy@pacematcher.comWe may need to verify your identity before completing certain requests.Additional rights may apply depending on your state, country, or region.7. SecurityPaceMatcher uses reasonable administrative, technical, and organizational safeguards designed to protect personal information.However, no application, internet transmission, storage system, or security measure can be guaranteed to be completely secure.Users should exercise care when deciding what information to share through PaceMatcher or directly with other users.8. Safety and VerificationPaceMatcher provides features designed to support safer and more informed interactions between users. These may include verification, reporting, blocking, privacy controls, and other safety tools.These features are intended to provide users with additional information and controls when deciding whether and how to interact with others.No verification, matching, reporting, or other safety feature can guarantee another person’s identity, behavior, intentions, reliability, or safety.Users remain responsible for deciding whether, when, where, and with whom they interact or participate in activities.Additional requirements governing user conduct and interactions may be contained in PaceMatcher’s Terms of Service and Community Guidelines.9. Consumer Health and Fitness InformationCertain fitness, activity, and related information processed by PaceMatcher may be considered consumer health data under applicable law.PaceMatcher maintains additional disclosures regarding covered consumer health data, including a Consumer Health Data Privacy Policy where applicable. These disclosures explain the categories of covered information we process, how that information is used and shared, and rights available to consumers.10. Children’s PrivacyPaceMatcher is intended only for individuals who are 18 years of age or older.We do not knowingly permit individuals under 18 to create PaceMatcher accounts or knowingly collect personal information from children through the Services.If we learn that an individual under 18 has created an account, we may take steps to remove the account and associated information as appropriate.11. Third-Party ServicesPaceMatcher may contain links to, integrations with, or functionality provided by third-party services.When you interact directly with a third-party service, that third party may independently collect and process information under its own privacy policy and terms.This Privacy Policy does not govern information a third party independently processes under its own policies.12. Changes to This Privacy PolicyWe may update this Privacy Policy as PaceMatcher, our Services, and applicable laws evolve.If we make material changes, we may provide notice through the Services, by email, or through another appropriate method.The “Last Updated” date at the beginning of this Privacy Policy indicates when it was most recently revised.13. Contact UsIf you have questions, concerns, or requests regarding this Privacy Policy or PaceMatcher’s privacy practices, contact:PaceMatcher LLCEmail: privacy@pacematcher.comWebsite: pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [],
+        "externalLinks": [
+          {
+            "text": "pacematcher.com",
+            "href": "https://pacematcher.com/",
+            "target": null,
+            "rel": null
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "clipped": [],
+        "footerTop": 13182,
+        "documentHeight": 13378
+      },
+      "topScreenshot": "privacy-policy-768-top.png",
+      "screenshot": "privacy-policy-768-full.png"
+    },
+    {
+      "page": "/privacy-policy/",
+      "refreshHeading": "Privacy Policy",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "1440",
+        "status": 200,
+        "title": "Privacy Policy - PaceMatcher",
+        "heading": "Privacy Policy",
+        "date": "Last Updated: August 11, 2026",
+        "sectionHeadings": [
+          "1. Information We Collect",
+          "2. How We Use Information",
+          "3. How We Share Information",
+          "4. Profile, Activity, and Location Visibility",
+          "5. Data Retention",
+          "6. Your Rights and Choices",
+          "7. Security",
+          "8. Safety and Verification",
+          "9. Consumer Health and Fitness Information",
+          "10. Children’s Privacy",
+          "11. Third-Party Services",
+          "12. Changes to This Privacy Policy",
+          "13. Contact Us"
+        ],
+        "subsectionHeadings": [
+          "Account and Profile Information",
+          "Activity Information",
+          "Location Information",
+          "Messages and Communications",
+          "Safety, Reports, and Verification Information",
+          "Information From Other Users",
+          "Usage and Technical Information",
+          "Information From Connected Services",
+          "Payment Information",
+          "Other PaceMatcher Users",
+          "Service Providers",
+          "Connected Services",
+          "Partners, Clubs, and Organizations",
+          "Legal, Safety, and Security Reasons",
+          "Business Transactions"
+        ],
+        "listCount": 13,
+        "listItemCount": 112,
+        "text": "PaceMatcher LLC (“PaceMatcher,” “we,” “our,” or “us”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, retain, and protect information when you use the PaceMatcher mobile application, website, and related services (collectively, the “Services”).By using PaceMatcher, you acknowledge the data practices described in this Privacy Policy.1. Information We CollectAccount and Profile InformationWhen you create or maintain a PaceMatcher account, we may collect information such as:NameEmail addressPhone numberAge or date-of-birth informationGenderProfile photosBioRunning or walking paceActivity goalsLocation preferencesMatching preferencesAvailability or schedule preferencesOther information you choose to provide through your profileCertain profile information may be visible to other PaceMatcher users as part of the matching and social experience.Activity InformationWhen you use features related to running, walking, or activities organized or recorded through PaceMatcher, we may collect information associated with those activities, such as:Activity typeDate and timeDurationDistancePaceActivity status or completionWhether an activity was completed individually or with another userParticipants associated with an activityLocation information associated with an activityOther information you choose to provide about an activityWe may use this information to provide activity-related features, improve matching, understand engagement, and operate and improve the Services.Location InformationPaceMatcher may collect and use location information to provide features such as identifying compatible people nearby, supporting matching, identifying nearby events or activities, and facilitating activities between users.Depending on the feature and permissions you provide, this may include approximate or precise device location information.PaceMatcher may use measures such as location rounding or other safeguards designed to limit unnecessary exposure of precise location information to other users. We do not intend for your precise device location to be publicly displayed to all PaceMatcher users.You can manage location permissions through your device settings. Disabling location access may affect features that rely on location.Messages and CommunicationsWhen you communicate through PaceMatcher, we may process information associated with those communications, including:Messages sent and receivedParticipants in a conversationDate and time of communicationsReports or support communicationsWe may access or review communications when reasonably necessary to investigate safety concerns, reports, suspected abuse, fraud, violations of our policies, or legal obligations.Safety, Reports, and Verification InformationPaceMatcher may collect and process information associated with trust and safety features, including:Selfie verificationReports involving users or activitiesBlockingSafety-related communicationsAccount restrictions or enforcement actionsPaceMatcher offers selfie verification to help determine whether the person completing verification corresponds to the person shown in the user’s current profile photo.During selfie verification, the submitted selfie and the user’s current profile photo are temporarily processed using automated facial analysis to determine whether the images match. A match score is calculated and evaluated against a verification threshold.The verification selfie, facial-analysis data, and match score are not retained by PaceMatcher after the verification process is completed. PaceMatcher retains only the resulting verification status.Verification indicates that a user successfully completed PaceMatcher’s verification process. It does not guarantee a user’s identity, background, character, conduct, intentions, reliability, or safety.Information From Other UsersWe may receive information about you from other PaceMatcher users, including when another user:Matches or interacts with youParticipates in an activity with youReports an account or interaction involving youBlocks youContacts PaceMatcher regarding an interaction involving youWe may use this information for safety, support, moderation, fraud prevention, dispute resolution, and enforcement purposes.Usage and Technical InformationWhen you use PaceMatcher, we may automatically collect certain information about your use of the Services and the device used to access them, including:Features usedMatches and interactionsApp navigationSession informationDevice typeOperating systemApp versionIP addressDevice or application identifiersCrash informationDiagnostic and performance informationWe may use this information to operate, secure, troubleshoot, analyze, and improve PaceMatcher.Information From Connected ServicesIf you choose to connect PaceMatcher with a third-party service, device, platform, or account, we may receive information from that service according to the permissions you provide.Depending on the integration, this may include:Account identifiersProfile informationRunning or walking activity informationPaceDistanceActivity date and timeOther fitness or activity informationOther information you authorize the service to provideWe will use information received through connected services in accordance with this Privacy Policy and the permissions associated with the connection.Payment InformationIf PaceMatcher offers paid features or services and you make a purchase, payments may be processed through third-party payment processors or application stores.PaceMatcher does not directly store complete payment card information when payment information is handled by those third parties.2. How We Use InformationWe may use information to:Create, authenticate, and maintain your account.Provide and personalize the Services.Match you with compatible runners and walkers based on factors such as pace, location, goals, preferences, and availability.Enable communication between users.Help users organize and participate in activities.Provide activity and event-related functionality.Operate verification and safety features.Respond to reports and support requests.Detect, investigate, and prevent fraud, misuse, abuse, security incidents, or violations of our policies.Enforce our Terms of Service and Community Guidelines.Maintain the safety, security, and integrity of the Services.Analyze how the Services are used.Troubleshoot technical problems.Improve existing features and develop new features.Communicate with you regarding your account, activities, safety, product updates, or policy changes.Comply with applicable laws, regulations, legal processes, and lawful requests.3. How We Share InformationWe do not sell your personal information for money.We may disclose information in the circumstances described below.Other PaceMatcher UsersInformation you make part of your profile may be visible to other users as necessary to provide matching and social features.Depending on the feature, users you interact or participate in activities with may also receive information necessary to coordinate that interaction or activity.Your private contact information, such as your email address or phone number, is not intended to be publicly displayed to other users unless you choose to share it.Service ProvidersWe may use third-party service providers that help us operate PaceMatcher, including providers of:Cloud hosting and infrastructureAuthenticationAnalyticsMapping and location servicesCommunications and notificationsError and performance monitoringPayment processingCustomer supportSecurity and fraud preventionThese providers may process information on our behalf to perform services for PaceMatcher.Connected ServicesWhen you choose to connect PaceMatcher with another platform or service, information may be exchanged with that service as necessary to provide the connection you requested and according to your permissions.Third-party services have their own privacy practices, and their handling of information is governed by their respective policies.Partners, Clubs, and OrganizationsPaceMatcher may work with running clubs, walking groups, event organizers, brands, community organizations, and other partners.Unless otherwise disclosed to you or authorized by you, PaceMatcher does not provide a partner with your private messages or precise device location merely because you view or participate in a partner-associated activity or event.We may provide partners with aggregated or de-identified information, such as participation, engagement, or feature-use statistics, that is not reasonably intended to identify individual users.If a particular activity, promotion, or integration requires information to be shared with a partner, we may provide additional notice at the time of participation.Legal, Safety, and Security ReasonsWe may preserve, access, or disclose information when we reasonably believe doing so is necessary to:Comply with applicable law, regulation, legal process, or lawful governmental request.Respond to emergencies involving potential harm.Investigate fraud, abuse, threats, harassment, or other safety concerns.Enforce our agreements and policies.Protect the rights, property, safety, or security of PaceMatcher, our users, or others.Establish, exercise, or defend legal claims.Business TransactionsIf PaceMatcher is involved in a merger, acquisition, financing, reorganization, bankruptcy, sale of assets, or similar corporate transaction, information may be disclosed or transferred as part of that transaction, subject to applicable law.4. Profile, Activity, and Location VisibilityPaceMatcher is designed to help people connect with compatible runners and walkers. Certain information therefore needs to be visible to other users for the Services to function.Depending on the feature and your settings, other users may see information such as:NameProfile photoBioPaceGoalsMatching preferencesVerification statusInformation associated with activities you choose to participate in or sharePaceMatcher may provide privacy controls that allow you to manage the visibility of certain information.Precise device location is not intended to be publicly displayed to all users.You should consider the information you choose to make available when interacting with other people through PaceMatcher.5. Data RetentionWe retain personal information for as long as reasonably necessary to provide the Services and fulfill the purposes described in this Privacy Policy.Retention periods may vary depending on the type of information and why we process it.After an account is deleted, we may retain certain information for a limited period where reasonably necessary for:Safety and securityFraud preventionInvestigation of reports or incidentsEnforcement of our policiesCompliance with legal or regulatory obligationsResolving disputesEstablishing, exercising, or defending legal claimsWe may retain aggregated or de-identified information where it no longer reasonably identifies an individual.As described above, selfies submitted for PaceMatcher’s selfie-verification process, facial-analysis data, and match scores are not retained after the verification process is completed.6. Your Rights and ChoicesDepending on where you live and applicable law, you may have rights regarding your personal information, including the ability to:Access certain personal information.Correct inaccurate information.Request deletion of certain information.Delete your PaceMatcher account.Request a copy of certain information.Manage profile and privacy settings.Manage device permissions, including location permissions.Disconnect connected third-party services.Withdraw consent where processing relies on consent.Appeal certain decisions regarding a privacy request where required by law.To submit a privacy request, contact:privacy@pacematcher.comWe may need to verify your identity before completing certain requests.Additional rights may apply depending on your state, country, or region.7. SecurityPaceMatcher uses reasonable administrative, technical, and organizational safeguards designed to protect personal information.However, no application, internet transmission, storage system, or security measure can be guaranteed to be completely secure.Users should exercise care when deciding what information to share through PaceMatcher or directly with other users.8. Safety and VerificationPaceMatcher provides features designed to support safer and more informed interactions between users. These may include verification, reporting, blocking, privacy controls, and other safety tools.These features are intended to provide users with additional information and controls when deciding whether and how to interact with others.No verification, matching, reporting, or other safety feature can guarantee another person’s identity, behavior, intentions, reliability, or safety.Users remain responsible for deciding whether, when, where, and with whom they interact or participate in activities.Additional requirements governing user conduct and interactions may be contained in PaceMatcher’s Terms of Service and Community Guidelines.9. Consumer Health and Fitness InformationCertain fitness, activity, and related information processed by PaceMatcher may be considered consumer health data under applicable law.PaceMatcher maintains additional disclosures regarding covered consumer health data, including a Consumer Health Data Privacy Policy where applicable. These disclosures explain the categories of covered information we process, how that information is used and shared, and rights available to consumers.10. Children’s PrivacyPaceMatcher is intended only for individuals who are 18 years of age or older.We do not knowingly permit individuals under 18 to create PaceMatcher accounts or knowingly collect personal information from children through the Services.If we learn that an individual under 18 has created an account, we may take steps to remove the account and associated information as appropriate.11. Third-Party ServicesPaceMatcher may contain links to, integrations with, or functionality provided by third-party services.When you interact directly with a third-party service, that third party may independently collect and process information under its own privacy policy and terms.This Privacy Policy does not govern information a third party independently processes under its own policies.12. Changes to This Privacy PolicyWe may update this Privacy Policy as PaceMatcher, our Services, and applicable laws evolve.If we make material changes, we may provide notice through the Services, by email, or through another appropriate method.The “Last Updated” date at the beginning of this Privacy Policy indicates when it was most recently revised.13. Contact UsIf you have questions, concerns, or requests regarding this Privacy Policy or PaceMatcher’s privacy practices, contact:PaceMatcher LLCEmail: privacy@pacematcher.comWebsite: pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [],
+        "externalLinks": [
+          {
+            "text": "pacematcher.com",
+            "href": "https://pacematcher.com/",
+            "target": null,
+            "rel": null
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "clipped": [],
+        "footerTop": 13380,
+        "documentHeight": 13487
+      },
+      "topScreenshot": "privacy-policy-1440-top.png",
+      "screenshot": "privacy-policy-1440-full.png"
+    },
+    {
+      "page": "/terms-of-service/",
+      "refreshHeading": "Terms of Service",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "320",
+        "status": 200,
+        "title": "Terms of Service - PaceMatcher",
+        "heading": "Terms of Service",
+        "date": "Last updated: May 4, 2026",
+        "sectionHeadings": [
+          "1. About PaceMatcher",
+          "2. Eligibility",
+          "3. Your Account",
+          "4. User Profiles and Content",
+          "5. Matching, Messaging, and Safety",
+          "6. Run Tracking and Location Features",
+          "7. Prohibited Conduct",
+          "8. Subscriptions, Purchases, and Payments",
+          "9. Third-Party Services",
+          "10. Privacy",
+          "11. Account Suspension or Termination",
+          "12. Service Availability",
+          "13. Disclaimers",
+          "14. Limitation of Liability",
+          "15. Indemnity",
+          "16. Changes to These Terms",
+          "17. Contact Us"
+        ],
+        "subsectionHeadings": [],
+        "listCount": 1,
+        "listItemCount": 7,
+        "text": "PaceMatcher Terms of Service(Last updated: May 4, 2026)Welcome to PaceMatcher. These Terms of Service (“Terms”) govern your access to and use of the PaceMatcher mobile application, website, features, and related services (“PaceMatcher,” “we,” “us,” or “our”). By creating an account or using PaceMatcher, you agree to these Terms.1. About PaceMatcherPaceMatcher helps runners discover compatible running partners, connect through profiles and messaging, and use running-related features such as saved profiles, chats, challenges, achievements, and run tracking.PaceMatcher is not a medical, emergency, coaching, or professional safety service. You are responsible for deciding whether, where, when, and with whom to run.2. EligibilityYou must be at least 18 years old, or the age of majority in your location, to use PaceMatcher. By using PaceMatcher, you confirm that you meet this requirement and that the information you provide is accurate.3. Your AccountYou may sign in using supported authentication providers, such as Google, Apple, or Facebook. You are responsible for maintaining the security of your account and for all activity that occurs under it.You agree not to create an account using false information, impersonate another person, or use another user’s account without permission.4. User Profiles and ContentYou may upload or share information such as your name, photos, running preferences, location-related details, messages, and other content (“User Content”).You retain ownership of your User Content. By submitting User Content, you grant PaceMatcher a worldwide, non-exclusive, royalty-free license to host, store, display, process, and use that content as needed to operate, improve, and provide the service.You are responsible for your User Content and agree not to upload or share content that is illegal, harmful, threatening, harassing, discriminatory, sexually explicit, deceptive, infringing, or otherwise inappropriate.5. Matching, Messaging, and SafetyPaceMatcher may suggest or display potential running partners based on profile details, preferences, location-related information, activity, or other signals. We do not guarantee compatibility, availability, conduct, identity, background, fitness level, or safety of any user.When meeting another user, use good judgment. Meet in public places, tell someone where you are going, follow local laws, and do not share sensitive personal information with people you do not trust.If you experience unsafe, abusive, or suspicious behavior, stop communication and use available reporting or blocking tools.6. Run Tracking and Location FeaturesPaceMatcher may include features that use location, route, pace, distance, or activity data. These features are provided for convenience and may be inaccurate, unavailable, delayed, or affected by device settings, GPS conditions, network connectivity, or third-party services.Do not rely on PaceMatcher for emergency response, navigation in dangerous areas, medical decisions, or personal safety.7. Prohibited ConductYou agree not to:Use PaceMatcher for unlawful, harmful, abusive, or fraudulent purposes.Harass, threaten, stalk, exploit, or discriminate against other users.Upload false, misleading, or inappropriate content.Attempt to access another user’s account or private information.Scrape, copy, reverse engineer, disrupt, or overload the service.Use PaceMatcher to send spam, scams, malware, or unauthorized promotions.Violate any applicable law, regulation, or third-party right.8. Subscriptions, Purchases, and PaymentsIf PaceMatcher offers paid features, subscriptions, or in-app purchases, pricing and billing terms will be shown before purchase. Purchases made through the Apple App Store or Google Play are handled by those platforms and are subject to their payment, cancellation, and refund rules.You are responsible for managing subscriptions through your app store account unless we provide another approved billing method.Google Play requires developers to clearly inform users about pricing and subscription terms for paid app features, and Apple provides standard or custom license terms for apps distributed through the App Store. See Google Play’s payment policy and Apple’s developer terms for platform-specific requirements:Google Play Payments PolicyApple Developer Agreements and Guidelines9. Third-Party ServicesPaceMatcher may use or integrate with third-party services, including authentication providers, maps, analytics, cloud hosting, notifications, app stores, or payment processors. Your use of those services may be subject to their own terms and privacy policies.We are not responsible for third-party services that we do not control.10. PrivacyYour use of PaceMatcher is also governed by our Privacy Policy, which explains how we collect, use, and share information. Please review it at:https://pacematcher.com/privacy11. Account Suspension or TerminationWe may suspend or terminate your access to PaceMatcher if we believe you violated these Terms, created risk for other users, misused the service, or if we need to protect PaceMatcher, our users, or others.You may stop using PaceMatcher at any time. You may also request account deletion through the app or by contacting us.12. Service AvailabilityWe may update, modify, suspend, or discontinue any part of PaceMatcher at any time. We do not guarantee that the service will always be available, secure, uninterrupted, or error-free.13. DisclaimersPaceMatcher is provided “as is” and “as available.” To the fullest extent permitted by law, we disclaim all warranties, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, accuracy, availability, and non-infringement.We do not guarantee that users are who they say they are, that matches will be suitable, or that running with another user will be safe.14. Limitation of LiabilityTo the fullest extent permitted by law, PaceMatcher and its owners, operators, employees, contractors, and affiliates will not be liable for indirect, incidental, consequential, special, exemplary, or punitive damages, or for loss of data, profits, goodwill, or other intangible losses arising from your use of the service.Nothing in these Terms limits liability that cannot be limited under applicable law.15. IndemnityYou agree to defend, indemnify, and hold harmless PaceMatcher from claims, damages, liabilities, losses, and expenses arising from your use of the service, your User Content, your violation of these Terms, or your violation of any law or third-party right.16. Changes to These TermsWe may update these Terms from time to time. If we make material changes, we may notify you through the app, website, or other reasonable means. Your continued use of PaceMatcher after changes become effective means you accept the updated Terms.17. Contact UsIf you have questions about these Terms, contact us at:support@pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [
+          {
+            "text": "https://pacematcher.com/privacy",
+            "href": "/privacy-policy/"
+          }
+        ],
+        "externalLinks": [
+          {
+            "text": "Google Play Payments Policy",
+            "href": "https://support.google.com/googleplay/android-developer/answer/9858738",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "text": "Apple Developer Agreements and Guidelines",
+            "href": "https://developer.apple.com/support/terms/",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 320,
+        "clientWidth": 320,
+        "clipped": [],
+        "footerTop": 8785,
+        "documentHeight": 8976
+      },
+      "topScreenshot": "terms-of-service-320-top.png",
+      "screenshot": "terms-of-service-320-full.png"
+    },
+    {
+      "page": "/terms-of-service/",
+      "refreshHeading": "Terms of Service",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "768",
+        "status": 200,
+        "title": "Terms of Service - PaceMatcher",
+        "heading": "Terms of Service",
+        "date": "Last updated: May 4, 2026",
+        "sectionHeadings": [
+          "1. About PaceMatcher",
+          "2. Eligibility",
+          "3. Your Account",
+          "4. User Profiles and Content",
+          "5. Matching, Messaging, and Safety",
+          "6. Run Tracking and Location Features",
+          "7. Prohibited Conduct",
+          "8. Subscriptions, Purchases, and Payments",
+          "9. Third-Party Services",
+          "10. Privacy",
+          "11. Account Suspension or Termination",
+          "12. Service Availability",
+          "13. Disclaimers",
+          "14. Limitation of Liability",
+          "15. Indemnity",
+          "16. Changes to These Terms",
+          "17. Contact Us"
+        ],
+        "subsectionHeadings": [],
+        "listCount": 1,
+        "listItemCount": 7,
+        "text": "PaceMatcher Terms of Service(Last updated: May 4, 2026)Welcome to PaceMatcher. These Terms of Service (“Terms”) govern your access to and use of the PaceMatcher mobile application, website, features, and related services (“PaceMatcher,” “we,” “us,” or “our”). By creating an account or using PaceMatcher, you agree to these Terms.1. About PaceMatcherPaceMatcher helps runners discover compatible running partners, connect through profiles and messaging, and use running-related features such as saved profiles, chats, challenges, achievements, and run tracking.PaceMatcher is not a medical, emergency, coaching, or professional safety service. You are responsible for deciding whether, where, when, and with whom to run.2. EligibilityYou must be at least 18 years old, or the age of majority in your location, to use PaceMatcher. By using PaceMatcher, you confirm that you meet this requirement and that the information you provide is accurate.3. Your AccountYou may sign in using supported authentication providers, such as Google, Apple, or Facebook. You are responsible for maintaining the security of your account and for all activity that occurs under it.You agree not to create an account using false information, impersonate another person, or use another user’s account without permission.4. User Profiles and ContentYou may upload or share information such as your name, photos, running preferences, location-related details, messages, and other content (“User Content”).You retain ownership of your User Content. By submitting User Content, you grant PaceMatcher a worldwide, non-exclusive, royalty-free license to host, store, display, process, and use that content as needed to operate, improve, and provide the service.You are responsible for your User Content and agree not to upload or share content that is illegal, harmful, threatening, harassing, discriminatory, sexually explicit, deceptive, infringing, or otherwise inappropriate.5. Matching, Messaging, and SafetyPaceMatcher may suggest or display potential running partners based on profile details, preferences, location-related information, activity, or other signals. We do not guarantee compatibility, availability, conduct, identity, background, fitness level, or safety of any user.When meeting another user, use good judgment. Meet in public places, tell someone where you are going, follow local laws, and do not share sensitive personal information with people you do not trust.If you experience unsafe, abusive, or suspicious behavior, stop communication and use available reporting or blocking tools.6. Run Tracking and Location FeaturesPaceMatcher may include features that use location, route, pace, distance, or activity data. These features are provided for convenience and may be inaccurate, unavailable, delayed, or affected by device settings, GPS conditions, network connectivity, or third-party services.Do not rely on PaceMatcher for emergency response, navigation in dangerous areas, medical decisions, or personal safety.7. Prohibited ConductYou agree not to:Use PaceMatcher for unlawful, harmful, abusive, or fraudulent purposes.Harass, threaten, stalk, exploit, or discriminate against other users.Upload false, misleading, or inappropriate content.Attempt to access another user’s account or private information.Scrape, copy, reverse engineer, disrupt, or overload the service.Use PaceMatcher to send spam, scams, malware, or unauthorized promotions.Violate any applicable law, regulation, or third-party right.8. Subscriptions, Purchases, and PaymentsIf PaceMatcher offers paid features, subscriptions, or in-app purchases, pricing and billing terms will be shown before purchase. Purchases made through the Apple App Store or Google Play are handled by those platforms and are subject to their payment, cancellation, and refund rules.You are responsible for managing subscriptions through your app store account unless we provide another approved billing method.Google Play requires developers to clearly inform users about pricing and subscription terms for paid app features, and Apple provides standard or custom license terms for apps distributed through the App Store. See Google Play’s payment policy and Apple’s developer terms for platform-specific requirements:Google Play Payments PolicyApple Developer Agreements and Guidelines9. Third-Party ServicesPaceMatcher may use or integrate with third-party services, including authentication providers, maps, analytics, cloud hosting, notifications, app stores, or payment processors. Your use of those services may be subject to their own terms and privacy policies.We are not responsible for third-party services that we do not control.10. PrivacyYour use of PaceMatcher is also governed by our Privacy Policy, which explains how we collect, use, and share information. Please review it at:https://pacematcher.com/privacy11. Account Suspension or TerminationWe may suspend or terminate your access to PaceMatcher if we believe you violated these Terms, created risk for other users, misused the service, or if we need to protect PaceMatcher, our users, or others.You may stop using PaceMatcher at any time. You may also request account deletion through the app or by contacting us.12. Service AvailabilityWe may update, modify, suspend, or discontinue any part of PaceMatcher at any time. We do not guarantee that the service will always be available, secure, uninterrupted, or error-free.13. DisclaimersPaceMatcher is provided “as is” and “as available.” To the fullest extent permitted by law, we disclaim all warranties, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, accuracy, availability, and non-infringement.We do not guarantee that users are who they say they are, that matches will be suitable, or that running with another user will be safe.14. Limitation of LiabilityTo the fullest extent permitted by law, PaceMatcher and its owners, operators, employees, contractors, and affiliates will not be liable for indirect, incidental, consequential, special, exemplary, or punitive damages, or for loss of data, profits, goodwill, or other intangible losses arising from your use of the service.Nothing in these Terms limits liability that cannot be limited under applicable law.15. IndemnityYou agree to defend, indemnify, and hold harmless PaceMatcher from claims, damages, liabilities, losses, and expenses arising from your use of the service, your User Content, your violation of these Terms, or your violation of any law or third-party right.16. Changes to These TermsWe may update these Terms from time to time. If we make material changes, we may notify you through the app, website, or other reasonable means. Your continued use of PaceMatcher after changes become effective means you accept the updated Terms.17. Contact UsIf you have questions about these Terms, contact us at:support@pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [
+          {
+            "text": "https://pacematcher.com/privacy",
+            "href": "/privacy-policy/"
+          }
+        ],
+        "externalLinks": [
+          {
+            "text": "Google Play Payments Policy",
+            "href": "https://support.google.com/googleplay/android-developer/answer/9858738",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "text": "Apple Developer Agreements and Guidelines",
+            "href": "https://developer.apple.com/support/terms/",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "clipped": [],
+        "footerTop": 5766,
+        "documentHeight": 5963
+      },
+      "topScreenshot": "terms-of-service-768-top.png",
+      "screenshot": "terms-of-service-768-full.png"
+    },
+    {
+      "page": "/terms-of-service/",
+      "refreshHeading": "Terms of Service",
+      "skipLinkFocus": {
+        "className": "skip-link",
+        "top": 12
+      },
+      "logoFocus": {
+        "role": "A",
+        "href": "/"
+      },
+      "direct": {
+        "viewport": "1440",
+        "status": 200,
+        "title": "Terms of Service - PaceMatcher",
+        "heading": "Terms of Service",
+        "date": "Last updated: May 4, 2026",
+        "sectionHeadings": [
+          "1. About PaceMatcher",
+          "2. Eligibility",
+          "3. Your Account",
+          "4. User Profiles and Content",
+          "5. Matching, Messaging, and Safety",
+          "6. Run Tracking and Location Features",
+          "7. Prohibited Conduct",
+          "8. Subscriptions, Purchases, and Payments",
+          "9. Third-Party Services",
+          "10. Privacy",
+          "11. Account Suspension or Termination",
+          "12. Service Availability",
+          "13. Disclaimers",
+          "14. Limitation of Liability",
+          "15. Indemnity",
+          "16. Changes to These Terms",
+          "17. Contact Us"
+        ],
+        "subsectionHeadings": [],
+        "listCount": 1,
+        "listItemCount": 7,
+        "text": "PaceMatcher Terms of Service(Last updated: May 4, 2026)Welcome to PaceMatcher. These Terms of Service (“Terms”) govern your access to and use of the PaceMatcher mobile application, website, features, and related services (“PaceMatcher,” “we,” “us,” or “our”). By creating an account or using PaceMatcher, you agree to these Terms.1. About PaceMatcherPaceMatcher helps runners discover compatible running partners, connect through profiles and messaging, and use running-related features such as saved profiles, chats, challenges, achievements, and run tracking.PaceMatcher is not a medical, emergency, coaching, or professional safety service. You are responsible for deciding whether, where, when, and with whom to run.2. EligibilityYou must be at least 18 years old, or the age of majority in your location, to use PaceMatcher. By using PaceMatcher, you confirm that you meet this requirement and that the information you provide is accurate.3. Your AccountYou may sign in using supported authentication providers, such as Google, Apple, or Facebook. You are responsible for maintaining the security of your account and for all activity that occurs under it.You agree not to create an account using false information, impersonate another person, or use another user’s account without permission.4. User Profiles and ContentYou may upload or share information such as your name, photos, running preferences, location-related details, messages, and other content (“User Content”).You retain ownership of your User Content. By submitting User Content, you grant PaceMatcher a worldwide, non-exclusive, royalty-free license to host, store, display, process, and use that content as needed to operate, improve, and provide the service.You are responsible for your User Content and agree not to upload or share content that is illegal, harmful, threatening, harassing, discriminatory, sexually explicit, deceptive, infringing, or otherwise inappropriate.5. Matching, Messaging, and SafetyPaceMatcher may suggest or display potential running partners based on profile details, preferences, location-related information, activity, or other signals. We do not guarantee compatibility, availability, conduct, identity, background, fitness level, or safety of any user.When meeting another user, use good judgment. Meet in public places, tell someone where you are going, follow local laws, and do not share sensitive personal information with people you do not trust.If you experience unsafe, abusive, or suspicious behavior, stop communication and use available reporting or blocking tools.6. Run Tracking and Location FeaturesPaceMatcher may include features that use location, route, pace, distance, or activity data. These features are provided for convenience and may be inaccurate, unavailable, delayed, or affected by device settings, GPS conditions, network connectivity, or third-party services.Do not rely on PaceMatcher for emergency response, navigation in dangerous areas, medical decisions, or personal safety.7. Prohibited ConductYou agree not to:Use PaceMatcher for unlawful, harmful, abusive, or fraudulent purposes.Harass, threaten, stalk, exploit, or discriminate against other users.Upload false, misleading, or inappropriate content.Attempt to access another user’s account or private information.Scrape, copy, reverse engineer, disrupt, or overload the service.Use PaceMatcher to send spam, scams, malware, or unauthorized promotions.Violate any applicable law, regulation, or third-party right.8. Subscriptions, Purchases, and PaymentsIf PaceMatcher offers paid features, subscriptions, or in-app purchases, pricing and billing terms will be shown before purchase. Purchases made through the Apple App Store or Google Play are handled by those platforms and are subject to their payment, cancellation, and refund rules.You are responsible for managing subscriptions through your app store account unless we provide another approved billing method.Google Play requires developers to clearly inform users about pricing and subscription terms for paid app features, and Apple provides standard or custom license terms for apps distributed through the App Store. See Google Play’s payment policy and Apple’s developer terms for platform-specific requirements:Google Play Payments PolicyApple Developer Agreements and Guidelines9. Third-Party ServicesPaceMatcher may use or integrate with third-party services, including authentication providers, maps, analytics, cloud hosting, notifications, app stores, or payment processors. Your use of those services may be subject to their own terms and privacy policies.We are not responsible for third-party services that we do not control.10. PrivacyYour use of PaceMatcher is also governed by our Privacy Policy, which explains how we collect, use, and share information. Please review it at:https://pacematcher.com/privacy11. Account Suspension or TerminationWe may suspend or terminate your access to PaceMatcher if we believe you violated these Terms, created risk for other users, misused the service, or if we need to protect PaceMatcher, our users, or others.You may stop using PaceMatcher at any time. You may also request account deletion through the app or by contacting us.12. Service AvailabilityWe may update, modify, suspend, or discontinue any part of PaceMatcher at any time. We do not guarantee that the service will always be available, secure, uninterrupted, or error-free.13. DisclaimersPaceMatcher is provided “as is” and “as available.” To the fullest extent permitted by law, we disclaim all warranties, whether express, implied, or statutory, including warranties of merchantability, fitness for a particular purpose, accuracy, availability, and non-infringement.We do not guarantee that users are who they say they are, that matches will be suitable, or that running with another user will be safe.14. Limitation of LiabilityTo the fullest extent permitted by law, PaceMatcher and its owners, operators, employees, contractors, and affiliates will not be liable for indirect, incidental, consequential, special, exemplary, or punitive damages, or for loss of data, profits, goodwill, or other intangible losses arising from your use of the service.Nothing in these Terms limits liability that cannot be limited under applicable law.15. IndemnityYou agree to defend, indemnify, and hold harmless PaceMatcher from claims, damages, liabilities, losses, and expenses arising from your use of the service, your User Content, your violation of these Terms, or your violation of any law or third-party right.16. Changes to These TermsWe may update these Terms from time to time. If we make material changes, we may notify you through the app, website, or other reasonable means. Your continued use of PaceMatcher after changes become effective means you accept the updated Terms.17. Contact UsIf you have questions about these Terms, contact us at:support@pacematcher.com",
+        "footerLinks": [
+          {
+            "text": "Instagram",
+            "href": "https://www.instagram.com/pacematcher/"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://www.linkedin.com/company/pacematcher"
+          },
+          {
+            "text": "Privacy",
+            "href": "/privacy-policy/"
+          },
+          {
+            "text": "Terms",
+            "href": "/terms-of-service/"
+          }
+        ],
+        "internalLinks": [
+          {
+            "text": "https://pacematcher.com/privacy",
+            "href": "/privacy-policy/"
+          }
+        ],
+        "externalLinks": [
+          {
+            "text": "Google Play Payments Policy",
+            "href": "https://support.google.com/googleplay/android-developer/answer/9858738",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "text": "Apple Developer Agreements and Guidelines",
+            "href": "https://developer.apple.com/support/terms/",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        ],
+        "imagesLoaded": true,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "clipped": [],
+        "footerTop": 6567,
+        "documentHeight": 6674
+      },
+      "topScreenshot": "terms-of-service-1440-top.png",
+      "screenshot": "terms-of-service-1440-full.png"
+    }
+  ],
+  "interactions": {
+    "homeHeading": "Your pace.\nYour people.",
+    "footerPrivacyNavigation": "/privacy-policy/",
+    "footerTermsNavigation": "/terms-of-service/",
+    "termsPrivacyLinks": [
+      {
+        "text": "https://pacematcher.com/privacy",
+        "href": "/privacy-policy/"
+      }
+    ],
+    "homeReturnNavigation": "/"
+  },
+  "errors": []
+}

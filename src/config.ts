@@ -12,7 +12,8 @@ export const siteConfig = {
   appStoreUrl: "https://apps.apple.com/ci/app/pacematcher/id6752578460",
   googlePlayUrl:
     "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
-  privacyPolicyUrl: "https://pacematcher.com/privacy-policy",
+  privacyPolicyUrl: "/privacy-policy/",
+  termsOfServiceUrl: "/terms-of-service/",
 } as const;
 
 export const footerDestinations: FooterDestination[] = [
@@ -34,6 +35,6 @@ export const footerDestinations: FooterDestination[] = [
   {
     key: "terms",
     label: "Terms",
-    url: "https://pacematcher.com/terms-of-service",
+    url: siteConfig.termsOfServiceUrl,
   },
 ];

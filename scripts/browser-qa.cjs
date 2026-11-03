@@ -6,7 +6,9 @@ const playwrightModulePath = process.env.PLAYWRIGHT_MODULE_PATH || "playwright";
 const chromeExecutable =
   process.env.CHROME_EXECUTABLE || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const baseUrl = process.env.PACEMATCHER_BASE_URL || "http://127.0.0.1:4173/";
-const qaDir = path.resolve(__dirname, "../docs/agent-work/pacematcher-refinement/qa");
+const qaDir = process.env.PACEMATCHER_QA_DIR
+  ? path.resolve(process.env.PACEMATCHER_QA_DIR)
+  : path.resolve(__dirname, "../docs/agent-work/pacematcher-refinement/qa");
 const { chromium } = require(playwrightModulePath);
 
 function parseCssColor(value) {
@@ -637,7 +639,7 @@ async function run() {
       assert.match(result.safetyText, /Location access can be approximate/i);
       assert.doesNotMatch(result.safetyText, /Map access/i);
       assert.equal(result.storyContributionCount, 3);
-      assert.equal(result.safetyPolicyHref, "https://pacematcher.com/privacy-policy");
+      assert.equal(result.safetyPolicyHref, "/privacy-policy/");
       assert.equal(result.headerCta.text, "Get the app");
       assert.equal(result.headerCta.href, "#download");
       assert.match(result.locationFaqAnswer, /device permissions/i);
@@ -678,7 +680,7 @@ async function run() {
       );
       assert.ok(
         result.contrastAudit.microLabel >= 4.5,
-        `${result.viewport}: hero micro-label contrast is below 4.5:1`,
+        `${result.viewport}: hero micro-label contrast is ${result.contrastAudit.microLabel}:1`,
       );
       assert.ok(
         result.contrastAudit.safetyPolicy >= 4.5,
@@ -765,8 +767,8 @@ async function run() {
     assert.deepEqual(footerUrls, [
       "https://www.instagram.com/pacematcher/",
       "https://www.linkedin.com/company/pacematcher",
-      "https://pacematcher.com/privacy-policy",
-      "https://pacematcher.com/terms-of-service",
+      "/privacy-policy/",
+      "/terms-of-service/",
     ]);
     assert.equal(contactHref, "mailto:contact@pacematcher.com");
     assert.equal(reducedMotion.scrollBehavior, "auto");
