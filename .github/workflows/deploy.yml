@@ -161,6 +161,9 @@ jobs:
             --include='/privacy-policy/***' \
             --include='/terms-of-service/***' \
             --include='/favicon.svg' \
+            --include='/favicon-32.png' \
+            --include='/favicon-192.png' \
+            --include='/apple-touch-icon.png' \
             --exclude='*' \
             -e "ssh ${ssh_options[*]}" \
             dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
