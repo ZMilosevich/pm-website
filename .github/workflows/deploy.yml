@@ -158,6 +158,8 @@ jobs:
             --include='/assets/***' \
             --include='/images/***' \
             --include='/fonts/***' \
+            --include='/privacy-policy/***' \
+            --include='/terms-of-service/***' \
             --include='/favicon.svg' \
             --exclude='*' \
             -e "ssh ${ssh_options[*]}" \
