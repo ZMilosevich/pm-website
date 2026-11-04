@@ -1,4 +1,4 @@
-import { CalendarDays, Footprints, UsersRound, type LucideIcon } from "lucide-react";
+import { Footprints, MessageCircle, UsersRound, type LucideIcon } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const steps: Array<{ number: string; title: string; description: string; icon: LucideIcon }> = [
@@ -18,7 +18,7 @@ const steps: Array<{ number: string; title: string; description: string; icon: L
     number: "03",
     title: "Connect and coordinate",
     description: "Start a conversation and plan a run or walk together.",
-    icon: CalendarDays,
+    icon: MessageCircle,
   },
 ];
 

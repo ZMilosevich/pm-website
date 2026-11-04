@@ -857,6 +857,10 @@ h3 {
   grid-row: 2;
 }
 
+.step:nth-child(2) .step__copy {
+  transform: translateY(0.875rem);
+}
+
 .step__copy h3 {
   margin-top: 10px;
 }
@@ -2017,6 +2021,10 @@ h3 {
 
   .step__copy p {
     max-width: 24rem;
+  }
+
+  .step:nth-child(2) .step__copy {
+    transform: none;
   }
 
   .app-panel__copy {
