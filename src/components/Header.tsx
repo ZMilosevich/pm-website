@@ -12,22 +12,26 @@ const navigation = [
   { label: "About", href: "#our-story" },
 ] as const;
 
-function getMobileStoreUrl() {
-  if (typeof navigator === "undefined") return "#download";
+type DevicePlatform = "ios" | "android" | "other";
+
+function getDevicePlatform(): DevicePlatform {
+  if (typeof navigator === "undefined") return "other";
 
   const userAgent = navigator.userAgent;
-  const isAndroid = /android/i.test(userAgent);
-  const isAppleMobile = /iPad|iPhone|iPod/i.test(userAgent) ||
-    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-  if (isAndroid) return siteConfig.googlePlayUrl;
-  if (isAppleMobile) return siteConfig.appStoreUrl;
-  return "#download";
+  if (/android/i.test(userAgent)) return "android";
+  if (
+    /iPad|iPhone|iPod/i.test(userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  ) {
+    return "ios";
+  }
+  return "other";
 }
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
+  const [devicePlatform] = useState(getDevicePlatform);
   const menuToggleRef = useRef<HTMLButtonElement>(null);
   const headerCtaRef = useRef<HTMLButtonElement>(null);
   const downloadDialogRef = useRef<HTMLDialogElement>(null);
@@ -117,7 +121,7 @@ export function Header() {
           ))}
           <a
             className="button button--primary"
-            href={getMobileStoreUrl()}
+            href={`${siteConfig.appRedirectUrl}?src=nav`}
             onClick={closeMenu}
             tabIndex={isMenuOpen ? 0 : -1}
           >
@@ -130,6 +134,8 @@ export function Header() {
         ref={downloadDialogRef}
         className="app-download-dialog"
         id="app-download-dialog"
+        role="dialog"
+        aria-modal="true"
         aria-labelledby="app-download-title"
         onClick={(event) => {
           if (event.target === event.currentTarget) closeDownloadDialog();
@@ -148,6 +154,7 @@ export function Header() {
             <div>
               <p className="eyebrow">Get the app</p>
               <h2 id="app-download-title">Find your running people.</h2>
+              <p className="app-download-dialog__reassurance">Free on iOS and Android.</p>
             </div>
             <button
               className="app-download-dialog__close"
@@ -158,26 +165,41 @@ export function Header() {
               <X aria-hidden="true" />
             </button>
           </div>
-          <div className="app-download-dialog__options">
+          <div
+            className={`app-download-dialog__options ${
+              devicePlatform !== "other" ? "app-download-dialog__options--mobile" : ""
+            }`}
+          >
             <div className="app-download-dialog__stores">
-              <p>Choose your store</p>
-              <StoreBadges className="store-badges--dialog" />
-            </div>
-            <a
-              className="app-download-dialog__qr"
-              href={siteConfig.downloadLandingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Scan the QR code to open PaceMatcher on your phone"
-            >
-              <img
-                src="/images/pacematcher-download-qr.svg"
-                alt=""
-                width="144"
-                height="144"
+              <p>
+                {devicePlatform === "other"
+                  ? "Choose your store"
+                  : "Get PaceMatcher for your phone"}
+              </p>
+              <StoreBadges
+                className="store-badges--dialog"
+                platform={devicePlatform === "other" ? undefined : devicePlatform}
               />
-              <span>Scan to open on your phone</span>
-            </a>
+            </div>
+            {devicePlatform === "other" && (
+              <a
+                className="app-download-dialog__qr"
+                href={`${siteConfig.appRedirectUrl}?src=qr`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open the app download link, or scan the QR code with your phone"
+              >
+                <span className="app-download-dialog__qr-frame">
+                  <img
+                    src="/images/pacematcher-download-qr.svg"
+                    alt=""
+                    width="144"
+                    height="144"
+                  />
+                </span>
+                <span>Scan to open on your phone</span>
+              </a>
+            )}
           </div>
         </div>
       </dialog>

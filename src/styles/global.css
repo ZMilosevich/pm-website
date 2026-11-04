@@ -478,7 +478,7 @@ h3 {
 
 .app-download-dialog__content {
   display: grid;
-  gap: 1.8rem;
+  gap: 1.35rem;
   padding: clamp(1.4rem, 4vw, 2.25rem);
 }
 
@@ -504,6 +504,12 @@ h3 {
   line-height: 1;
 }
 
+.app-download-dialog__reassurance {
+  margin-top: 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
 .app-download-dialog__close {
   display: grid;
   width: 2.5rem;
@@ -520,9 +526,14 @@ h3 {
     color 180ms ease;
 }
 
-.app-download-dialog__close:hover,
-.app-download-dialog__close:focus-visible {
+.app-download-dialog__close:hover {
   border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.app-download-dialog__close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
   color: var(--color-text);
 }
 
@@ -534,8 +545,12 @@ h3 {
 .app-download-dialog__options {
   display: grid;
   align-items: center;
-  grid-template-columns: minmax(0, 1fr) 9.5rem;
+  grid-template-columns: minmax(0, 1fr) 8.5rem;
   gap: 1.5rem;
+}
+
+.app-download-dialog__options.app-download-dialog__options--mobile {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .app-download-dialog__stores > p {
@@ -549,16 +564,31 @@ h3 {
   width: 100%;
 }
 
+.store-badges--dialog.store-badges--single {
+  max-width: 18rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .app-download-dialog__qr {
   display: grid;
   justify-items: center;
-  gap: 0.55rem;
+  gap: 0.5rem;
   border: 1px solid var(--color-border);
   border-radius: 0.9rem;
-  padding: 0.85rem;
-  background: #fff;
-  color: #343438;
+  padding: 0.65rem;
+  background: var(--color-surface-raised);
+  color: var(--color-muted-strong);
   text-align: center;
+}
+
+.app-download-dialog__qr-frame {
+  display: grid;
+  width: 6.3rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 0.55rem;
+  padding: 0.3rem;
+  background: #fff;
 }
 
 .app-download-dialog__qr img {
@@ -566,8 +596,8 @@ h3 {
   height: auto;
 }
 
-.app-download-dialog__qr span {
-  font-size: 0.7rem;
+.app-download-dialog__qr > span:last-child {
+  font-size: 0.66rem;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -2179,6 +2209,14 @@ h3 {
   .store-badges {
     width: 100%;
     max-width: 23rem;
+  }
+
+  .app-download-dialog__options:not(.app-download-dialog__options--mobile) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app-download-dialog__qr {
+    justify-self: start;
   }
 
   .button--primary {

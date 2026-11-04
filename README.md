@@ -56,6 +56,7 @@ Official app-store and footer destinations are centralized in `src/config.ts`:
 
 - App Store: `https://apps.apple.com/us/app/pacematcher/id6752578460`
 - Google Play: `https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en`
+- App smart link: `https://pacematcher.com/get`
 - Privacy: `https://pacematcher.com/privacy-policy`
 - Terms: `https://pacematcher.com/terms-of-service`
 - LinkedIn: `https://www.linkedin.com/company/pacematcher`
@@ -72,6 +73,10 @@ marketing artwork:
 Both assets were retrieved from the respective platform marketing resources on
 2026-11-02 and are stored under `public/images/`. Their trademark and brand
 guidelines remain with Apple and Google respectively.
+
+The smart-link QR is a local SVG asset, not a remotely hosted image. Regenerate
+it with `python3 scripts/generate-smart-link-qr.py` if the QR destination changes;
+the script uses the local OpenCV Python module and does not run during builds.
 
 ## Cloudways deployment
 
@@ -106,8 +111,8 @@ the intended dedicated PaceMatcher document root, take a complete Cloudways
 backup, and verify that the existing legal pages and other unrelated files are
 in place. The marker authorizes the directory; it does not authorize existing
 files that would collide with this release. A pre-existing `index.html`,
-`assets/` path, `images/` path, `fonts/` path, or favicon must be reviewed,
-backed up, and moved by the owner before the first automated upload.
+`get.php`, `assets/` path, `images/` path, `fonts/` path, or favicon must be
+reviewed, backed up, and moved by the owner before the first automated upload.
 
 Only after that migration review, create the marker once from an authenticated
 SSH session:
@@ -140,6 +145,31 @@ or Nginx routes in place because this single-page build does not implement
 those policies. The workflow does not log credentials or disable host
 verification.
 
+### App smart link
+
+The QR code points to `https://pacematcher.com/get?src=qr`. The built `get.php`
+endpoint sends iPhone/iPad/iPod visitors to the App Store, Android visitors to
+Google Play, and other devices to the app section on the landing page. It uses a
+302 response and disables caching so store destinations can be changed in
+`public/get.php` without regenerating the QR asset. Keep the direct badge URLs in
+`src/config.ts` in sync when changing a store destination. The mobile navigation
+CTA uses the same endpoint with `src=nav`.
+
+On a Cloudways Lightning Stack, which does not process `.htaccess`, follow the
+[Cloudways Web Rules guide](https://support.cloudways.com/en/articles/12597858-how-to-create-and-manage-web-rules-in-cloudways)
+to add a **Rewrite Rule** with action **Rewrite**, source `/get`, destination
+`/get.php`, and **Keep Original Query String** enabled. This internally routes
+`/get?src=qr` to the PHP endpoint while keeping the short URL in the browser. On
+a Hybrid Stack, add this Apache rule to the existing `.htaccess` file:
+
+```apache
+RewriteEngine On
+RewriteRule ^get/?$ get.php [L,QSA]
+```
+
+The PHP endpoint is included in the deployment artifact; the Cloudways Web Rule
+is an application setting and must be configured once in the Cloudways panel.
+
 Run the local mocked filesystem tests without contacting Cloudways:
 
 ```bash
@@ -168,7 +198,8 @@ location / {
 }
 ```
 
-Do not assume Apache `.htaccess` behavior on the Lightning Stack.
+Do not assume Apache `.htaccess` behavior on the Lightning Stack. Cloudways
+documents its Web Rules as the route for rewrite behavior on that stack.
 
 ## Accessibility and interaction
 

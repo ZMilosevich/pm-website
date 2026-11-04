@@ -12,7 +12,7 @@ export const siteConfig = {
   appStoreUrl: "https://apps.apple.com/us/app/pacematcher/id6752578460",
   googlePlayUrl:
     "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
-  downloadLandingUrl: "https://pacematcher.com/#download",
+  appRedirectUrl: "https://pacematcher.com/get",
   privacyPolicyUrl: "/privacy-policy/",
   termsOfServiceUrl: "/terms-of-service/",
 } as const;
