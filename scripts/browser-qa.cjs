@@ -533,8 +533,8 @@ async function run() {
     const footerUrls = await interactionPage
       .locator(".footer-links a")
       .evaluateAll((anchors) => anchors.map((anchor) => anchor.getAttribute("href")));
-    const contactHref = await interactionPage
-      .locator(".contact__details a")
+    const finalDownloadAppleHref = await interactionPage
+      .locator(".contact .store-badge--apple")
       .getAttribute("href");
 
     await interactionPage.emulateMedia({ reducedMotion: "reduce" });
@@ -599,9 +599,11 @@ async function run() {
 
     process.stdout.write("[qa] evaluating assertions\n");
     const expectedStoreUrls = [
-      "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+      "https://apps.apple.com/us/app/pacematcher/id6752578460",
       "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
-      "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+      "https://apps.apple.com/us/app/pacematcher/id6752578460",
+      "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+      "https://apps.apple.com/us/app/pacematcher/id6752578460",
       "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
     ];
 
@@ -636,7 +638,7 @@ async function run() {
       assert.match(result.productImageAlt, /^Three PaceMatcher app screens/i);
       assert.equal(result.hasBetterMiles, false, `${result.viewport}: obsolete photo section remains`);
       assert.equal(result.safetyCardCount, 3);
-      assert.match(result.safetyText, /Location access can be approximate/i);
+      assert.match(result.safetyText, /Manage location permissions through your device settings/i);
       assert.doesNotMatch(result.safetyText, /Map access/i);
       assert.equal(result.storyContributionCount, 3);
       assert.equal(result.safetyPolicyHref, "/privacy-policy/");
@@ -770,7 +772,10 @@ async function run() {
       "/privacy-policy/",
       "/terms-of-service/",
     ]);
-    assert.equal(contactHref, "mailto:contact@pacematcher.com");
+    assert.equal(
+      finalDownloadAppleHref,
+      "https://apps.apple.com/us/app/pacematcher/id6752578460",
+    );
     assert.equal(reducedMotion.scrollBehavior, "auto");
     assert.equal(reducedMotion.firstRevealOpacity, "1");
     assert.equal(reducedMotion.firstRevealTransform, "none");
@@ -799,7 +804,7 @@ async function run() {
         faqIconColors,
         arrowFocus,
         footerUrls,
-        contactHref,
+        finalDownloadAppleHref,
         reducedMotion,
       },
       errors,

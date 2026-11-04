@@ -1,5 +1,5 @@
 export type FooterDestination = {
-  key: "instagram" | "linkedin" | "privacy" | "terms";
+  key: "instagram" | "linkedin" | "faq" | "privacy" | "terms";
   label: string;
   url: string;
 };
@@ -9,9 +9,10 @@ export const siteConfig = {
   contactEmail: "contact@pacematcher.com",
   location: "Seattle, Washington",
   copyrightYear: 2026,
-  appStoreUrl: "https://apps.apple.com/ci/app/pacematcher/id6752578460",
+  appStoreUrl: "https://apps.apple.com/us/app/pacematcher/id6752578460",
   googlePlayUrl:
     "https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en",
+  downloadLandingUrl: "https://pacematcher.com/#download",
   privacyPolicyUrl: "/privacy-policy/",
   termsOfServiceUrl: "/terms-of-service/",
 } as const;
@@ -26,6 +27,11 @@ export const footerDestinations: FooterDestination[] = [
     key: "linkedin",
     label: "LinkedIn",
     url: "https://www.linkedin.com/company/pacematcher",
+  },
+  {
+    key: "faq",
+    label: "FAQ",
+    url: "#faq",
   },
   {
     key: "privacy",

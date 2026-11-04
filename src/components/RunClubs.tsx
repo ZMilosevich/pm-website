@@ -10,17 +10,17 @@ import { Reveal } from "./Reveal";
 const features: Array<{ title: string; description: string; icon: LucideIcon }> = [
   {
     title: "Discover clubs nearby",
-    description: "Browse by pace, distance and area.",
+    description: "Explore local running communities and their activities.",
     icon: MapPin,
   },
   {
     title: "Join local events",
-    description: "RSVP to group runs in a tap.",
+    description: "Review pace and schedule information and RSVP in the app.",
     icon: CalendarDays,
   },
   {
-    title: "Chat before you go",
-    description: "Meet the group before the run.",
+    title: "Connect before you go",
+    description: "Use available messaging to coordinate plans.",
     icon: MessageCircle,
   },
 ];
@@ -33,14 +33,14 @@ export function RunClubs() {
           <div className="runclubs-panel__copy">
             <p className="eyebrow">RUNCLUBS &amp; EVENTS</p>
             <h2 id="runclubs-title">
-              <span>Find your club.</span>
+              <span>Find your club.</span>{" "}
               <span>
                 Find your <em>crew.</em>
               </span>
             </h2>
             <p className="runclubs__description">
-              Join local run clubs and their events right in the app. Every group run lists its
-              pace and distance, so you always show up to the right one.
+              Discover local running clubs and events, explore activity details, and connect with
+              the community.
             </p>
             <div className="runclubs-preview" aria-hidden="true">
               <div className="runclubs-preview__top">

@@ -6,25 +6,40 @@ const faqs = [
   {
     question: "Is PaceMatcher only for runners?",
     answer:
-      "Walkers, joggers and runners are all welcome. It starts with finding a pace that feels right for you.",
+      "No. Walkers, joggers, and runners are welcome, whether training for a race or enjoying a casual walk.",
   },
   {
     question: "How does matching work?",
     answer:
-      "PaceMatcher helps you discover people based on your preferred pace, location, availability and running goals.",
+      "Discover people based on pace, location, availability, and goals. Connect through chat and coordinate a run or walk.",
   },
   {
     question: "Is my exact location visible?",
     answer:
-      "Location access can be approximate or precise depending on your device permissions. PaceMatcher is designed to limit public exposure of your precise location.",
+      "Location access can be approximate or precise depending on device permissions. PaceMatcher is designed to limit public exposure of precise location. Review permissions in device settings.",
   },
   {
     question: "Which platforms are available?",
-    answer: "PaceMatcher is available for iOS and Android.",
+    answer:
+      "PaceMatcher is available for iPhone and Android through the App Store and Google Play.",
   },
   {
     question: "How do I join a local run event?",
-    answer: "Open a club or event in the app, check the pace and time, and tap to RSVP.",
+    answer: "Explore clubs and events, review activity details, and tap RSVP.",
+  },
+  {
+    question: "Do I need to be training for a race?",
+    answer:
+      "No. PaceMatcher is for different goals, from marathon training to casual walks.",
+  },
+  {
+    question: "What if I don’t find anyone compatible nearby?",
+    answer:
+      "Matches depend on who is using PaceMatcher locally and how preferences align. Check again later or explore clubs and events.",
+  },
+  {
+    question: "Who can use PaceMatcher?",
+    answer: "PaceMatcher is intended for adults aged 18 and older.",
   },
 ] as const;
 

@@ -1,6 +1,5 @@
-import { ArrowRight } from "lucide-react";
-import { siteConfig } from "../config";
 import { Reveal } from "./Reveal";
+import { StoreBadges } from "./StoreBadges";
 
 export function Contact() {
   return (
@@ -8,19 +7,15 @@ export function Contact() {
       <div className="page-shell contact__grid">
         <Reveal>
           <h2 id="contact-title">
-            Let&apos;s talk <span>pace.</span>
+            Have a run or <span>walk in mind?</span>
           </h2>
         </Reveal>
         <Reveal className="contact__details" delay={100}>
           <p>
-            Questions, feedback or collaboration ideas?
-            <br />
-            We&apos;re all ears.
+            Find people who fit your pace, location, and goals. Start a conversation and see where
+            your next connection takes you.
           </p>
-          <a href={`mailto:${siteConfig.contactEmail}`}>
-            <ArrowRight aria-hidden="true" />
-            <span>{siteConfig.contactEmail}</span>
-          </a>
+          <StoreBadges className="store-badges--contact" />
         </Reveal>
       </div>
     </section>

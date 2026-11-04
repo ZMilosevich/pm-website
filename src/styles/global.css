@@ -165,6 +165,7 @@ h3 {
 
 .button {
   display: inline-flex;
+  cursor: pointer;
   min-height: 2.9rem;
   align-items: center;
   justify-content: center;
@@ -454,6 +455,123 @@ h3 {
   justify-self: end;
 }
 
+.app-download-dialog {
+  width: min(40rem, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 1.4rem;
+  padding: 0;
+  background:
+    radial-gradient(circle at 88% 12%, rgb(255 0 85 / 10%), transparent 18rem),
+    var(--color-surface);
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 48%);
+  color: var(--color-text);
+}
+
+.app-download-dialog::backdrop {
+  background: rgb(0 0 0 / 72%);
+  backdrop-filter: blur(4px);
+}
+
+.app-download-dialog__content {
+  display: grid;
+  gap: 1.8rem;
+  padding: clamp(1.4rem, 4vw, 2.25rem);
+}
+
+.app-download-dialog__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.app-download-dialog .eyebrow {
+  margin-bottom: 0.7rem;
+  border: 0;
+  background: none;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+}
+
+.app-download-dialog h2 {
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.app-download-dialog__close {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface-raised);
+  color: var(--color-muted-strong);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.app-download-dialog__close:hover,
+.app-download-dialog__close:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.app-download-dialog__close svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.app-download-dialog__options {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 9.5rem;
+  gap: 1.5rem;
+}
+
+.app-download-dialog__stores > p {
+  margin-bottom: 0.8rem;
+  color: var(--color-muted-strong);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.store-badges--dialog {
+  width: 100%;
+}
+
+.app-download-dialog__qr {
+  display: grid;
+  justify-items: center;
+  gap: 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.9rem;
+  padding: 0.85rem;
+  background: #fff;
+  color: #343438;
+  text-align: center;
+}
+
+.app-download-dialog__qr img {
+  width: 100%;
+  height: auto;
+}
+
+.app-download-dialog__qr span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 .menu-toggle {
   display: none;
   width: 2.75rem;
@@ -582,7 +700,7 @@ h3 {
 .hero h1 {
   display: flex;
   flex-direction: column;
-  font-size: clamp(3.4rem, 7vw, 6.5rem);
+  font-size: clamp(3.4rem, 7vw, 5.16rem);
   font-weight: 760;
   letter-spacing: -0.058em;
   line-height: 0.9;
@@ -776,7 +894,7 @@ h3 {
   background:
     radial-gradient(circle at 35% 10%, rgb(255 255 255 / 3.5%), transparent 36%),
     var(--color-surface);
-  grid-template-columns: minmax(25rem, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(28rem, 0.95fr) minmax(0, 1.25fr);
 }
 
 .app-panel__copy {
@@ -1080,7 +1198,7 @@ h3 {
 }
 
 .app-feature p {
-  max-width: 20rem;
+  max-width: 24rem;
   font-size: 1.125rem;
 }
 
@@ -1108,7 +1226,7 @@ h3 {
 
 .product-shot img {
   width: 100%;
-  max-width: 92%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -1157,7 +1275,7 @@ h3 {
 
 .safety h2,
 .team h2 {
-  font-size: clamp(2.75rem, 4.45vw, 4rem);
+  font-size: clamp(2.5rem, 3.6vw, 3.25rem);
   font-weight: 720;
   letter-spacing: -0.052em;
   line-height: 0.96;
@@ -1244,26 +1362,77 @@ h3 {
   display: grid;
   align-items: start;
   grid-template-columns: minmax(13rem, 0.45fr) minmax(0, 1fr);
+  grid-template-areas:
+    "eyebrow story"
+    "portrait story";
+  row-gap: 1.35rem;
+}
+
+.team__intro .team__eyebrow {
+  grid-area: eyebrow;
+  margin-bottom: 0;
+}
+
+.team__story-copy {
+  grid-area: story;
+}
+
+.team__founder-portrait {
+  grid-area: portrait;
+  width: clamp(13rem, 18vw, 16rem);
+  aspect-ratio: 1;
+  align-self: start;
+  border: 10px solid #171717;
+  border-radius: 50%;
+  padding: 10px;
+  object-fit: cover;
+  object-position: center 25%;
 }
 
 .team h2 {
-  max-width: 48rem;
+  max-width: 46rem;
+  text-wrap: balance;
 }
 
 .team__mission {
-  max-width: 46rem;
+  max-width: 38rem;
   margin-top: 1.3rem;
-  color: var(--color-muted);
+  color: #c6c6cb;
   font-size: 1.125rem;
+  font-style: normal;
   line-height: 1.6;
+}
+
+.team__mission + .team__mission {
+  margin-top: 1rem;
+}
+
+.team__signature {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.team__pullquote {
+  margin: 0;
+  color: var(--color-muted-strong);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.team__attribution {
+  margin-top: 1.25rem;
+  color: #c6c6cb;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .team__details {
   display: grid;
-  margin-top: 2.5rem;
+  margin-top: 2.8rem;
   border-top: 1px solid var(--color-border);
-  padding-top: 1.4rem;
-  grid-template-columns: minmax(13rem, 0.45fr) minmax(0, 1fr);
+  padding-top: 1.8rem;
+  grid-template-columns: minmax(10rem, 0.25fr) minmax(0, 1.75fr);
 }
 
 .team__members {
@@ -1272,9 +1441,69 @@ h3 {
 }
 
 .team-member {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  align-items: start;
+  column-gap: 0.9rem;
+  position: relative;
   min-height: 6.5rem;
-  padding-inline: clamp(1rem, 2.6vw, 2.5rem);
-  border-left: 1px solid var(--color-border);
+  padding-inline: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.team-member::before {
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  left: 0;
+  width: 1px;
+  background: var(--color-border);
+  content: "";
+}
+
+.team-member__avatar {
+  display: block;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #171717;
+  background: var(--color-surface-raised);
+  background-image: url("/images/team-portraits.png");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+}
+
+.team-member__avatar--andre {
+  background-position: 0% 50%;
+}
+
+.team-member__avatar--zack {
+  background-position: 50% 50%;
+}
+
+.team-member__avatar--varad {
+  background-position: 100% 50%;
+}
+
+.team-member__copy {
+  min-width: 0;
+}
+
+.team-member__name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-member__name a {
+  display: inline-flex;
+  color: var(--color-muted);
+  transition: color 180ms var(--ease-out);
+}
+
+.team-member__name a:hover,
+.team-member__name a:focus-visible {
+  color: var(--color-accent);
 }
 
 .team-member p {
@@ -1405,7 +1634,7 @@ h3 {
 }
 
 .contact h2 {
-  font-size: clamp(3.5rem, 6.3vw, 5.75rem);
+  font-size: clamp(3.5rem, 6.3vw, 5rem);
   font-weight: 730;
   letter-spacing: -0.061em;
   line-height: 0.9;
@@ -1419,6 +1648,14 @@ h3 {
   color: var(--color-muted-strong);
   font-size: 1.125rem;
   line-height: 1.6;
+}
+
+.contact__details .store-badges {
+  margin-top: 1.35rem;
+}
+
+.contact__details .store-badge {
+  margin-top: 0;
 }
 
 .contact__details a {
@@ -1529,6 +1766,11 @@ h3 {
     grid-template-columns: 1fr auto;
   }
 
+  .app-download-dialog__options {
+    grid-template-columns: minmax(0, 1fr) 8rem;
+    gap: 1rem;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
@@ -1635,7 +1877,17 @@ h3 {
   }
 
   .team__intro {
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "story"
+      "portrait";
+    row-gap: 1.25rem;
+  }
+
+  .team__founder-portrait {
+    width: 12rem;
+    margin-top: 0.25rem;
   }
 
   .team__details {
@@ -1647,10 +1899,14 @@ h3 {
   }
 
   .team-member {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
     min-height: auto;
     padding: 1.25rem 0;
     border-top: 1px solid var(--color-border);
-    border-left: 0;
+  }
+
+  .team-member::before {
+    display: none;
   }
 
   .faq__grid {

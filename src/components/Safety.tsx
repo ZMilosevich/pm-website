@@ -6,19 +6,19 @@ const safetyItems = [
   {
     title: "Photo verification",
     description:
-      "Selfie verification compares your selfie with your profile photo. It confirms a visual match, not your identity, background, or safety.",
+      "Selfie verification compares a selfie with a profile photo. It does not verify legal identity, background, or safety.",
     icon: ShieldCheck,
   },
   {
-    title: "Location access",
+    title: "Location privacy",
     description:
-      "Location access can be approximate or precise, depending on your device permissions. PaceMatcher is designed to limit public exposure of precise location.",
+      "Manage location permissions through your device settings. PaceMatcher is designed to limit public exposure of precise location information.",
     icon: MapPin,
   },
   {
     title: "Report and block",
     description:
-      "Use in-app reporting and blocking tools when an interaction feels wrong. For meetups, choose a public place and tell someone your plans.",
+      "Use in-app tools to manage unwanted interactions. Meet in public, use your judgment, and tell someone you trust about your plans.",
     icon: Flag,
   },
 ] as const;
@@ -31,7 +31,7 @@ export function Safety() {
           <div>
             <p className="eyebrow">Safety by design</p>
             <h2 id="safety-title">
-              Run with clearer
+              Connect with clearer{" "}
               <span>expectations.</span>
             </h2>
           </div>

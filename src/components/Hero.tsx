@@ -22,16 +22,16 @@ export function Hero() {
 
       <div className="page-shell hero__inner">
         <div className="hero__copy">
-          <p className="eyebrow hero__eyebrow">Walk. Jog. Run. Together.</p>
+          <p className="eyebrow hero__eyebrow">WALK. JOG. RUN. TOGETHER.</p>
           <h1 id="hero-title">
-            <span>Your pace.</span>
+            <span>Find your pace.</span>{" "}
             <span>
-              Your <em>people.</em>
+              Find your <em>person.</em>
             </span>
           </h1>
           <p className="hero__description">
-            Find people who move like you. Match by pace, goals and location, and make your next
-            outing a shared one.
+            Find company for the run or walk you have in mind. Discover runners and walkers who fit
+            your pace, location, and goals. Connect, chat, and coordinate your next run or walk.
           </p>
           <div className="hero__actions">
             <StoreBadges className="store-badges--hero" />

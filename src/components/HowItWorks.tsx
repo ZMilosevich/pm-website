@@ -4,20 +4,20 @@ import { Reveal } from "./Reveal";
 const steps: Array<{ number: string; title: string; description: string; icon: LucideIcon }> = [
   {
     number: "01",
-    title: "Set your pace",
-    description: "Choose your preferred pace, distance and location.",
+    title: "Set your preferences",
+    description: "Choose your pace, distance, location, and goals.",
     icon: Footprints,
   },
   {
     number: "02",
-    title: "Find your people",
-    description: "Get matched with others who move like you.",
+    title: "Discover compatible people",
+    description: "Explore runners and walkers whose preferences align with yours.",
     icon: UsersRound,
   },
   {
     number: "03",
-    title: "Move together",
-    description: "Plan your outing, connect in chat and hit the road.",
+    title: "Connect and coordinate",
+    description: "Start a conversation and plan a run or walk together.",
     icon: CalendarDays,
   },
 ];
@@ -37,8 +37,8 @@ export function HowItWorks() {
 
         <Reveal className="how-it-works__heading">
           <h2 id="how-title">
-            Good company.
-            <span>Three simple steps.</span>
+            Find your people{" "}
+            <span>in three simple steps.</span>
           </h2>
         </Reveal>
 

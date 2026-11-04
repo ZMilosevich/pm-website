@@ -54,7 +54,7 @@ precise location is impossible.
 
 Official app-store and footer destinations are centralized in `src/config.ts`:
 
-- App Store: `https://apps.apple.com/ci/app/pacematcher/id6752578460`
+- App Store: `https://apps.apple.com/us/app/pacematcher/id6752578460`
 - Google Play: `https://play.google.com/store/apps/details?id=com.pacematcher.frontend&hl=en`
 - Privacy: `https://pacematcher.com/privacy-policy`
 - Terms: `https://pacematcher.com/terms-of-service`
