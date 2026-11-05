@@ -148,12 +148,13 @@ verification.
 ### App smart link
 
 The QR code points to `https://pacematcher.com/get?src=qr`. The built `get.php`
-endpoint sends iPhone/iPad/iPod visitors to the App Store, Android visitors to
-Google Play, and other devices to the app section on the landing page. It uses a
-302 response and disables caching so store destinations can be changed in
-`public/get.php` without regenerating the QR asset. Keep the direct badge URLs in
-`src/config.ts` in sync when changing a store destination. The mobile navigation
-CTA uses the same endpoint with `src=nav`.
+endpoint sends recognized iPhone/iPad/iPod visitors to the App Store and all
+other devices, including unidentified clients, to Google Play. Mac-like iPadOS
+user agents are resolved in the browser so iPads still reach the App Store. The
+endpoint disables caching, so store destinations can be changed in `public/get.php`
+without regenerating the QR asset. Keep the direct badge URLs in `src/config.ts`
+in sync when changing a store destination. The mobile navigation CTA uses the
+same endpoint with `src=nav`.
 
 On a Cloudways Lightning Stack, which does not process `.htaccess`, follow the
 [Cloudways Web Rules guide](https://support.cloudways.com/en/articles/12597858-how-to-create-and-manage-web-rules-in-cloudways)
