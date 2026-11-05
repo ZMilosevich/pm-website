@@ -1552,6 +1552,10 @@ h3 {
   text-wrap: balance;
 }
 
+.team__heading-accent {
+  color: var(--color-accent);
+}
+
 .team__mission {
   max-width: 38rem;
   margin-top: 1.3rem;

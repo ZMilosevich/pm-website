@@ -49,7 +49,8 @@ export function Team() {
           />
           <div className="team__story-copy">
             <h2 id="team-title">
-              Built from a simple challenge: finding people to run with.
+              Built from a simple challenge:{" "}
+              <span className="team__heading-accent">finding people to run with.</span>
             </h2>
             <p className="team__mission">
               Running has helped me explore cities, build friendships, and find community. After
