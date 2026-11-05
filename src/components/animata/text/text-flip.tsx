@@ -1,7 +1,16 @@
-import { useLayoutEffect, useMemo, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
-export default function TextFlip() {
-  const words = useMemo(() => ["pace.", "person.", "crew.", "pace."], []);
+const HERO_WORDS = ["pace.", "person.", "crew.", "pace."] as const;
+
+type TextFlipProps = {
+  words?: readonly string[];
+  className?: string;
+};
+
+export default function TextFlip({
+  words = HERO_WORDS,
+  className = "hero__flip-word",
+}: TextFlipProps = {}) {
   const tallestRef = useRef<HTMLSpanElement>(null);
 
   useLayoutEffect(() => {
@@ -23,7 +32,7 @@ export default function TextFlip() {
   }, [words]);
 
   return (
-    <span ref={tallestRef} className="text-flip__track hero__flip-word" aria-hidden="true">
+    <span ref={tallestRef} className={`text-flip__track ${className}`} aria-hidden="true">
       {words.map((word, index) => (
         <span key={`${word}-${index}`} className="animate-flip-words">
           {word}

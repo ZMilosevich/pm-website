@@ -6,6 +6,9 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
+import TextFlip from "./animata/text/text-flip";
+
+const runClubWords = ["club.", "crew.", "club."] as const;
 
 const features: Array<{ title: string; description: string; icon: LucideIcon }> = [
   {
@@ -32,11 +35,12 @@ export function RunClubs() {
         <Reveal className="runclubs-panel">
           <div className="runclubs-panel__copy">
             <p className="eyebrow">RUNCLUBS &amp; EVENTS</p>
-            <h2 id="runclubs-title">
-              <span>Find your club.</span>{" "}
-              <span>
-                Find your <em>crew.</em>
-              </span>
+            <h2 id="runclubs-title" aria-label="Find your club or crew.">
+              <span aria-hidden="true">Find your </span>
+              <TextFlip
+                words={runClubWords}
+                className="runclubs__flip-word text-flip__track--pair"
+              />
             </h2>
             <p className="runclubs__description">
               Discover local running clubs and events, explore activity details, and connect with

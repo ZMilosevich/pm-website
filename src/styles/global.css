@@ -2,6 +2,7 @@
 
 @theme {
   --animate-flip-words: flip-words 12s infinite;
+  --animate-flip-words-pair: flip-words-pair 10.5s infinite;
 
   @keyframes flip-words {
     10% {
@@ -30,6 +31,31 @@
 
     100% {
       transform: translateY(-300%);
+    }
+  }
+
+  @keyframes flip-words-pair {
+    0%,
+    6.667% {
+      transform: translateY(0);
+    }
+
+    10% {
+      transform: translateY(-112%);
+    }
+
+    13.333%,
+    56.667% {
+      transform: translateY(-100%);
+    }
+
+    60% {
+      transform: translateY(-212%);
+    }
+
+    63.333%,
+    100% {
+      transform: translateY(-200%);
     }
   }
 }
@@ -849,6 +875,10 @@ h3 {
   white-space: nowrap;
 }
 
+.text-flip__track--pair > span.animate-flip-words {
+  animation: var(--animate-flip-words-pair);
+}
+
 .text-flip__measure {
   position: absolute;
   opacity: 0;
@@ -856,6 +886,11 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .hero__flip-word .animate-flip-words {
+    animation: none;
+    transform: none;
+  }
+
+  .runclubs__flip-word .animate-flip-words {
     animation: none;
     transform: none;
   }
@@ -1080,11 +1115,16 @@ h3 {
   line-height: 0.98;
 }
 
-.runclubs-panel h2 span {
-  display: block;
+.runclubs-panel h2 > span:not(.text-flip__track) {
+  display: inline;
 }
 
 .runclubs-panel h2 em {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.runclubs__flip-word {
   color: var(--color-accent);
   font-style: normal;
 }
