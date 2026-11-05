@@ -1,4 +1,5 @@
 import { StoreBadges } from "./StoreBadges";
+import TextFlip from "./animata/text/text-flip";
 
 const heroImage = {
   src: "/images/hero-runners-city.jpg",
@@ -23,11 +24,9 @@ export function Hero() {
       <div className="page-shell hero__inner">
         <div className="hero__copy">
           <p className="eyebrow hero__eyebrow">WALK. JOG. RUN. TOGETHER.</p>
-          <h1 id="hero-title">
-            <span>Find your pace.</span>{" "}
-            <span>
-              Find your <em>person.</em>
-            </span>
+          <h1 id="hero-title" aria-label="Find your pace. Find your person.">
+            <span aria-hidden="true">Find your </span>
+            <TextFlip />
           </h1>
           <p className="hero__description">
             Find company for the run or walk you have in mind. Discover runners and walkers who fit

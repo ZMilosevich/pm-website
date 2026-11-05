@@ -1,5 +1,43 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-flip-words: flip-words 12s infinite;
+
+  @keyframes flip-words {
+    10% {
+      transform: translateY(-112%);
+    }
+
+    25% {
+      transform: translateY(-100%);
+    }
+
+    35% {
+      transform: translateY(-212%);
+    }
+
+    50% {
+      transform: translateY(-200%);
+    }
+
+    60% {
+      transform: translateY(-312%);
+    }
+
+    75% {
+      transform: translateY(-300%);
+    }
+
+    85% {
+      transform: translateY(-412%);
+    }
+
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+}
+
 @font-face {
   font-family: "Inter Variable";
   font-style: normal;
@@ -469,11 +507,53 @@ h3 {
     var(--color-surface);
   box-shadow: 0 2rem 6rem rgb(0 0 0 / 48%);
   color: var(--color-text);
+  opacity: 0;
+  transform: translateY(0.5rem) scale(0.985);
 }
 
 .app-download-dialog::backdrop {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.app-download-dialog[open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.app-download-dialog[open]::backdrop {
   background: rgb(0 0 0 / 72%);
   backdrop-filter: blur(4px);
+}
+
+@supports (transition-behavior: allow-discrete) {
+  .app-download-dialog {
+    transition:
+      opacity 260ms ease,
+      transform 260ms var(--ease-out),
+      display 260ms allow-discrete,
+      overlay 260ms allow-discrete;
+  }
+
+  .app-download-dialog::backdrop {
+    transition:
+      background-color 260ms ease,
+      backdrop-filter 260ms ease;
+  }
+
+  @starting-style {
+    .app-download-dialog[open] {
+      opacity: 0;
+      transform: translateY(0.5rem) scale(0.985);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-download-dialog,
+  .app-download-dialog::backdrop {
+    transition-duration: 0s;
+  }
 }
 
 .app-download-dialog__content {
@@ -728,8 +808,7 @@ h3 {
 }
 
 .hero h1 {
-  display: flex;
-  flex-direction: column;
+  display: block;
   font-size: clamp(3.4rem, 7vw, 5.16rem);
   font-weight: 760;
   letter-spacing: -0.058em;
@@ -739,6 +818,37 @@ h3 {
 .hero h1 em {
   color: var(--color-accent);
   font-style: normal;
+}
+
+.hero__flip-word {
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+.text-flip__track {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  flex-direction: column;
+  vertical-align: baseline;
+  line-height: 1.12;
+}
+
+.text-flip__track > span:not(.text-flip__measure) {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.text-flip__measure {
+  position: absolute;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__flip-word .animate-flip-words {
+    animation: none;
+    transform: none;
+  }
 }
 
 .hero__description {
