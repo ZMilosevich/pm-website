@@ -28,12 +28,12 @@
       transform: translateY(-300%);
     }
 
-    85% {
-      transform: translateY(-412%);
+    75% {
+      transform: translateY(-300%);
     }
 
     100% {
-      transform: translateY(-400%);
+      transform: translateY(-300%);
     }
   }
 }
@@ -1340,7 +1340,7 @@ h3 {
 .app-feature-list {
   display: grid;
   gap: clamp(1rem, 1.7vw, 1.35rem);
-  margin-top: 1.8rem;
+  margin-top: 3rem;
 }
 
 .app-feature {
@@ -1361,18 +1361,30 @@ h3 {
 }
 
 .app-download {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.75rem);
+  bottom: clamp(0.6rem, 3vw, 1.25rem);
+  left: clamp(4rem, 3vw, 4rem);
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  margin-top: 20px;
+  padding: 1rem 1.25rem 1.1rem;
+  text-align: center;
 }
 
 .app-download .eyebrow {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.store-badges--app {
+  width: min(100%, 23rem);
 }
 
 .product-shot {
   position: relative;
   display: flex;
+  justify-content: center;
   min-width: 0;
   min-height: 34rem;
   align-items: center;
@@ -1383,7 +1395,8 @@ h3 {
 }
 
 .product-shot img {
-  width: 100%;
+  width: 90%;
+  align-self: center;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -2006,10 +2019,17 @@ h3 {
 
   .product-shot {
     min-height: 25rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-download {
+    position: static;
+    padding: 1.25rem 0 0;
   }
 
   .product-shot img {
-    width: 100%;
+    width: 90%;
     transform: none;
   }
 
@@ -2232,7 +2252,7 @@ h3 {
   }
 
   .product-shot img {
-    width: 100%;
+    width: 90%;
     object-fit: contain;
     transform: none;
   }

@@ -68,11 +68,6 @@ export function AppShowcase() {
                 );
               })}
             </div>
-
-            <div className="app-download" id="download">
-              <p className="eyebrow">Get the app</p>
-              <StoreBadges className="store-badges--app" />
-            </div>
           </div>
 
           <figure className="product-shot">
@@ -89,6 +84,10 @@ export function AppShowcase() {
               loading="lazy"
               decoding="async"
             />
+            <div className="app-download" id="download">
+              <p className="eyebrow">Get the app</p>
+              <StoreBadges className="store-badges--app" />
+            </div>
           </figure>
         </Reveal>
 

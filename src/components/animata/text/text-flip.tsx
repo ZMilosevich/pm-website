@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useRef } from "react";
 
 export default function TextFlip() {
-  const words = useMemo(() => ["pace.", "person.", "pace.", "person.", "pace."], []);
+  const words = useMemo(() => ["pace.", "person.", "crew.", "pace."], []);
   const tallestRef = useRef<HTMLSpanElement>(null);
 
   useLayoutEffect(() => {
