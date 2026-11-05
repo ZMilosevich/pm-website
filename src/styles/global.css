@@ -454,17 +454,31 @@ h3 {
 }
 
 .desktop-nav {
+  --desktop-nav-gap: clamp(0.9rem, 1.8vw, 2rem);
   display: flex;
   align-items: center;
-  gap: clamp(0.9rem, 1.8vw, 2rem);
+  gap: var(--desktop-nav-gap);
 }
 
 .desktop-nav a {
   position: relative;
   color: var(--color-muted-strong);
-  font-size: 1rem;
-  font-weight: 550;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
   transition: color 180ms ease;
+}
+
+.desktop-nav a + a::before {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--desktop-nav-gap) / -2);
+  width: 1px;
+  height: 0.9rem;
+  background: rgb(212 212 216 / 28%);
+  content: "";
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .desktop-nav a::after {
