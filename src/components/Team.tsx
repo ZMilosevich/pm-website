@@ -18,7 +18,7 @@ const team = [
   },
   {
     name: "Zack Milosevich",
-    role: "Co-Founder · Design",
+    role: "Co-Founder · Product Design",
     contribution: "Leads UX/UI and creative direction.",
     avatar: "zack",
     linkedin: "https://www.linkedin.com/in/zmilosevich/",
