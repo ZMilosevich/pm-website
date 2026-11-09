@@ -165,6 +165,8 @@ jobs:
             --include='/favicon-192.png' \
             --include='/apple-touch-icon.png' \
             --include='/get.php' \
+            --include='/robots.txt' \
+            --include='/sitemap.xml' \
             --exclude='*' \
             -e "ssh ${ssh_options[*]}" \
             dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
