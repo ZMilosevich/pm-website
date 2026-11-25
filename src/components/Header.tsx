@@ -14,6 +14,10 @@ const navigation = [
 
 type DevicePlatform = "ios" | "android" | "other";
 
+type HeaderProps = {
+  homeLinkBase?: string;
+};
+
 function getDevicePlatform(): DevicePlatform {
   if (typeof navigator === "undefined") return "other";
 
@@ -28,7 +32,7 @@ function getDevicePlatform(): DevicePlatform {
   return "other";
 }
 
-export function Header() {
+export function Header({ homeLinkBase = "" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
   const [devicePlatform] = useState(getDevicePlatform);
@@ -72,11 +76,11 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Logo />
+        <Logo href={homeLinkBase || "#top"} />
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href}>
+            <a key={item.href} href={`${homeLinkBase}${item.href}`}>
               {item.label}
             </a>
           ))}
@@ -115,7 +119,12 @@ export function Header() {
       >
         <div className="mobile-nav__inner">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href} onClick={closeMenu} tabIndex={isMenuOpen ? 0 : -1}>
+            <a
+              key={item.href}
+              href={`${homeLinkBase}${item.href}`}
+              onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
+            >
               {item.label}
             </a>
           ))}
