@@ -13,7 +13,6 @@ export default defineConfig({
         home: path.resolve(__dirname, "index.html"),
         privacy: path.resolve(__dirname, "privacy-policy/index.html"),
         terms: path.resolve(__dirname, "terms-of-service/index.html"),
-        publicRun: path.resolve(__dirname, "r/greenlake-sun/index.html"),
       },
     },
   },

@@ -11,21 +11,30 @@ const runStores = [
 ];
 
 type EventStatus = "open" | "full" | "past" | "cancelled";
+type EventKind = "run" | "race";
 type Units = "mi" | "km";
 
 export type PublicRunEvent = {
   title: string;
   description: string;
+  kind?: EventKind;
   status: EventStatus;
   city: string;
   startsAt: string;
   timezone: string;
-  distanceMeters: number;
-  groupPaceSecondsPerKm: number;
-  allowsWalkers: boolean;
-  capacity: number;
+  distanceMeters?: number;
+  distances?: Array<{
+    label: string;
+    distanceMeters: number;
+  }>;
+  groupPaceSecondsPerKm?: number;
+  allowsWalkers?: boolean;
+  capacity?: number;
   attendeeCount: number;
-  club: {
+  club?: {
+    name: string;
+  };
+  organizer?: {
     name: string;
   };
   area: {
@@ -44,8 +53,6 @@ export type PublicRunEvent = {
   attendeesHidden: number;
 };
 
-const shareUrl = "https://pacematcher.com/r/greenlake-sun/";
-const displayShareUrl = "pacematcher.com/r/greenlake-sun";
 const personColors = ["#ff0055", "#3478d4", "#d9961a", "#1ea36e"];
 
 function formatDistance(distanceMeters: number, units: Units) {
@@ -63,32 +70,70 @@ function formatPace(secondsPerKm: number, units: Units) {
   return `${minutes}:${seconds} /${units}`;
 }
 
-function getEventContent(status: EventStatus, city: string) {
+function getEventContent(status: EventStatus, city: string, kind: EventKind) {
+  if (kind === "run") {
+    switch (status) {
+      case "full":
+        return {
+          actionLabel: "Join the waitlist in the app",
+          reassurance: "This run is full. Download PaceMatcher to join the waitlist.",
+          joinTitle: "Join the waitlist in the app",
+          tag: `Run club event · ${city}`,
+        };
+      case "past":
+        return {
+          actionLabel: "See this club's next runs",
+          reassurance: "This run has ended. Explore other PaceMatcher run clubs.",
+          joinTitle: "See this club's next runs",
+          tag: `Past event · ${city}`,
+        };
+      case "cancelled":
+        return {
+          actionLabel: "Find another run",
+          reassurance: "This event has been cancelled. Explore other PaceMatcher run clubs.",
+          joinTitle: "Find another run",
+          tag: `Cancelled event · ${city}`,
+        };
+      case "open":
+        return {
+          actionLabel: "Open in the PaceMatcher app",
+          reassurance:
+            "RSVP is completed in the PaceMatcher app. This public sample shows the event details and official download choices.",
+          joinTitle: "RSVP to this run",
+          tag: `Run club event · ${city}`,
+        };
+    }
+  }
+
   switch (status) {
     case "full":
       return {
-        actionLabel: "Join the waitlist in the app",
-        reassurance: "This run is full. Download PaceMatcher to join the waitlist.",
-        tag: `Run club event · ${city}`,
+        actionLabel: "Join the race waitlist in the app",
+        reassurance: "This race is full. Download PaceMatcher to join the waitlist.",
+        joinTitle: "See this race in PaceMatcher",
+        tag: `Full race · ${city}`,
       };
     case "past":
       return {
-        actionLabel: "See this club's next runs",
-        reassurance: "This run has ended. Explore other PaceMatcher run clubs.",
-        tag: `Past event · ${city}`,
+        actionLabel: "See more races",
+        reassurance: "This race has ended. Explore other events in PaceMatcher.",
+        joinTitle: "Past race",
+        tag: `Past race · ${city}`,
       };
     case "cancelled":
       return {
-        actionLabel: "Find another run",
-        reassurance: "This event has been cancelled. Explore other PaceMatcher run clubs.",
-        tag: `Cancelled event · ${city}`,
+        actionLabel: "Find another race",
+        reassurance: "This event has been cancelled. Explore other events in PaceMatcher.",
+        joinTitle: "Cancelled race",
+        tag: `Cancelled race · ${city}`,
       };
     case "open":
       return {
         actionLabel: "Open in the PaceMatcher app",
         reassurance:
-          "RSVP is completed in the PaceMatcher app. This public sample shows the event details and official download choices.",
-        tag: `Run club event · ${city}`,
+          "This public demo shows how the race appears in PaceMatcher. Use the official organizer for registration and race-day details.",
+        joinTitle: "See this race in PaceMatcher",
+        tag: `Race · ${city}`,
       };
   }
 }
@@ -128,7 +173,13 @@ function EventStat({
   );
 }
 
-export function PublicRunPage({ event }: { event: PublicRunEvent }) {
+export function PublicRunPage({
+  event,
+  shareUrl,
+}: {
+  event: PublicRunEvent;
+  shareUrl: string;
+}) {
   const [units, setUnits] = useState<Units>("mi");
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
   const shareInputRef = useRef<HTMLInputElement>(null);
@@ -145,14 +196,35 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
     timeZoneName: "short",
   });
   const startsAt = new Date(event.startsAt);
-  const content = getEventContent(event.status, event.city);
+  const kind = event.kind ?? "run";
+  const organizerName = event.organizer?.name ?? event.club?.name ?? "";
+  const content = getEventContent(event.status, event.city, kind);
+  const distances =
+    event.distances?.length
+      ? event.distances
+      : event.distanceMeters
+        ? [{ label: "", distanceMeters: event.distanceMeters }]
+        : [];
+  const capacity =
+    typeof event.capacity === "number" &&
+    Number.isFinite(event.capacity) &&
+    event.capacity > 0
+      ? event.capacity
+      : undefined;
   const visibleAttendeeCount =
-    event.status === "full" ? event.capacity : event.attendeeCount;
-  const progress = Math.min((visibleAttendeeCount / event.capacity) * 100, 100);
+    event.status === "full" && capacity !== undefined ? capacity : event.attendeeCount;
+  const progress =
+    capacity === undefined
+      ? 0
+      : Math.min((visibleAttendeeCount / capacity) * 100, 100);
   const hasAppAction = event.status === "open" || event.status === "full";
   const actionUrl = hasAppAction ? "#run-download" : "/#runclubs";
   const paceTolerance = units === "mi" ? "15 sec/mi" : "9 sec/km";
   const description = event.description.replace("15 sec/mi", paceTolerance);
+  const displayShareUrl = shareUrl
+    .replace(/^https?:\/\//, "")
+    .replace(/\/$/, "");
+  const eventName = kind === "race" ? "race" : "run";
 
   const copyShareUrl = async () => {
     try {
@@ -170,7 +242,7 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
   return (
     <>
       <a className="skip-link" href="#run-main">
-        Skip to run details
+        Skip to {eventName} details
       </a>
       <Header homeLinkBase="/" />
 
@@ -180,7 +252,7 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
       >
         {event.status === "cancelled" && (
           <aside className="run-page__banner" role="status">
-            This run has been cancelled by {event.club.name}.
+            This event has been cancelled by {organizerName}.
           </aside>
         )}
 
@@ -217,7 +289,7 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
                 {description}
               </p>
 
-              <section className="run-stats" aria-label="Run details">
+              <section className="run-stats" aria-label={`${kind === "race" ? "Race" : "Run"} details`}>
                 <EventStat icon={<RunIcon name="calendar-days" />} label="Date">
                   <time dateTime={event.startsAt}>{dateFormatter.format(startsAt)}</time>
                 </EventStat>
@@ -225,15 +297,24 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
                   {timeFormatter.format(startsAt)}
                 </EventStat>
                 <EventStat icon={<RunIcon name="route" />} label="Distance">
-                  {formatDistance(event.distanceMeters, units)}
+                  <span className="run-distance-list">
+                    {distances.map((distance) => (
+                      <span key={distance.label || distance.distanceMeters}>
+                        {distance.label && <small>{distance.label}</small>}
+                        {formatDistance(distance.distanceMeters, units)}
+                      </span>
+                    ))}
+                  </span>
                 </EventStat>
-                <EventStat
-                  className="run-stat--pace"
-                  icon={<RunIcon name="gauge-high" />}
-                  label="Group pace"
-                >
-                  <strong>{formatPace(event.groupPaceSecondsPerKm, units)}</strong>
-                </EventStat>
+                {typeof event.groupPaceSecondsPerKm === "number" && (
+                  <EventStat
+                    className="run-stat--pace"
+                    icon={<RunIcon name="gauge-high" />}
+                    label="Group pace"
+                  >
+                    <strong>{formatPace(event.groupPaceSecondsPerKm, units)}</strong>
+                  </EventStat>
+                )}
               </section>
 
               <section className="run-map-card" aria-labelledby="run-area-title">
@@ -249,7 +330,8 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
                   </span>
                   <div>
                     <h2 id="run-area-title">
-                      Meeting point: <span>{event.area.label}</span>
+                      {kind === "race" ? "Race area" : "Meeting point"}:{" "}
+                      <span>{event.area.label}</span>
                     </h2>
                     <p>{event.area.detail}</p>
                   </div>
@@ -260,28 +342,50 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
                 <div className="run-attendees__heading">
                   <h2 id="run-attendees-title">Who's going</h2>
                   <p>
-                    Hosted by {event.club.name}
-                    <span className="run-attendees__privacy"> · First names only</span>
+                    {kind === "race" ? (
+                      <>
+                        Organized by {organizerName}
+                        <span className="run-attendees__privacy">
+                          {" "}
+                          · {visibleAttendeeCount}{" "}
+                          {visibleAttendeeCount === 1 ? "runner" : "runners"} going · First names
+                          only
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        Hosted by {organizerName}
+                        <span className="run-attendees__privacy"> · First names only</span>
+                      </>
+                    )}
                   </p>
                 </div>
                 <div className="run-attendees__list">
-                  {event.attendeesPreview.map((attendee, index) => (
-                    <span className="run-person" key={attendee.firstName}>
-                      <span
-                        className="run-person__initial"
-                        style={{ backgroundColor: personColors[index] }}
-                        aria-hidden="true"
-                      >
-                        {attendee.firstName.charAt(0)}
+                  {event.attendeesPreview.map((attendee, index) => {
+                    const attendeePace =
+                      attendee.paceSecondsPerKm ?? event.groupPaceSecondsPerKm;
+
+                    return (
+                      <span className="run-person" key={attendee.firstName}>
+                        <span
+                          className="run-person__initial"
+                          style={{ backgroundColor: personColors[index] }}
+                          aria-hidden="true"
+                        >
+                          {attendee.firstName.charAt(0)}
+                        </span>
+                        <span>{attendee.firstName}</span>
+                        {attendee.isWalker && (
+                          <span className="run-person__detail">Walker</span>
+                        )}
+                        {!attendee.isWalker && attendeePace != null && (
+                          <span className="run-person__detail">
+                            {formatPace(attendeePace, units)}
+                          </span>
+                        )}
                       </span>
-                      <span>{attendee.firstName}</span>
-                      <span className="run-person__detail">
-                        {attendee.isWalker
-                          ? "Walker"
-                          : formatPace(attendee.paceSecondsPerKm ?? event.groupPaceSecondsPerKm, units)}
-                      </span>
-                    </span>
-                  ))}
+                    );
+                  })}
                   {event.attendeesHidden > 0 && (
                     <span className="run-person run-person--more">
                       +{event.attendeesHidden} more
@@ -292,29 +396,29 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
             </article>
 
             <aside className="run-join" id="join" aria-labelledby="run-join-title">
-              <h2 id="run-join-title">
-                {event.status === "open" ? "RSVP to this run" : content.actionLabel}
-              </h2>
+              <h2 id="run-join-title">{content.joinTitle}</h2>
               <p className="run-join__reassurance">{content.reassurance}</p>
 
-              <div className="run-spots">
-                <div className="run-spots__label">
-                  <span>Spots</span>
-                  <strong>
-                    {visibleAttendeeCount} of {event.capacity} taken
-                  </strong>
+              {capacity !== undefined && (
+                <div className="run-spots">
+                  <div className="run-spots__label">
+                    <span>Spots</span>
+                    <strong>
+                      {visibleAttendeeCount} of {capacity} taken
+                    </strong>
+                  </div>
+                  <div
+                    className="run-spots__track"
+                    role="progressbar"
+                    aria-label={`${visibleAttendeeCount} of ${capacity} event spots taken`}
+                    aria-valuemin={0}
+                    aria-valuemax={capacity}
+                    aria-valuenow={visibleAttendeeCount}
+                  >
+                    <span style={{ width: `${progress}%` }} />
+                  </div>
                 </div>
-                <div
-                  className="run-spots__track"
-                  role="progressbar"
-                  aria-label={`${visibleAttendeeCount} of ${event.capacity} event spots taken`}
-                  aria-valuemin={0}
-                  aria-valuemax={event.capacity}
-                  aria-valuenow={visibleAttendeeCount}
-                >
-                  <span style={{ width: `${progress}%` }} />
-                </div>
-              </div>
+              )}
 
               <a className="run-join__action" href={actionUrl}>
                 {content.actionLabel}
@@ -332,7 +436,7 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
               )}
 
               <div className="run-share">
-                <label htmlFor="run-share-url">Share this run</label>
+                <label htmlFor="run-share-url">Share this {eventName}</label>
                 <div className="run-share__row">
                   <input
                     ref={shareInputRef}

@@ -1,0 +1,32 @@
+{
+  "title": "Seattle Marathon & Half Marathon 2026",
+  "description": "2026 UW Medicine Seattle Marathon & Half Marathon",
+  "kind": "race",
+  "status": "open",
+  "city": "Seattle",
+  "startsAt": "2026-11-29T15:00:00Z",
+  "timezone": "America/Los_Angeles",
+  "distances": [
+    { "label": "Marathon", "distanceMeters": 42195 },
+    { "label": "Half Marathon", "distanceMeters": 21097.5 }
+  ],
+  "attendeeCount": 4,
+  "organizer": {
+    "name": "Seattle Marathon Association"
+  },
+  "area": {
+    "name": "Seattle Center",
+    "label": "5th Ave & Harrison St, Seattle, WA",
+    "detail": "Approximate race area near Seattle Center. Check the official event details before race day.",
+    "latitude": 47.622,
+    "longitude": -122.347,
+    "zoom": 14
+  },
+  "attendeesPreview": [
+    { "firstName": "Ray" },
+    { "firstName": "Simeon" },
+    { "firstName": "Vic" },
+    { "firstName": "Dexter" }
+  ],
+  "attendeesHidden": 0
+}

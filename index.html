@@ -81,7 +81,19 @@
     <title>PaceMatcher | Find Running &amp; Walking Partners</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="run-loader" id="run-loader" role="status" hidden>
+      <div class="run-loader__content">
+        <span class="run-loader__spinner" aria-hidden="true"></span>
+        <span>Loading run details…</span>
+      </div>
+    </div>
+    <div id="root">
+      <aside class="run-page__banner" id="run-data-error" role="status" hidden>
+        <span>The run details couldn’t be refreshed.</span>
+        <button class="button button--outline" type="button">Try again</button>
+        <a class="button button--outline" href="/">Back to home</a>
+      </aside>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

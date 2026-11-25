@@ -15,17 +15,18 @@ npm run dev
 
 The Vite development server listens on `http://127.0.0.1:5173` by default.
 
-The sample public run at `/r/greenlake-sun/` uses Mapbox GL JS with the
-Mapbox Dark vector style.
+The sample public run pages use the homepage with the
+`runclub_events` query parameter. The available event IDs are
+`greenlake-sun-2026` and `seattle-marathon-2026`.
+The maps use Mapbox GL JS with the Mapbox Dark vector style.
 Set `VITE_MAPBOX_PUBLIC_TOKEN` to a Mapbox public token (prefix `pk.`) in
 `.env.local` for local development or in the build environment for a hosted
-build. Restart Vite after changing the token. The interactive page reads
-one event payload from `public/r/greenlake-sun/event.json`. Its `area`
-contains the public location text, approximate pin coordinates, and initial
-map zoom (12 to 17). Edit the JSON and reload during local development.
-The initial HTML includes sample details for link previews and fallback
-display. If the browser cannot render the map, the card shows the area name
-and a red pin.
+build. Restart Vite after changing the token. Each event reads its JSON
+from `public/r/`. The `area` contains the public location text, approximate
+pin coordinates, and initial map zoom (12 to 17). Edit the JSON and reload
+during local development. Social previews that read the initial HTML use
+the homepage metadata. If the browser cannot render the map, the card
+shows the area name and a red pin.
 
 ```bash
 npm run typecheck

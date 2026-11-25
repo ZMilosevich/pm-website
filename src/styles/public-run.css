@@ -206,6 +206,25 @@
   font-weight: 720;
 }
 
+.run-distance-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+}
+
+.run-distance-list > span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.run-distance-list small {
+  color: var(--run-muted-low);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 .run-stat--pace {
   grid-column: 1 / -1;
 }
@@ -369,9 +388,7 @@
 }
 
 .run-attendees__heading p {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+  display: block;
   color: var(--run-muted);
   font-size: 0.86rem;
   text-align: right;
