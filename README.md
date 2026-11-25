@@ -19,9 +19,13 @@ The sample public run at `/r/greenlake-sun/` uses Mapbox GL JS with the
 Mapbox Dark vector style.
 Set `VITE_MAPBOX_PUBLIC_TOKEN` to a Mapbox public token (prefix `pk.`) in
 `.env.local` for local development or in the build environment for a hosted
-build. Restart Vite after changing the token. The map marks the approximate
-Green Lake area. If the browser cannot render the map, the card shows the
-area name with a red pin.
+build. Restart Vite after changing the token. The interactive page reads
+one event payload from `public/r/greenlake-sun/event.json`. Its `area`
+contains the public location text, approximate pin coordinates, and initial
+map zoom (12 to 17). Edit the JSON and reload during local development.
+The initial HTML includes sample details for link previews and fallback
+display. If the browser cannot render the map, the card shows the area name
+and a red pin.
 
 ```bash
 npm run typecheck

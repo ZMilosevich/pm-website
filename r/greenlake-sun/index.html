@@ -83,6 +83,12 @@
     <title>Sunday easy loop around Green Lake · PaceMatcher</title>
   </head>
   <body class="public-run-body">
+    <div class="run-loader" id="run-loader" role="status" hidden>
+      <div class="run-loader__content">
+        <span class="run-loader__spinner" aria-hidden="true"></span>
+        <span>Loading run details…</span>
+      </div>
+    </div>
     <div id="root">
       <a class="skip-link" href="#run-main">Skip to run details</a>
       <header class="site-header">
@@ -129,6 +135,10 @@
       </header>
 
       <main class="run-page" id="run-main">
+        <aside class="run-page__banner" id="run-data-error" role="status" hidden>
+          The run details couldn’t be refreshed.
+          <button class="button button--outline" type="button">Try again</button>
+        </aside>
         <div class="run-page__shell">
           <div class="run-layout">
             <article class="run-details" aria-labelledby="run-title">
@@ -148,9 +158,8 @@
               <section class="run-stats" aria-label="Run details">
                 <div class="run-stat">
                   <div class="run-stat__label">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                      <path d="M16 3v4M8 3v4M3 11h18"></path>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#calendar-days"></use>
                     </svg>
                     <span>Date</span>
                   </div>
@@ -158,9 +167,8 @@
                 </div>
                 <div class="run-stat">
                   <div class="run-stat__label">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9"></circle>
-                      <path d="M12 7v5l3 2"></path>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#clock"></use>
                     </svg>
                     <span>Start</span>
                   </div>
@@ -168,8 +176,8 @@
                 </div>
                 <div class="run-stat">
                   <div class="run-stat__label">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <path d="M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 17h3a3 3 0 0 0 3-3V9a3 3 0 0 1 3-3"></path>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#route"></use>
                     </svg>
                     <span>Distance</span>
                   </div>
@@ -177,9 +185,8 @@
                 </div>
                 <div class="run-stat run-stat--pace">
                   <div class="run-stat__label">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <path d="M12 14 8.5 9.5M3 18a9 9 0 1 1 18 0"></path>
-                      <circle cx="12" cy="14" r="2"></circle>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#gauge-high"></use>
                     </svg>
                     <span>Group pace</span>
                   </div>
@@ -190,17 +197,16 @@
               <section class="run-map-card" aria-labelledby="run-area-title">
                 <div class="run-map-card__canvas">
                   <div class="run-map-card__fallback">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#location-dot"></use>
                     </svg>
                     <span>Green Lake, Seattle</span>
                   </div>
                 </div>
                 <div class="run-map-card__meeting">
                   <span class="run-map-card__map-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6ZM9 3v15M15 6v15"></path>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#map-location-dot"></use>
                     </svg>
                   </span>
                   <div>
@@ -287,9 +293,8 @@
                     aria-describedby="run-copy-status"
                   />
                   <button type="button">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                      <rect x="8" y="8" width="12" height="12" rx="2"></rect>
-                      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path>
+                    <svg aria-hidden="true" focusable="false" fill="currentColor">
+                      <use href="/images/fontawesome/run-icons.svg#copy"></use>
                     </svg>
                     Copy
                   </button>

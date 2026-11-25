@@ -1,15 +1,7 @@
-import {
-  CalendarDays,
-  Check,
-  Clock3,
-  Copy,
-  Gauge,
-  Map,
-  Route,
-} from "lucide-react";
 import { useRef, useState } from "react";
 import { Header } from "../components/Header";
 import { PublicRunMap } from "../components/PublicRunMap";
+import { RunIcon } from "../components/RunIcon";
 import { siteConfig } from "../config";
 
 const runStores = [
@@ -20,10 +12,11 @@ const runStores = [
 type EventStatus = "open" | "full" | "past" | "cancelled";
 type Units = "mi" | "km";
 
-type PublicRunEvent = {
+export type PublicRunEvent = {
   title: string;
   description: string;
   status: EventStatus;
+  city: string;
   startsAt: string;
   timezone: string;
   distanceMeters: number;
@@ -35,8 +28,12 @@ type PublicRunEvent = {
     name: string;
   };
   area: {
+    name: string;
     label: string;
     detail: string;
+    latitude: number;
+    longitude: number;
+    zoom: number;
   };
   attendeesPreview: Array<{
     firstName: string;
@@ -44,34 +41,6 @@ type PublicRunEvent = {
     isWalker?: boolean;
   }>;
   attendeesHidden: number;
-};
-
-const event: PublicRunEvent = {
-  title: "Sunday easy loop around Green Lake",
-  description:
-    "Rain or shine. A relaxed, conversational loop with coffee after. Everyone within 15 sec/mi of the group pace is welcome, and walkers are too.",
-  status: "open",
-  startsAt: "2026-12-06T17:00:00Z",
-  timezone: "America/Los_Angeles",
-  distanceMeters: 4800,
-  groupPaceSecondsPerKm: 354,
-  allowsWalkers: true,
-  capacity: 12,
-  attendeeCount: 7,
-  club: {
-    name: "Lakeside Run Club",
-  },
-  area: {
-    label: "Green Lake Park, east side",
-    detail: "Near the community center. The exact meeting point is shared after you RSVP in the app.",
-  },
-  attendeesPreview: [
-    { firstName: "Maya", paceSecondsPerKm: 354 },
-    { firstName: "Ben", paceSecondsPerKm: 348 },
-    { firstName: "Priya", paceSecondsPerKm: 366.6 },
-    { firstName: "Sam", isWalker: true },
-  ],
-  attendeesHidden: 3,
 };
 
 const shareUrl = "https://pacematcher.com/r/greenlake-sun/";
@@ -93,32 +62,32 @@ function formatPace(secondsPerKm: number, units: Units) {
   return `${minutes}:${seconds} /${units}`;
 }
 
-function getEventContent(status: EventStatus) {
+function getEventContent(status: EventStatus, city: string) {
   switch (status) {
     case "full":
       return {
         actionLabel: "Join the waitlist in the app",
         reassurance: "This run is full. Download PaceMatcher to join the waitlist.",
-        tag: "Run club event · Seattle",
+        tag: `Run club event · ${city}`,
       };
     case "past":
       return {
         actionLabel: "See this club's next runs",
         reassurance: "This run has ended. Explore other PaceMatcher run clubs.",
-        tag: "Past event · Seattle",
+        tag: `Past event · ${city}`,
       };
     case "cancelled":
       return {
         actionLabel: "Find another run",
         reassurance: "This event has been cancelled. Explore other PaceMatcher run clubs.",
-        tag: "Cancelled event · Seattle",
+        tag: `Cancelled event · ${city}`,
       };
     case "open":
       return {
         actionLabel: "Get the PaceMatcher app",
         reassurance:
           "RSVP is completed in the PaceMatcher app. This public sample shows the event details and official download choices.",
-        tag: "Run club event · Seattle",
+        tag: `Run club event · ${city}`,
       };
   }
 }
@@ -158,7 +127,7 @@ function EventStat({
   );
 }
 
-export function PublicRunPage() {
+export function PublicRunPage({ event }: { event: PublicRunEvent }) {
   const [units, setUnits] = useState<Units>("mi");
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
   const shareInputRef = useRef<HTMLInputElement>(null);
@@ -175,7 +144,7 @@ export function PublicRunPage() {
     timeZoneName: "short",
   });
   const startsAt = new Date(event.startsAt);
-  const content = getEventContent(event.status);
+  const content = getEventContent(event.status, event.city);
   const visibleAttendeeCount =
     event.status === "full" ? event.capacity : event.attendeeCount;
   const progress = Math.min((visibleAttendeeCount / event.capacity) * 100, 100);
@@ -245,18 +214,18 @@ export function PublicRunPage() {
               </p>
 
               <section className="run-stats" aria-label="Run details">
-                <EventStat icon={<CalendarDays aria-hidden="true" />} label="Date">
+                <EventStat icon={<RunIcon name="calendar-days" />} label="Date">
                   <time dateTime={event.startsAt}>{dateFormatter.format(startsAt)}</time>
                 </EventStat>
-                <EventStat icon={<Clock3 aria-hidden="true" />} label="Start">
+                <EventStat icon={<RunIcon name="clock" />} label="Start">
                   {timeFormatter.format(startsAt)}
                 </EventStat>
-                <EventStat icon={<Route aria-hidden="true" />} label="Distance">
+                <EventStat icon={<RunIcon name="route" />} label="Distance">
                   {formatDistance(event.distanceMeters, units)}
                 </EventStat>
                 <EventStat
                   className="run-stat--pace"
-                  icon={<Gauge aria-hidden="true" />}
+                  icon={<RunIcon name="gauge-high" />}
                   label="Group pace"
                 >
                   <strong>{formatPace(event.groupPaceSecondsPerKm, units)}</strong>
@@ -264,10 +233,15 @@ export function PublicRunPage() {
               </section>
 
               <section className="run-map-card" aria-labelledby="run-area-title">
-                <PublicRunMap />
+                <PublicRunMap
+                  latitude={event.area.latitude}
+                  longitude={event.area.longitude}
+                  zoom={event.area.zoom}
+                  label={`${event.area.name}, ${event.city}`}
+                />
                 <div className="run-map-card__meeting">
                   <span className="run-map-card__map-icon">
-                    <Map aria-hidden="true" />
+                    <RunIcon name="map-location-dot" />
                   </span>
                   <div>
                     <h2 id="run-area-title">
@@ -366,9 +340,9 @@ export function PublicRunPage() {
                   />
                   <button type="button" onClick={copyShareUrl}>
                     {copyStatus === "copied" ? (
-                      <Check aria-hidden="true" />
+                      <RunIcon name="check" />
                     ) : (
-                      <Copy aria-hidden="true" />
+                      <RunIcon name="copy" />
                     )}
                     <span>{copyStatus === "copied" ? "Copied" : "Copy"}</span>
                   </button>

@@ -1,3 +1,36 @@
+.run-loader:not([hidden]) {
+  position: fixed;
+  z-index: 110;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg);
+}
+
+.run-loader__content {
+  display: grid;
+  justify-items: center;
+  gap: 0.85rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.run-loader__spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid #29292e;
+  border-top-color: #ff0055;
+  border-radius: 50%;
+  animation: run-loader-spin 0.8s linear infinite;
+}
+
+@keyframes run-loader-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 .run-page {
   --run-card: #151518;
   --run-card-raised: #1a1a1e;
@@ -10,7 +43,7 @@
   --run-accent-hover: #ff3d7d;
   --run-on-accent: #fff;
   min-height: calc(100vh - var(--header-height));
-  padding: 4.25rem 0 6rem;
+  padding: 1.75rem 0 6rem;
   background:
     linear-gradient(180deg, #0c0c0e 0%, var(--color-bg) 34%),
     var(--color-bg);
@@ -208,8 +241,30 @@
   background: var(--run-card-raised);
 }
 
-.run-map-card__interactive .mapboxgl-ctrl-group .mapboxgl-ctrl-icon {
-  filter: invert(1);
+.run-map-card__interactive .mapboxgl-ctrl-group button:is(.mapboxgl-ctrl-zoom-in, .mapboxgl-ctrl-zoom-out) .mapboxgl-ctrl-icon {
+  background: var(--run-text);
+  mask: var(--run-map-zoom-icon) center / 1rem 1rem no-repeat;
+}
+
+.run-map-card__interactive .mapboxgl-ctrl-zoom-in {
+  --run-map-zoom-icon: url("/images/fontawesome/plus.svg");
+}
+
+.run-map-card__interactive .mapboxgl-ctrl-zoom-out {
+  --run-map-zoom-icon: url("/images/fontawesome/minus.svg");
+}
+
+.run-map-card__pin {
+  width: 1.65rem;
+  height: 2.1rem;
+  color: #e53935;
+}
+
+.run-map-card__pin svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .run-map-card__interactive .mapboxgl-ctrl-attrib:not(.mapboxgl-compact) {
@@ -558,7 +613,7 @@
 
 @media (max-width: 900px) {
   .run-page {
-    padding-block: 2.75rem 7.5rem;
+    padding-block: 1.5rem 7.5rem;
   }
 
   .run-layout {
@@ -597,7 +652,7 @@
 
 @media (max-width: 640px) {
   .run-page {
-    padding-top: 2rem;
+    padding-top: 1.25rem;
   }
 
   .run-page__shell,
@@ -719,6 +774,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .run-loader__spinner {
+    animation: none;
+  }
+
   .run-join__action,
   .run-mobile-cta a {
     transition: none;

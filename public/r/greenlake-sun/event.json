@@ -1,0 +1,31 @@
+{
+  "title": "Sunday easy loop around Green Lake",
+  "description": "Rain or shine. A relaxed, conversational loop with coffee after. Everyone within 15 sec/mi of the group pace is welcome, and walkers are too.",
+  "status": "open",
+  "city": "Seattle",
+  "startsAt": "2026-12-06T17:00:00Z",
+  "timezone": "America/Los_Angeles",
+  "distanceMeters": 4800,
+  "groupPaceSecondsPerKm": 354,
+  "allowsWalkers": true,
+  "capacity": 12,
+  "attendeeCount": 7,
+  "club": {
+    "name": "Lakeside Run Club"
+  },
+  "area": {
+    "name": "Green Lake",
+    "label": "Green Lake Park, east side",
+    "detail": "Near the community center. The exact meeting point is shared after you RSVP in the app.",
+    "latitude": 47.680,
+    "longitude": -122.328,
+    "zoom": 14
+  },
+  "attendeesPreview": [
+    { "firstName": "Maya", "paceSecondsPerKm": 354 },
+    { "firstName": "Ben", "paceSecondsPerKm": 348 },
+    { "firstName": "Priya", "paceSecondsPerKm": 366.6 },
+    { "firstName": "Sam", "isWalker": true }
+  ],
+  "attendeesHidden": 3
+}
