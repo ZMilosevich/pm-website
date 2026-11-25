@@ -36,6 +36,8 @@ jobs:
         run: npm run typecheck
 
       - name: Build production site
+        env:
+          VITE_MAPBOX_PUBLIC_TOKEN: ${{ vars.VITE_MAPBOX_PUBLIC_TOKEN }}
         run: npm run build
 
       - name: Validate deployment inputs
@@ -150,14 +152,16 @@ jobs:
             "bash -s -- $quoted_deploy_path $quoted_manifest_base64" \
             < scripts/cloudways-preflight.sh
 
-          # New content-hashed assets become available while the old index is
-          # still live. The index changes only after its dependencies exist.
+          # Upload assets and event data before publishing HTML that uses them.
           rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
             --exclude=.DS_Store \
             --exclude='*.map' \
             --include='/assets/***' \
             --include='/images/***' \
             --include='/fonts/***' \
+            --include='/r/' \
+            --include='/r/*/' \
+            --include='/r/*/event.json' \
             --include='/privacy-policy/***' \
             --include='/terms-of-service/***' \
             --include='/favicon.svg' \
@@ -173,6 +177,9 @@ jobs:
 
           rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
             --include='/index.html' \
+            --include='/r/' \
+            --include='/r/*/' \
+            --include='/r/*/index.html' \
             --exclude='*' \
             -e "ssh ${ssh_options[*]}" \
             dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
