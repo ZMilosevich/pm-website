@@ -85,7 +85,7 @@ jobs:
             exit 1
           fi
 
-          if [[ ! -f dist/index.html || ! -f dist/.pacematcher-deploy ]]; then
+          if [[ ! -f dist/index.html || ! -f dist/404.html || ! -f dist/.pacematcher-deploy ]]; then
             echo "The production build or PaceMatcher ownership marker is missing."
             exit 1
           fi
@@ -177,6 +177,7 @@ jobs:
 
           rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
             --include='/index.html' \
+            --include='/404.html' \
             --include='/r/' \
             --include='/r/*/' \
             --include='/r/*/index.html' \

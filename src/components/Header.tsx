@@ -16,6 +16,7 @@ type DevicePlatform = "ios" | "android" | "other";
 
 type HeaderProps = {
   homeLinkBase?: string;
+  showNavigation?: boolean;
 };
 
 function getDevicePlatform(): DevicePlatform {
@@ -32,7 +33,7 @@ function getDevicePlatform(): DevicePlatform {
   return "other";
 }
 
-export function Header({ homeLinkBase = "" }: HeaderProps) {
+export function Header({ homeLinkBase = "", showNavigation = true }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
   const [devicePlatform] = useState(getDevicePlatform);
@@ -41,6 +42,7 @@ export function Header({ homeLinkBase = "" }: HeaderProps) {
   const downloadDialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
+    if (!showNavigation) return;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && isMenuOpen) {
         setIsMenuOpen(false);
@@ -50,9 +52,10 @@ export function Header({ homeLinkBase = "" }: HeaderProps) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, showNavigation]);
 
   useEffect(() => {
+    if (!showNavigation) return;
     const handleResize = () => {
       if (window.matchMedia("(min-width: 901px)").matches) {
         setIsMenuOpen(false);
@@ -61,7 +64,7 @@ export function Header({ homeLinkBase = "" }: HeaderProps) {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [showNavigation]);
 
   const closeMenu = () => setIsMenuOpen(false);
   const openDownloadDialog = () => {
@@ -74,17 +77,19 @@ export function Header({ homeLinkBase = "" }: HeaderProps) {
   const closeDownloadDialog = () => downloadDialogRef.current?.close();
 
   return (
-    <header className="site-header">
+    <header className={showNavigation ? "site-header" : "site-header site-header--no-nav"}>
       <div className="site-header__inner">
         <Logo href={homeLinkBase || "#top"} />
 
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {navigation.map((item) => (
-            <a key={item.href} href={`${homeLinkBase}${item.href}`}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        {showNavigation && (
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {navigation.map((item) => (
+              <a key={item.href} href={`${homeLinkBase}${item.href}`}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        )}
 
         <button
           ref={headerCtaRef}
@@ -98,46 +103,50 @@ export function Header({ homeLinkBase = "" }: HeaderProps) {
           Get the app
         </button>
 
-        <button
-          ref={menuToggleRef}
-          className="menu-toggle"
-          type="button"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          onClick={() => setIsMenuOpen((open) => !open)}
-        >
-          {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-        </button>
+        {showNavigation && (
+          <button
+            ref={menuToggleRef}
+            className="menu-toggle"
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
+        )}
       </div>
 
-      <nav
-        className={`mobile-nav ${isMenuOpen ? "is-open" : ""}`}
-        id="mobile-navigation"
-        aria-label="Mobile navigation"
-        aria-hidden={!isMenuOpen}
-      >
-        <div className="mobile-nav__inner">
-          {navigation.map((item) => (
+      {showNavigation && (
+        <nav
+          className={`mobile-nav ${isMenuOpen ? "is-open" : ""}`}
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          aria-hidden={!isMenuOpen}
+        >
+          <div className="mobile-nav__inner">
+            {navigation.map((item) => (
+              <a
+                key={item.href}
+                href={`${homeLinkBase}${item.href}`}
+                onClick={closeMenu}
+                tabIndex={isMenuOpen ? 0 : -1}
+              >
+                {item.label}
+              </a>
+            ))}
             <a
-              key={item.href}
-              href={`${homeLinkBase}${item.href}`}
+              className="button button--primary"
+              href={`${siteConfig.appRedirectUrl}?src=nav`}
               onClick={closeMenu}
               tabIndex={isMenuOpen ? 0 : -1}
             >
-              {item.label}
+              Get the app
             </a>
-          ))}
-          <a
-            className="button button--primary"
-            href={`${siteConfig.appRedirectUrl}?src=nav`}
-            onClick={closeMenu}
-            tabIndex={isMenuOpen ? 0 : -1}
-          >
-            Get the app
-          </a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+      )}
 
       <dialog
         ref={downloadDialogRef}

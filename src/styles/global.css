@@ -330,7 +330,8 @@ h3 {
   grid-template-columns: 1fr auto 1fr;
 }
 
-.legal-header__inner {
+.legal-header__inner,
+.site-header--no-nav .site-header__inner {
   grid-template-columns: 1fr auto;
 }
 
@@ -531,6 +532,10 @@ h3 {
 
 .header-cta {
   justify-self: end;
+}
+
+.site-header--no-nav .header-cta {
+  display: inline-flex;
 }
 
 .app-download-dialog {
@@ -2378,6 +2383,21 @@ h3 {
   .site-header__inner,
   .page-shell {
     width: calc(100% - 2rem);
+  }
+
+  .site-header--no-nav .wordmark {
+    font-size: 1.125rem;
+  }
+
+  .site-header--no-nav .wordmark img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .site-header--no-nav .header-cta {
+    padding-inline: 0.875rem;
+    font-size: 0.875rem;
   }
 
   .hero__eyebrow {

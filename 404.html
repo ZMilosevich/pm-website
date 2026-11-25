@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <title>404 · Page not found | PaceMatcher</title>
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <style>
+      :root {
+        color-scheme: dark;
+        background: #0b0b0d;
+        color: #fff;
+        font-family: "Inter Variable", Inter, system-ui, sans-serif;
+        --accent: #ed244d;
+        --button: #df1e47;
+        --muted: #96969f;
+        --line: #28282c;
+        --outline: #3c3c44;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      body, h1, p, dl, dd { margin: 0; }
+
+      main :focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 4px;
+      }
+
+      .shell {
+        width: min(84%, 67rem);
+        margin-inline: auto;
+      }
+
+      #error-header { display: contents; }
+
+      .actions, .explanation {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .875rem;
+      }
+
+      .recovery-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3.375rem;
+        padding: .625rem 1.6875rem;
+        border: 1px solid var(--outline);
+        border-radius: 999px;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .recovery-button:hover { background: #1d1d20; }
+      .recovery-button.primary { background: var(--button); border-color: var(--button); }
+      .recovery-button.primary:hover { background: #c90042; border-color: #c90042; }
+      .recovery-button[hidden] { display: none; }
+
+      main {
+        line-height: normal;
+        padding-block: clamp(2.5rem, 4.5vw, 3.625rem) 3rem;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: .8125rem;
+        font-weight: 750;
+        line-height: 1.4;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin-top: 1.125rem;
+        font-size: clamp(2.5rem, 8.45vw, 6.75rem);
+        font-weight: 900;
+        letter-spacing: -.056em;
+        line-height: .98;
+      }
+
+      h1 span { display: block; color: var(--accent); }
+
+      .description {
+        max-width: 34rem;
+        margin-top: 2rem;
+        color: #d4d4d8;
+        font-size: clamp(1.0625rem, 1.6vw, 1.3125rem);
+        line-height: 1.46;
+      }
+
+      .actions { margin-top: 2.375rem; }
+
+      .track {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 2.625rem;
+        margin-top: clamp(3rem, 6.1vw, 4.375rem);
+        border-bottom: 2px dashed var(--outline);
+      }
+
+      .runner {
+        position: absolute;
+        left: 52%;
+        bottom: .15rem;
+        font-size: 1.75rem;
+        transform: translateX(-50%);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-bottom: 1px solid var(--line);
+      }
+
+      .stats > div { padding: 1.25rem 1.5rem 1.625rem; }
+      .stats > div:first-child { padding-left: 0; }
+      .stats > div + div { border-left: 1px solid var(--line); }
+
+      .stats dd {
+        margin-top: .4rem;
+        font-size: clamp(1rem, 2.75vw, 2.1875rem);
+        font-weight: 850;
+        letter-spacing: -.045em;
+      }
+
+      .explanation {
+        margin-top: 2.125rem;
+        gap: .875rem 1rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .explanation .recovery-button {
+        min-height: 2.8125rem;
+        padding-inline: 1.125rem;
+        color: #fff;
+        font-size: .9375rem;
+        font-weight: 550;
+      }
+
+      @media (max-width: 600px) {
+        .shell { width: calc(100% - 2.5rem); }
+        h1 { line-height: 1.02; text-wrap: balance; }
+        .actions { margin-top: 1.75rem; }
+        .actions .recovery-button { min-height: 3rem; padding-inline: 1.125rem; }
+        .runner { left: 25%; }
+        .stats > div { padding: 1rem .625rem; }
+        .stats .label { font-size: .625rem; letter-spacing: .1em; }
+        .stats dd { font-size: clamp(1rem, 4.2vw, 1.5rem); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="error-header">
+      <header class="site-header site-header--no-nav">
+        <div class="site-header__inner">
+          <a class="wordmark" href="/" aria-label="PaceMatcher home">
+            <img src="/images/pacematcher-logo.png" alt="" width="42" height="42" />
+            <span>Pace</span>Matcher
+          </a>
+          <a class="button button--primary header-cta" href="/#download">Get the app</a>
+        </div>
+      </header>
+    </div>
+
+    <main class="shell">
+      <p class="label">Error 404. Wrong turn.</p>
+      <h1>We found your pace. <span>Not your page.</span></h1>
+      <p class="description">
+        This page took a rest day. Or maybe it never existed.
+        Honestly, we can’t tell either. Let’s get you back on the route.
+      </p>
+      <div class="actions">
+        <a class="recovery-button primary" href="/">Back to home</a>
+        <a class="recovery-button" href="/#app">Find a running buddy</a>
+      </div>
+
+      <div class="track">
+        <span class="runner" aria-hidden="true">🏃‍♂️</span>
+        <span class="label">Finish line: ???</span>
+      </div>
+
+      <dl class="stats">
+        <div><dt class="label">Distance</dt><dd>0.00 km</dd></div>
+        <div><dt class="label">Pace</dt><dd>∞ min/km</dd></div>
+        <div><dt class="label">Pages found</dt><dd>0</dd></div>
+      </dl>
+
+      <div class="explanation">
+        <button class="recovery-button" type="button" id="why-missing" hidden>Why is this missing?</button>
+        <p id="missing-reason" role="status"></p>
+      </div>
+    </main>
+
+    <script>
+      const reasons = [
+        "The page forgot to start its watch. Technically, it never happened.",
+        "It followed a shortcut from a runner who said they knew the way.",
+        "It went out for an easy 5K and accidentally signed up for a marathon.",
+        "It stopped to tie its shoes. We’re still waiting.",
+      ];
+      const button = document.getElementById("why-missing");
+      const message = document.getElementById("missing-reason");
+      let nextReason = 0;
+
+      message.textContent = "Press the button. We’ll make something up.";
+      button.hidden = false;
+      button.addEventListener("click", () => {
+        message.textContent = reasons[nextReason];
+        nextReason = (nextReason + 1) % reasons.length;
+      });
+    </script>
+    <script type="module" src="/src/not-found-main.tsx"></script>
+  </body>
+</html>

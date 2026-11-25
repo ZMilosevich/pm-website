@@ -199,21 +199,18 @@ the server after an upload so cached pages do not break mid-release. After a
 verified release and a fresh backup, remove stale hashed assets manually during
 a maintenance window.
 
-### SPA routing
+### Custom 404 page
 
-This landing page uses anchors and has no client-side router, so a catch-all
-route is not needed. If React Router is added later, configure the Cloudways
-Lightning Stack Nginx application with an appropriate `try_files` fallback such
-as:
+The deployment uploads `404.html`. For the Lightning Stack, configure the
+application's Nginx error handler to serve that file with HTTP status 404.
 
 ```nginx
-location / {
-    try_files $uri $uri/ /index.html;
-}
+error_page 404 /404.html;
 ```
 
-Do not assume Apache `.htaccess` behavior on the Lightning Stack. Cloudways
-documents its Web Rules as the route for rewrite behavior on that stack.
+On the Hybrid Stack, add `ErrorDocument 404 /404.html` to the existing Apache
+`.htaccess` for requests handled by Apache. After configuring the host, request
+a missing URL to verify that it displays the custom page with an HTTP 404 status.
 
 ## Accessibility and interaction
 
