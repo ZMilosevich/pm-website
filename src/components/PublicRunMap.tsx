@@ -51,6 +51,7 @@ export function PublicRunMap({ latitude, longitude, zoom, label }: {
           doubleClickZoom: false,
           touchPitch: false,
           keyboard: false,
+          attributionControl: false,
         });
         map.touchZoomRotate.disableRotation();
         const marker = document.createElement("div");
