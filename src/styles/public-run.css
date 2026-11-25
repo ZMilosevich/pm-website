@@ -77,6 +77,13 @@
   min-width: 0;
 }
 
+.run-kickers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .run-kicker {
   display: inline-flex;
   min-height: 2rem;
@@ -88,6 +95,13 @@
   font-size: 0.8rem;
   font-weight: 650;
   line-height: 1;
+}
+
+.run-countdown {
+  border-color: #72334a;
+  background: #27151d;
+  color: #ff9fbd;
+  font-variant-numeric: tabular-nums;
 }
 
 .run-title-row {

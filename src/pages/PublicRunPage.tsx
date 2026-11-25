@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Header } from "../components/Header";
 import { PublicRunMap } from "../components/PublicRunMap";
+import { RunCountdown } from "../components/RunCountdown";
 import { RunIcon } from "../components/RunIcon";
 import { siteConfig } from "../config";
 
@@ -84,7 +85,7 @@ function getEventContent(status: EventStatus, city: string) {
       };
     case "open":
       return {
-        actionLabel: "Get the PaceMatcher app",
+        actionLabel: "Open in the PaceMatcher app",
         reassurance:
           "RSVP is completed in the PaceMatcher app. This public sample shows the event details and official download choices.",
         tag: `Run club event · ${city}`,
@@ -186,7 +187,10 @@ export function PublicRunPage({ event }: { event: PublicRunEvent }) {
         <div className="run-page__shell">
           <div className="run-layout">
             <article className="run-details" aria-labelledby="run-title">
-              <p className="run-kicker">{content.tag}</p>
+              <div className="run-kickers">
+                <p className="run-kicker">{content.tag}</p>
+                {hasAppAction && <RunCountdown startsAt={event.startsAt} />}
+              </div>
               <div className="run-title-row">
                 <h1 id="run-title">{event.title}</h1>
                 <div className="run-units" role="group" aria-label="Pace and distance units">
