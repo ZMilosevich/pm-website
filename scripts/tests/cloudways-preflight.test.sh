@@ -39,6 +39,7 @@ event_data_line="$(grep -nF "include='/r/*/event.json'" "$workflow" | cut -d: -f
 index_line="$(grep -n "include='/index.html'" "$workflow" | cut -d: -f1)"
 run_index_line="$(grep -nF "include='/r/*/index.html'" "$workflow" | cut -d: -f1)"
 manifest_finalize_line="$(grep -n 'mv .*managed-paths.stage' "$workflow" | cut -d: -f1)"
+purge_line="$(grep -nF 'name: Purge Cloudways application cache' "$workflow" | cut -d: -f1)"
 if [[ -z "$preflight_line" || -z "$assets_line" || -z "$index_line" || -z "$manifest_finalize_line" ]]; then
   printf 'FAIL: workflow ordering markers are missing\n' >&2
   exit 1
@@ -46,6 +47,8 @@ fi
 [[ "$preflight_line" -lt "$assets_line" ]] || { printf 'FAIL: assets must follow preflight\n' >&2; exit 1; }
 [[ "$assets_line" -lt "$index_line" ]] || { printf 'FAIL: index must follow assets\n' >&2; exit 1; }
 [[ "$index_line" -lt "$manifest_finalize_line" ]] || { printf 'FAIL: manifest must finalize after index\n' >&2; exit 1; }
+[[ -n "$purge_line" && "$manifest_finalize_line" -lt "$purge_line" ]] ||
+  { printf 'FAIL: cache purge must follow manifest finalization\n' >&2; exit 1; }
 [[ "$assets_line" -lt "$event_data_line" && "$event_data_line" -lt "$index_line" ]] ||
   { printf 'FAIL: event data must transfer with assets, before HTML\n' >&2; exit 1; }
 [[ "$index_line" -lt "$run_index_line" && "$run_index_line" -lt "$manifest_finalize_line" ]] ||
@@ -61,7 +64,7 @@ for association in apple-app-site-association apple-app-site-association.json as
       { printf 'FAIL: %s HTML must transfer after assets and before %s\n' "$fallback" "$association" >&2; exit 1; }
   done
 done
-printf 'PASS: workflow orders preflight, assets and event data, HTML, app associations, then manifest finalization\n'
+printf 'PASS: workflow orders preflight, assets and event data, HTML, app associations, manifest finalization, then cache purge\n'
 
 run_preflight() {
   local artifact="$1"

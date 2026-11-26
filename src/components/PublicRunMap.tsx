@@ -9,6 +9,7 @@ const mapboxToken = import.meta.env.VITE_MAPBOX_PUBLIC_TOKEN?.trim();
 const minZoom = 12;
 const maxZoom = 17;
 const coursePadding = 24;
+const recenterDuration = 900;
 
 async function loadCourse(url: string, signal: AbortSignal): Promise<FeatureCollection<LineString>> {
   const response = await fetch(url, { signal });
@@ -79,8 +80,8 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
         });
         const eventMap = map;
         recenterRef.current = course
-          ? () => eventMap.fitBounds(bounds, { padding: coursePadding, duration: 0 })
-          : () => eventMap.jumpTo({ center, zoom });
+          ? () => eventMap.fitBounds(bounds, { padding: coursePadding, duration: recenterDuration })
+          : () => eventMap.flyTo({ center, zoom, duration: recenterDuration });
         map.touchZoomRotate.disableRotation();
         if (!course) {
           const marker = document.createElement("div");

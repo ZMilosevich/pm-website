@@ -116,6 +116,21 @@ Actions**:
 Use a production environment in GitHub with required reviewers if releases
 should be gated.
 
+### Automatic application cache purge
+
+The deploy workflow purges the PaceMatcher application cache after publishing
+the files and finalizing the deployment manifest. Configure these in the
+GitHub `production` environment:
+
+- Secret `CLOUDWAYS_API_TOKEN`: Cloudways Limited Access token with
+  **Clear App Cache** and **Get Operation Status** permissions.
+- Variable `CLOUDWAYS_SERVER_ID`: numeric ID of the Cloudways server.
+- Variable `CLOUDWAYS_APP_ID`: numeric ID of the PaceMatcher application.
+
+When all three are unset, deployments continue and log that the purge was
+skipped. Partial configuration or a failed purge makes the workflow report
+an error after the files have been uploaded.
+
 ### Safe first deployment
 
 The workflow fails closed when a non-empty remote document root has no

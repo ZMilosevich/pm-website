@@ -216,3 +216,49 @@ jobs:
             deploy_path=$quoted_deploy_path
             mv \"\$deploy_path/.pacematcher-managed-paths.stage\" \"\$deploy_path/.pacematcher-managed-paths\"
           "
+
+      - name: Purge Cloudways application cache
+        timeout-minutes: 3
+        env:
+          CLOUDWAYS_API_TOKEN: ${{ secrets.CLOUDWAYS_API_TOKEN }}
+          CLOUDWAYS_SERVER_ID: ${{ vars.CLOUDWAYS_SERVER_ID }}
+          CLOUDWAYS_APP_ID: ${{ vars.CLOUDWAYS_APP_ID }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$CLOUDWAYS_API_TOKEN" && -z "$CLOUDWAYS_SERVER_ID" && -z "$CLOUDWAYS_APP_ID" ]]; then
+            echo "::warning::Cloudways application cache purge skipped because it is not configured."
+            exit 0
+          fi
+
+          if [[ -z "$CLOUDWAYS_API_TOKEN" || ! "$CLOUDWAYS_SERVER_ID" =~ ^[1-9][0-9]*$ || ! "$CLOUDWAYS_APP_ID" =~ ^[1-9][0-9]*$ ]]; then
+            echo "::error::Set CLOUDWAYS_API_TOKEN and numeric CLOUDWAYS_SERVER_ID and CLOUDWAYS_APP_ID in the production environment."
+            exit 1
+          fi
+
+          api_url=https://api.cloudways.com/api/v2
+          curl_options=(
+            --fail --silent --show-error --connect-timeout 5 --max-time 10
+            --header "Authorization: Bearer $CLOUDWAYS_API_TOKEN"
+          )
+          response="$(curl "${curl_options[@]}" \
+            --data-urlencode "server_id=$CLOUDWAYS_SERVER_ID" \
+            --data-urlencode "app_id=$CLOUDWAYS_APP_ID" \
+            "$api_url/app/cache/purge")"
+          if ! operation_id="$(jq -er 'select(.status == true) | .operation_id | tostring | select(test("^(flex-)?[1-9][0-9]*$"))' <<< "$response")"; then
+            echo "::error::Cloudways did not return a valid cache purge operation."
+            exit 1
+          fi
+
+          for attempt in {1..12}; do
+            response="$(curl "${curl_options[@]}" "$api_url/operation/$operation_id")"
+            status="$(jq -er '.operation.is_completed | tostring' <<< "$response")"
+            case "$status" in
+              1) echo "Cloudways application cache purged."; exit 0 ;;
+              -1) echo "::error::Cloudways reported a failed cache purge."; exit 1 ;;
+              0) if [[ "$attempt" -lt 12 ]]; then sleep 5; fi ;;
+              *) echo "::error::Cloudways returned an unexpected cache purge status."; exit 1 ;;
+            esac
+          done
+          echo "::error::Cloudways did not confirm cache purge completion in time."
+          exit 1
