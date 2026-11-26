@@ -56,6 +56,12 @@ function servePublicPages(): Plugin {
 
   return {
     name: "pacematcher-public-pages",
+    async generateBundle() {
+      // Cloudways can rewrite the extensionless URL to this copy to serve JSON.
+      const fileName = associationPath.slice(1);
+      const source = await readFile(path.resolve(__dirname, "public", fileName));
+      this.emitFile({ type: "asset", fileName: `${fileName}.json`, source });
+    },
     configureServer(server) {
       server.middlewares.use(setAssociationContentType);
       return () => server.middlewares.use(middleware(async () => {

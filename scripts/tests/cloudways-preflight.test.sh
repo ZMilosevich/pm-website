@@ -51,7 +51,7 @@ fi
 [[ "$index_line" -lt "$run_index_line" && "$run_index_line" -lt "$manifest_finalize_line" ]] ||
   { printf 'FAIL: run HTML must transfer after its dependencies and before manifest finalization\n' >&2; exit 1; }
 
-for association in apple-app-site-association assetlinks.json; do
+for association in apple-app-site-association apple-app-site-association.json assetlinks.json; do
   association_line="$(grep -nF "include='/.well-known/$association'" "$workflow" | cut -d: -f1)"
   [[ "$association_line" -lt "$manifest_finalize_line" ]] ||
     { printf 'FAIL: %s must transfer before manifest finalization\n' "$association" >&2; exit 1; }

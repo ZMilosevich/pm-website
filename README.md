@@ -191,7 +191,8 @@ The build includes the three browser fallbacks and the two files from
 
 On the Lightning Stack, use [Cloudways Web Rules](https://support.cloudways.com/en/articles/12597858-how-to-create-and-manage-web-rules-in-cloudways)
 to add these internal **Rewrite** rules with **Keep Original Query String**
-enabled. Match each source path exactly.
+enabled. Attach a **URI** condition with **Equals (=)** and the same path as the
+source for each rule.
 
 | Source | Destination |
 | --- | --- |
@@ -199,10 +200,13 @@ enabled. Match each source path exactly.
 | `/app/tracker` | `/app/tracker/index.html` |
 | `/app/explore` | `/app/explore/index.html` |
 
-Add a custom Header Rule with action **Set**, header `Content-Type`, value
-`application/json`, **Always Apply** off, and an exact URI condition for
-`/.well-known/apple-app-site-association`. Serve both association files
-publicly over HTTPS at their original paths.
+After deploying, add an internal rewrite from
+`/.well-known/apple-app-site-association` to
+`/.well-known/apple-app-site-association.json` with the same exact URI
+condition. The build generates that JSON copy byte for byte from the Apple
+association file. Nginx serves it with `application/json` while the original
+extensionless URL stays in use. Cloudways rejects `Content-Type` in Header
+Rules. Serve `/.well-known/assetlinks.json` directly.
 
 On the Hybrid Stack, add the equivalent settings to the existing Apache
 `.htaccess` before broader rewrites:
