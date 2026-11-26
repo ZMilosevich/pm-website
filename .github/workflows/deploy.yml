@@ -171,6 +171,7 @@ jobs:
             --include='/r/' \
             --include='/r/*/' \
             --include='/r/*/event.json' \
+            --include='/r/*/course.geojson' \
             --include='/privacy-policy/***' \
             --include='/terms-of-service/***' \
             --include='/favicon.svg' \
