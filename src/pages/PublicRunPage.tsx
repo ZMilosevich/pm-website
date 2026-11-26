@@ -133,7 +133,7 @@ function getEventContent(status: EventStatus, city: string, kind: EventKind) {
       };
     case "open":
       return {
-        actionLabel: "Open in the PaceMatcher app",
+        actionLabel: "Find your race or training partner",
         reassurance:
           "This public demo shows how the race appears in PaceMatcher. Use the official organizer for registration and race-day details.",
         joinTitle: "See this race in PaceMatcher",
