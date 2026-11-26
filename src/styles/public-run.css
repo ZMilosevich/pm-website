@@ -238,7 +238,7 @@
 .run-map-card__canvas {
   position: relative;
   display: grid;
-  aspect-ratio: 704 / 320;
+  aspect-ratio: 704 / 384;
   border-bottom: 1px solid var(--run-border);
   background: #19191c;
 }
@@ -253,13 +253,15 @@
   visibility: visible;
 }
 
-.run-map-card__interactive .mapboxgl-ctrl-group {
+.run-map-card__interactive .mapboxgl-ctrl-group,
+.run-map-card__recenter {
   background: var(--run-card);
   border: 1px solid var(--run-border-strong);
   border-radius: 0.7rem;
 }
 
-.run-map-card__interactive .mapboxgl-ctrl-group button {
+.run-map-card__interactive .mapboxgl-ctrl-group button,
+.run-map-card__recenter {
   width: 2.75rem;
   height: 2.75rem;
 }
@@ -268,8 +270,25 @@
   border-top-color: var(--run-border-strong);
 }
 
-.run-map-card__interactive .mapboxgl-ctrl-group button:hover:enabled {
+.run-map-card__interactive .mapboxgl-ctrl-group button:hover:enabled,
+.run-map-card__recenter:hover {
   background: var(--run-card-raised);
+}
+
+.run-map-card__recenter {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  color: var(--run-text);
+  cursor: pointer;
+}
+
+.run-map-card__recenter:focus-visible {
+  outline: 2px solid var(--run-text);
+  outline-offset: 2px;
 }
 
 .run-map-card__interactive .mapboxgl-ctrl-group button:is(.mapboxgl-ctrl-zoom-in, .mapboxgl-ctrl-zoom-out) .mapboxgl-ctrl-icon {

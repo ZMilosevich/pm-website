@@ -1,5 +1,6 @@
 import type { Map } from "mapbox-gl";
 import type { FeatureCollection, LineString } from "geojson";
+import { Crosshair } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { RunIcon, runIconHref } from "./RunIcon";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -7,6 +8,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 const mapboxToken = import.meta.env.VITE_MAPBOX_PUBLIC_TOKEN?.trim();
 const minZoom = 12;
 const maxZoom = 17;
+const coursePadding = 24;
 
 async function loadCourse(url: string, signal: AbortSignal): Promise<FeatureCollection<LineString>> {
   const response = await fetch(url, { signal });
@@ -23,6 +25,7 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
   courseLabel?: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const recenterRef = useRef<(() => void) | null>(null);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -61,7 +64,7 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
           style: "mapbox://styles/mapbox/dark-v11",
           center,
           zoom,
-          ...(course && { bounds, fitBoundsOptions: { padding: 24 } }),
+          ...(course && { bounds, fitBoundsOptions: { padding: coursePadding } }),
           minZoom: course ? 0 : minZoom,
           maxZoom,
           scrollZoom: { around: "center" },
@@ -74,6 +77,10 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
           keyboard: false,
           attributionControl: false,
         });
+        const eventMap = map;
+        recenterRef.current = course
+          ? () => eventMap.fitBounds(bounds, { padding: coursePadding, duration: 0 })
+          : () => eventMap.jumpTo({ center, zoom });
         map.touchZoomRotate.disableRotation();
         if (!course) {
           const marker = document.createElement("div");
@@ -132,6 +139,7 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
     void loadMap();
     return () => {
       controller.abort();
+      recenterRef.current = null;
       map?.remove();
     };
   }, [latitude, longitude, zoom, label, courseUrl]);
@@ -151,6 +159,17 @@ export function PublicRunMap({ latitude, longitude, zoom, label, courseUrl, cour
         aria-label={courseLabel ? `Map of the ${courseLabel}` : `Map of the approximate area around ${label}`}
         aria-hidden={!isReady}
       />
+      {isReady && (
+        <button
+          type="button"
+          className="run-map-card__recenter"
+          aria-label="Re-center map"
+          title="Re-center map"
+          onClick={() => recenterRef.current?.()}
+        >
+          <Crosshair size={18} aria-hidden="true" />
+        </button>
+      )}
     </div>
   );
 }

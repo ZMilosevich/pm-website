@@ -21,8 +21,8 @@ export function RunCountdown({ startsAt }: { startsAt: string }) {
       if (remaining <= 0) return;
 
       const delay = remaining >= day
-        ? Math.min(minute, remaining - day + 1)
-        : Math.min(second, remaining);
+        ? Math.min(minute, remaining % day + 1)
+        : (remaining - 1) % second + 1;
       timeout = window.setTimeout(tick, delay);
     }
 
@@ -36,7 +36,7 @@ export function RunCountdown({ startsAt }: { startsAt: string }) {
   if (remaining >= day) {
     const label = remaining >= 2 * week
       ? relativeTime.format(Math.floor(remaining / week), "week")
-      : relativeTime.format(Math.ceil(remaining / day), "day");
+      : relativeTime.format(Math.floor(remaining / day), "day");
 
     return <time className="run-kicker run-countdown" dateTime={startsAt}>{label}</time>;
   }
