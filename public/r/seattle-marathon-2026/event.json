@@ -17,10 +17,14 @@
   "area": {
     "name": "Seattle Center",
     "label": "5th Ave & Harrison St, Seattle, WA",
-    "detail": "Approximate race area near Seattle Center. Check the official event details before race day.",
+    "detail": "Starts at 5th Ave & Harrison St and finishes at Wall St & Alaskan Way.",
     "latitude": 47.622,
     "longitude": -122.347,
-    "zoom": 14
+    "zoom": 14,
+    "course": {
+      "label": "Full marathon course",
+      "url": "/r/seattle-marathon-2026/course.geojson"
+    }
   },
   "attendeesPreview": [
     { "firstName": "Ray" },

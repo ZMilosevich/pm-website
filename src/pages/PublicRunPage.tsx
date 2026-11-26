@@ -44,6 +44,10 @@ export type PublicRunEvent = {
     latitude: number;
     longitude: number;
     zoom: number;
+    course?: {
+      label: string;
+      url: string;
+    };
   };
   attendeesPreview: Array<{
     firstName: string;
@@ -323,6 +327,8 @@ export function PublicRunPage({
                   longitude={event.area.longitude}
                   zoom={event.area.zoom}
                   label={`${event.area.name}, ${event.city}`}
+                  courseUrl={event.area.course?.url}
+                  courseLabel={event.area.course?.label}
                 />
                 <div className="run-map-card__meeting">
                   <span className="run-map-card__map-icon">
@@ -330,8 +336,12 @@ export function PublicRunPage({
                   </span>
                   <div>
                     <h2 id="run-area-title">
-                      {kind === "race" ? "Race area" : "Meeting point"}:{" "}
-                      <span>{event.area.label}</span>
+                      {event.area.course?.label ?? (
+                        <>
+                          {kind === "race" ? "Race area" : "Meeting point"}:{" "}
+                          <span>{event.area.label}</span>
+                        </>
+                      )}
                     </h2>
                     <p>{event.area.detail}</p>
                   </div>

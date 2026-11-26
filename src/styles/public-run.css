@@ -298,6 +298,48 @@
   fill: currentColor;
 }
 
+.run-map-card__endpoint {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #151518;
+  border-radius: 50%;
+  background: var(--endpoint-color);
+  box-shadow: 0 0 0 1px var(--endpoint-color);
+  pointer-events: none;
+}
+
+.run-map-card__endpoint span {
+  position: absolute;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--endpoint-color) 35%, #151518);
+  border-radius: 999px;
+  background: #151518;
+  color: var(--endpoint-color);
+  box-shadow: 0 2px 8px #0008;
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.run-map-card__endpoint--start {
+  --endpoint-color: #78e7bf;
+}
+
+.run-map-card__endpoint--start span {
+  bottom: 5px;
+  left: 9px;
+}
+
+.run-map-card__endpoint--finish {
+  --endpoint-color: #ff9abb;
+}
+
+.run-map-card__endpoint--finish span {
+  top: 5px;
+  right: 9px;
+}
+
 .run-map-card__interactive .mapboxgl-ctrl-attrib:not(.mapboxgl-compact) {
   border-top-left-radius: 0.35rem;
   background-color: var(--run-card);
