@@ -50,7 +50,18 @@ fi
   { printf 'FAIL: event data must transfer with assets, before HTML\n' >&2; exit 1; }
 [[ "$index_line" -lt "$run_index_line" && "$run_index_line" -lt "$manifest_finalize_line" ]] ||
   { printf 'FAIL: run HTML must transfer after its dependencies and before manifest finalization\n' >&2; exit 1; }
-printf 'PASS: workflow orders preflight, assets and event data, HTML, then manifest finalization\n'
+
+for association in apple-app-site-association assetlinks.json; do
+  association_line="$(grep -nF "include='/.well-known/$association'" "$workflow" | cut -d: -f1)"
+  [[ "$association_line" -lt "$manifest_finalize_line" ]] ||
+    { printf 'FAIL: %s must transfer before manifest finalization\n' "$association" >&2; exit 1; }
+  for fallback in app app/tracker app/explore; do
+    fallback_line="$(grep -nF "include='/$fallback/index.html'" "$workflow" | cut -d: -f1)"
+    [[ "$assets_line" -lt "$fallback_line" && "$fallback_line" -lt "$association_line" ]] ||
+      { printf 'FAIL: %s HTML must transfer after assets and before %s\n' "$fallback" "$association" >&2; exit 1; }
+  done
+done
+printf 'PASS: workflow orders preflight, assets and event data, HTML, app associations, then manifest finalization\n'
 
 run_preflight() {
   local artifact="$1"

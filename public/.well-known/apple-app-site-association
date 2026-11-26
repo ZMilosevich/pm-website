@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "M2R9FQQG48.com.pmstartup.frontend",
+        "paths": [
+          "/app",
+          "/app/tracker",
+          "/app/explore"
+        ]
+      }
+    ]
+  }
+}

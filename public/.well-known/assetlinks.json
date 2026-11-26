@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pacematcher.frontend",
+      "sha256_cert_fingerprints": [
+        "1F:BC:3C:1D:AA:E1:C6:6E:24:4D:D1:C3:8E:08:93:D2:7E:9C:85:D8:04:62:5A:BE:AE:3F:0D:E3:65:FA:C1:50"
+      ]
+    }
+  }
+]

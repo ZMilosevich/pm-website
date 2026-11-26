@@ -184,6 +184,54 @@ RewriteRule ^get/?$ get.php [L,QSA]
 The PHP endpoint is included in the deployment artifact; the Cloudways Web Rule
 is an application setting and must be configured once in the Cloudways panel.
 
+### App links and browser fallbacks
+
+The build includes the three browser fallbacks and the two files from
+`public/.well-known/`. The deployment uploads the pages before the associations.
+
+On the Lightning Stack, use [Cloudways Web Rules](https://support.cloudways.com/en/articles/12597858-how-to-create-and-manage-web-rules-in-cloudways)
+to add these internal **Rewrite** rules with **Keep Original Query String**
+enabled. Match each source path exactly.
+
+| Source | Destination |
+| --- | --- |
+| `/app` | `/app/index.html` |
+| `/app/tracker` | `/app/tracker/index.html` |
+| `/app/explore` | `/app/explore/index.html` |
+
+Add a custom Header Rule with action **Set**, header `Content-Type`, value
+`application/json`, **Always Apply** off, and an exact URI condition for
+`/.well-known/apple-app-site-association`. Serve both association files
+publicly over HTTPS at their original paths.
+
+On the Hybrid Stack, add the equivalent settings to the existing Apache
+`.htaccess` before broader rewrites:
+
+```apache
+RewriteEngine On
+RewriteRule ^(app(?:/(?:tracker|explore))?)$ $1/index.html [L]
+
+<Files "apple-app-site-association">
+    ForceType application/json
+</Files>
+```
+
+After deploying and applying the rules, check the exact public URLs:
+
+```bash
+for path in /app /app/tracker /app/explore \
+  /.well-known/apple-app-site-association /.well-known/assetlinks.json; do
+  curl -sS -D - -o /dev/null "https://pacematcher.com${path}"
+done
+```
+
+Expect HTTP 200 for all five URLs and `application/json` for both association
+responses. Open each page in a browser and check both store links. Verify the
+links on devices with the signed iOS and Play-distributed Android app before
+changing either mobile invite action to `https://pacematcher.com/app`.
+
+### Deployment testing
+
 Run the local mocked filesystem tests without contacting Cloudways:
 
 ```bash

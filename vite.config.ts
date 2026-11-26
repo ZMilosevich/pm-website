@@ -8,13 +8,27 @@ const pageEntries = {
   home: "index.html",
   privacy: "privacy-policy/index.html",
   terms: "terms-of-service/index.html",
+  app: "app/index.html",
+  tracker: "app/tracker/index.html",
+  explore: "app/explore/index.html",
   notFound: "404.html",
 };
 
-function notFoundPage(): Plugin {
+const associationPath = "/.well-known/apple-app-site-association";
+
+const setAssociationContentType: Connect.NextHandleFunction = (req, res, next) => {
+  if ((req.method === "GET" || req.method === "HEAD") && req.url?.split("?")[0] === associationPath) {
+    res.setHeader("Content-Type", "application/json");
+  }
+
+  next();
+};
+
+function servePublicPages(): Plugin {
   const pages = new Set(Object.values(pageEntries).map((entry) => `/${entry}`));
   const middleware = (loadPage: () => Promise<string>): Connect.NextHandleFunction => (req, res, next) => {
-    const pathname = (req.url ?? "/").split("?")[0];
+    const url = req.url ?? "/";
+    const pathname = url.split("?")[0];
     if (
       (req.method !== "GET" && req.method !== "HEAD") ||
       (req.headers.accept && !/text\/html|\*\/\*/.test(req.headers.accept)) ||
@@ -26,7 +40,7 @@ function notFoundPage(): Plugin {
 
     const directoryIndex = `${pathname}/index.html`;
     if (pages.has(directoryIndex)) {
-      req.url = directoryIndex;
+      req.url = directoryIndex + url.slice(pathname.length);
       next();
       return;
     }
@@ -41,14 +55,16 @@ function notFoundPage(): Plugin {
   };
 
   return {
-    name: "pacematcher-not-found",
+    name: "pacematcher-public-pages",
     configureServer(server) {
+      server.middlewares.use(setAssociationContentType);
       return () => server.middlewares.use(middleware(async () => {
         const html = await readFile(path.join(server.config.root, pageEntries.notFound), "utf8");
         return server.transformIndexHtml("/404.html", html);
       }));
     },
     configurePreviewServer(server) {
+      server.middlewares.use(setAssociationContentType);
       const { root, build } = server.config;
       return () => server.middlewares.use(middleware(
         () => readFile(path.resolve(root, build.outDir, pageEntries.notFound), "utf8"),
@@ -59,7 +75,7 @@ function notFoundPage(): Plugin {
 
 export default defineConfig({
   appType: "mpa",
-  plugins: [react(), tailwindcss(), notFoundPage()],
+  plugins: [react(), tailwindcss(), servePublicPages()],
   build: {
     target: "es2022",
     sourcemap: false,

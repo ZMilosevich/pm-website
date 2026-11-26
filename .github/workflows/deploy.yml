@@ -90,6 +90,14 @@ jobs:
             exit 1
           fi
 
+          for deep_link_file in app/index.html app/tracker/index.html app/explore/index.html \
+            .well-known/apple-app-site-association .well-known/assetlinks.json; do
+            if [[ ! -s "dist/$deep_link_file" ]]; then
+              echo "The build is missing $deep_link_file."
+              exit 1
+            fi
+          done
+
           if [[ ! -s dist/.pacematcher-managed-paths ]]; then
             echo "The managed-path manifest is missing or empty."
             exit 1
@@ -178,9 +186,24 @@ jobs:
           rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
             --include='/index.html' \
             --include='/404.html' \
+            --include='/app/' \
+            --include='/app/index.html' \
+            --include='/app/tracker/' \
+            --include='/app/tracker/index.html' \
+            --include='/app/explore/' \
+            --include='/app/explore/index.html' \
             --include='/r/' \
             --include='/r/*/' \
             --include='/r/*/index.html' \
+            --exclude='*' \
+            -e "ssh ${ssh_options[*]}" \
+            dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
+
+          # Publish the associations after their browser fallbacks are available.
+          rsync -az --no-perms --omit-dir-times --chmod=D755,F644 \
+            --include='/.well-known/' \
+            --include='/.well-known/apple-app-site-association' \
+            --include='/.well-known/assetlinks.json' \
             --exclude='*' \
             -e "ssh ${ssh_options[*]}" \
             dist/ "$remote:$CLOUDWAYS_DEPLOY_PATH/"
