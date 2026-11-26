@@ -265,7 +265,7 @@ export function PublicRunPage({
             <article className="run-details" aria-labelledby="run-title">
               <div className="run-kickers">
                 <p className="run-kicker">{content.tag}</p>
-                {hasAppAction && <RunCountdown startsAt={event.startsAt} />}
+                {hasAppAction && <RunCountdown startsAt={event.startsAt} timeZone={event.timezone} />}
               </div>
               <div className="run-title-row">
                 <h1 id="run-title">{event.title}</h1>

@@ -3,10 +3,16 @@ import { useEffect, useState } from "react";
 const second = 1_000;
 const minute = 60 * second;
 const day = 24 * 60 * minute;
-const week = 7 * day;
 const relativeTime = new Intl.RelativeTimeFormat("en", { numeric: "always" });
 
-export function RunCountdown({ startsAt }: { startsAt: string }) {
+function calendarDate(timestamp: number, formatter: Intl.DateTimeFormat) {
+  const { year, month, day: dayOfMonth } = Object.fromEntries(
+    formatter.formatToParts(timestamp).map(({ type, value }) => [type, value]),
+  );
+  return Date.UTC(Number(year), Number(month) - 1, Number(dayOfMonth));
+}
+
+export function RunCountdown({ startsAt, timeZone }: { startsAt: string; timeZone: string }) {
   const startTime = Date.parse(startsAt);
   const [now, setNow] = useState(Date.now);
 
@@ -21,7 +27,7 @@ export function RunCountdown({ startsAt }: { startsAt: string }) {
       if (remaining <= 0) return;
 
       const delay = remaining >= day
-        ? Math.min(minute, remaining % day + 1)
+        ? Math.min(minute - currentTime % minute, remaining - day + 1)
         : (remaining - 1) % second + 1;
       timeout = window.setTimeout(tick, delay);
     }
@@ -34,9 +40,16 @@ export function RunCountdown({ startsAt }: { startsAt: string }) {
   if (!Number.isFinite(remaining) || remaining <= 0) return null;
 
   if (remaining >= day) {
-    const label = remaining >= 2 * week
-      ? relativeTime.format(Math.floor(remaining / week), "week")
-      : relativeTime.format(Math.floor(remaining / day), "day");
+    const formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    });
+    const calendarDays = (calendarDate(startTime, formatter) - calendarDate(now, formatter)) / day;
+    const label = calendarDays >= 14
+      ? relativeTime.format(Math.floor(calendarDays / 7), "week")
+      : calendarDays === 0 ? "today" : relativeTime.format(calendarDays, "day");
 
     return <time className="run-kicker run-countdown" dateTime={startsAt}>{label}</time>;
   }
